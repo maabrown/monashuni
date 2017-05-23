@@ -1,0 +1,684 @@
+// main: ../style.scss
+
+.index {
+  margin: auto;
+  width: 100%;
+  overflow-x: hidden;
+
+  .clear {
+    clear: both;
+  }
+
+  .section {
+    display: block;
+    width: 100%;
+
+
+    &[data-name="preheader"] {
+      position: relative;
+      height: 84rem;
+      z-index: 0;
+
+      .bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-image: $preheaderbg;
+        background-position: 50% 50%;
+      }
+
+      .overlay {
+        color: #FFF;
+        position: relative;
+        text-align: center;
+        height: 100%;
+
+        .topLogo {
+          width: 20rem;
+          height: 6rem;
+          margin: auto;
+          display: inline-block;
+          position: relative;
+          margin-top: 6rem;
+
+          .logoImg {
+            background-image: $logo_white;
+            width: 20rem;
+            height: 6rem;
+          }
+        }
+
+        .centreCopy {
+          top: 50%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          width: 84rem;
+          display: inline-block;
+          position: absolute;
+
+          h1 {
+            font-size: 4rem;
+            @include TitleFont();
+          }
+
+          p.lead {
+            font-size: 2.2rem;
+            line-height: 150%;
+            width: 100%;
+            display: inline-block;
+            margin-top: 3rem;
+            font-weight: 300;
+          }
+
+          button.cta {
+            margin-top: 3rem;
+          }
+
+        }
+
+        button.scrollDown {
+          background: transparent;
+          border: none;
+          background-image: $scrollDownArrow;
+          background-position: 50% 50%;
+          background-size: 100%;
+          background-repeat: no-repeat;
+
+          height: 6rem;
+          width: 4rem;
+
+          position: absolute;
+          left: 50%;
+          transform: translatex(-50%);
+          top: 74rem;
+
+          @include Transition();
+
+
+          &:hover {
+            cursor: pointer;
+            background-position: 50% 70%;
+          }
+
+          &:active, &:focus, &:visited {
+            outline: none;
+          }
+        }
+      }
+    }
+
+
+
+    &.mainHeader {
+      background: $black;
+      color: #FFF;
+      height: 7.5rem;
+      z-index: 4;
+
+        nav {
+          text-align: center;
+          height: 7.5rem;
+          line-height: 7.5rem;
+
+          ul {
+            display: inline-block;
+            height: 7.5rem;
+            line-height: 7.5rem;
+
+            li {
+              display: inline-block;
+              font-size: 1.4rem;
+              text-transform: uppercase;
+              height: 7.5rem;
+              width: 12rem;
+              line-height: 7.5rem;
+              vertical-align: top;
+              margin: 0rem 2rem;
+
+              a {
+                display: inline;
+                border-bottom: 1px solid $black;
+                padding-bottom: 0.2rem;
+                @include Transition();
+
+                &:hover {
+                  border-bottom-color: $white;
+                  padding-bottom: 1rem;
+                }
+              }
+
+              &.logo {
+                height: 3rem;
+                vertical-align: middle;
+
+                a {
+                  display: inline-block;
+
+                  .logoImg {
+                    background-image: $logo_white;
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    width: 10rem;
+                    height: 3rem;
+                    display: block;
+                    vertical-align: top;
+                  }
+                }
+
+              }
+            }
+          }
+        }
+
+        &--fixed {
+          position: fixed;
+          top: 0rem;
+          left: 0rem;
+          width: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+
+        &--fixed ~ .headerSpacer {
+          height: 7.5rem;
+          display: block;
+        }
+    }
+
+    &[data-name="intro"] {
+      background: $white;
+      color: $black;
+      height: 84rem;
+      position: relative;
+      z-index: 1;
+
+      .lineDown {
+        position: absolute;
+        width: 1px;
+        background: $black;
+        height: 40rem;
+        left: 50%;
+        margin-left: -50rem;
+        bottom: -10rem;
+      }
+
+      .image1, .image2 {
+        position: absolute;
+        border: 1px solid $white;
+        box-shadow: $boxShadow;
+        background: $white;
+        background-size: cover;
+      }
+
+      .image1 {
+        height: 42rem;
+        width: 42rem;
+        right: -12rem;
+        top: 14rem;
+        background-image: $image1;
+      }
+
+      .image2 {
+        height: 32rem;
+        width: 32rem;
+        right: 20rem;
+        top: 40rem;
+        background-image: $image2;
+      }
+
+      .bigM {
+        background-image: $bigM;
+        width: 12rem;
+        height: 28rem;
+        position: absolute;
+        right: 8rem;
+        bottom: 0rem;
+      }
+
+      .content {
+        width: 116rem;
+        margin:auto;
+        padding-top: 20rem;
+
+        h2 {
+          @include TitleFont();
+          line-height: 200%;
+          font-size: 2.8rem;
+        }
+        .textSpace {
+          width: 42rem;
+          margin-top: 8rem;
+          margin-left: 22rem;
+
+          p {
+            font-size: 1.8rem;
+            line-height: 150%;
+            margin-bottom: 2rem;
+          }
+        }
+      }
+    }
+
+
+    &[data-name="nextgen"] {
+      background: $lightgray;
+      color: $black;
+      height: 130rem;
+      position: relative;
+      z-index: 0;
+
+      .content {
+        width: 116rem;
+        margin:auto;
+        padding-top: 20rem;
+
+        h2 {
+          @include TitleFont();
+          line-height: 200%;
+          font-size: 2.2rem;
+        }
+
+        h2 ~ p {
+          margin-top: 2rem;
+        }
+
+        > p {
+          width: 80rem;
+          font-size: 1.6rem;
+        }
+
+
+        .videoExpose {
+          margin-top: 4rem;
+
+          //common
+          .vidCover {
+            box-shadow: $boxShadow;
+          }
+
+          .title {
+            margin-top: 3rem;
+            font-size: 2rem;
+            text-transform: uppercase;
+          }
+
+          .description {
+            margin-top: 2rem;
+            font-size: 1.6rem;
+            padding-left: 2rem;
+            border-left: 3px solid $gray;
+          }
+
+          //specific
+          .mainVid {
+            width: 75rem;
+            display: inline-block;
+            vertical-align: top;
+
+            ul {
+              width: 100%;
+              display: block;
+
+              li {
+                width: 100%;
+                display: block;
+                display: none;
+
+                &.current {
+                  display: block;
+                }
+
+                .vidCover {
+                  width: 75rem;
+                  height: 60rem;
+                }
+
+                .description {
+
+                }
+              }
+            }
+          }
+
+          .sideScroll {
+            width: 36rem;
+            display: inline-block;
+            vertical-align: top;
+            float: right;
+            position: relative;
+            height: 84.4rem;
+            overflow: hidden;
+
+            .scrollContainer {
+              position: absolute;
+              width: 100%;
+
+              ul {
+                width: 100%;
+                display: block;
+
+                li {
+                  width: 100%;
+                  display: block;
+                  display: block;
+                  margin-bottom: 4rem;
+
+                  &.current {
+                    display: block;
+                  }
+
+                  .vidCover {
+                    width: 36rem;
+                    height: 24rem;
+                    box-shadow: none;
+                    border: 1px solid #CCC;
+                  }
+
+                  .description {
+
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &[data-name="flexiblelearning"] {
+      height: 78rem;
+      background: $black;
+      color: $white;
+      text-align: center;
+
+      .content {
+        width: 116rem;
+        margin:auto;
+        padding-top: 16rem;
+
+        h2 {
+          @include TitleFont();
+          line-height: 200%;
+          font-size: 2.2rem;
+        }
+
+        .thirds {
+          text-align: left;
+          margin-top: 7rem;
+          position: relative;
+
+          .col {
+            font-size: 1.6rem;
+            padding-left: 5rem;
+            padding-right: 5rem;
+
+            h4.title {
+              font-size: 2.3rem;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+              line-height: 120%;
+            }
+
+            .vline {
+              display: inline-block;
+              float: left;
+              width: 3px;
+              background: $gray;
+              height: 6rem;
+              vertical-align: top;
+              margin-top: 3.5rem;
+
+            }
+
+            p.description {
+              float: right;
+              line-height: 150%;
+              display: inline-block;
+              width: calc(100% - 2rem);
+              vertical-align: top;
+              margin-top: 3rem;
+              font-size: 1.6rem;
+            }
+
+          }
+        }
+      }
+
+      button.cta {
+        margin-top: 8rem;
+      }
+    }
+
+    &[data-name="newthinking"] {
+      height: 140rem;
+      background: $white;
+      color: $black;
+      text-align: left;
+
+      .content {
+        width: 116rem;
+        margin:auto;
+        padding-top: 20rem;
+
+        h2 {
+          @include TitleFont();
+          line-height: 200%;
+          font-size: 2.2rem;
+        }
+
+        .halves {
+
+          .linkSlider {
+            display: inline-block;
+
+            ul li {
+              .coverImg {
+                width: 56rem;
+                height: 31rem;
+                box-shadow: $boxShadow;
+              }
+
+              .copy {
+                margin-top: 2rem;
+                width: 100%;
+
+                h5.name {
+                  font-size: 2.2rem;
+                  text-transform: uppercase;
+                }
+
+                span.creds {
+                  font-size: 1.8rem;
+                  font-weight: 300;
+                  margin-top: 1rem;
+                  display: block;
+                }
+
+                p.description {
+                  margin-top: 2rem;
+                  font-size: 1.6rem;
+                  width: 100%;
+                }
+
+                button.btn {
+                  margin-top: 2rem;
+                }
+              }
+
+              &.next {
+                display: none;
+              }
+            }
+          }
+
+          //left
+          .col:first-child {
+            padding-right: 4rem;
+          }
+
+          //right
+          .col:last-child {
+            padding-left: 1rem;
+
+            .titleCopy {
+              width: 60rem;
+              padding-left: 3rem;
+
+              p {
+                margin-top: 2rem;
+                font-size: 1.6rem;
+              }
+            }
+
+            .linkSlider {
+              margin-top: 11rem;
+            }
+          }
+
+
+        }
+      }
+    }
+
+
+    &[data-name="viewthecollection"] {
+      position: relative;
+      height: 64rem;
+      z-index: 0;
+
+      .bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-image: $preheaderbg;
+        background-position: 50% 50%;
+      }
+
+      .overlay {
+        color: #FFF;
+        position: relative;
+        text-align: center;
+        height: 100%;
+
+
+        .content {
+          width: 116rem;
+          margin:auto;
+          padding-top: 27rem;
+
+          h2 {
+            @include TitleFont();
+            line-height: 200%;
+            font-size: 2.2rem;
+          }
+
+          button.cta {
+            margin-top: 2rem;
+          }
+        }
+
+      }
+    }
+    &[data-name="choosemonash"] {
+      height: 60rem;
+      background: $white;
+      color: $black;
+      text-align: center;
+
+      .content {
+        width: 116rem;
+        margin:auto;
+        padding-top: 10rem;
+
+        h2 {
+          @include TitleFont();
+          line-height: 200%;
+          font-size: 2.2rem;
+        }
+
+        > p.description {
+          margin-top: 2rem;
+        }
+
+        .halves {
+          margin-top: 7rem;
+
+          .col {
+            text-align: left;
+            padding-left: 4rem;
+            padding-right: 4rem;
+
+            h3 {
+              margin-top: 3rem;
+              font-size: 2rem;
+              text-transform: uppercase;
+            }
+
+            .vline {
+              display: inline-block;
+              float: left;
+              width: 3px;
+              background: $gray;
+              height: 6rem;
+              vertical-align: top;
+              margin-top: 3.5rem;
+
+            }
+
+            p.description {
+              float: right;
+              line-height: 150%;
+              display: inline-block;
+              width: calc(100% - 3rem);
+              vertical-align: top;
+              margin-top: 3rem;
+              font-size: 1.6rem;
+            }
+          }
+
+          //left
+          .col:first-child {
+
+          }
+
+          //right
+          .col:last-child {
+
+          }
+        }
+      }
+    }
+    &[data-name="stats"] {
+      height: 42rem;
+      background: $black;
+      color: $white;
+      text-align: center;
+    }
+    &[data-name="facts"] {
+      height: 96rem;
+      background: $white;
+      color: $black;
+      text-align: center;
+    }
+    &[data-name="makeithappen"] {
+      height: 40rem;
+      background: $gray;
+      color: $white;
+      text-align: center;
+    }
+    &[data-name="contact"] {
+      height: 13rem;
+      background: $lightgray;
+      color: $black;
+      text-align: center;
+    }
+    &[data-name="footer"] {
+      height: 7.5rem;
+      background: $black;
+      color: $white;
+      text-align: center;
+    }
+  }
+}

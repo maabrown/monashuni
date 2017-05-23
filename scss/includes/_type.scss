@@ -1,0 +1,24 @@
+// main: ../style.scss
+
+@mixin TitleFont {
+  font-family: 'Domine', serif;
+  text-transform: uppercase;
+  letter-spacing: 8px;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p {
+  font-weight: 300;
+  font-size: 1.8rem;
+  line-height: 150%;
+}
+
+
+pre, .pre {
+  white-space: pre;
+}

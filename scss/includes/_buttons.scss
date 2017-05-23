@@ -1,0 +1,45 @@
+// main: ../style.scss
+
+@mixin Button() {
+  display: inline-block;
+  width: 25rem;
+  height: 5rem;
+  background: transparent;
+  border: 1px solid;
+  font-size: 1.8rem;
+  @include Transition();
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+
+.btn {
+  @include Button();
+
+
+  &--white {
+    color: $white;
+    border-color: $white;
+    background: transparent;
+
+    &:hover {
+      color: $black;
+      background: $white;
+
+    }
+  }
+
+  &--black {
+    color: $white;
+    border-color: $black;
+    background: $black;
+
+    &:hover {
+      color: $black;
+      background: $white;
+
+    }
+  }
+}

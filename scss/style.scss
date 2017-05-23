@@ -1,0 +1,23 @@
+// compileCompressed, compressedFilenamePattern: ../css/$1.css
+// main: style.scss
+
+//fonts
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i');
+@import url('https://fonts.googleapis.com/css?family=Domine:400,700');
+
+//reset
+@import "includes/reset";
+
+//tools
+@import "includes/transitions";
+
+//general
+@import "general/variables";
+@import "general/layout";
+
+//components
+@import "includes/buttons";
+@import "includes/type";
+
+//pages
+@import "pages/index";
