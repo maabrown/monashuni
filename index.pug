@@ -14,7 +14,9 @@
             h1(data-parallax="-3") Question the Answers
             
             p.lead(data-parallax="-5") Encourage change, ask questions and lift the lid on things that 
-              | no-one else would dare to. This is our style at Monash University and 
+              | no-one else would dare to. 
+              br
+              | This is our style at Monash University and 
               | we want you to explore it with us. 
             
             br
@@ -27,21 +29,21 @@
       .section(data-name="header").mainHeader
         nav
           ul
+            li.logo: a(href="#")
+              .logoImg
             li: a(href="#") About
             li: a(href="#") Our Stories
             li: a(href="#") Courses
-            li.logo: a(href="#")
-              .logoImg
             li: a(href="#") Next Gen
             li: a(href="#") Choose Monash
             li: a(href="#") Contact
       .section(data-name="headerSpacer").headerSpacer
     
       .section(data-name="intro")
-        .lineDown(data-parallax="-8")
+        .lineDown(data-parallax="-2")
         .bigM
         .image1(data-parallax="28")
-        .image2(data-parallax="-24")
+        .image2
         .content
           h2 Progress Doesn't accept answers,
             br
@@ -61,6 +63,7 @@
 
             
       .section(data-name="nextgen")
+        .bg(data-parallax="-20")
         .content
           h2 Next Generation Thinkers
           p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam nec 
@@ -110,45 +113,6 @@
                       | justo, ut digniss.
               
             
-              
-      .section(data-name="flexiblelearning")
-        .content
-          h2 Flexible Learning
-          .thirds
-            .col
-              h4.title Specialist
-                br
-                | Degree
-              .vline
-              p.description 
-                | If you know what you want to do and are looking for a direct 
-                | route into a particular field or career, then a specialist 
-                | degree might be right for you.
-            .col
-              h4.title Comprehensive
-                br
-                | Degree
-              .vline
-              p.description 
-                | These courses offer a wide range of majors allowing you to 
-                | build your studies around your professional and personal needs. 
-                | You have the option to choose your major at the start of your 
-                | course, or study a range of options before narrowing your focus.
-
-            .col
-              h4.title Double
-                br
-                | Degree
-              .vline
-              p.description 
-                | A Monash Double Degree lets you pursue two areas of interest at 
-                | the same time. You can qualify with two degrees in as little as 
-                | 4 years, so you can combine all your interests while saving 
-                | time and money.
-            .clear
-        button.cta.btn.btn--white Find a Course
-
-
       .section(data-name="newthinking")
         .content
           .halves
@@ -165,8 +129,7 @@
                        | porttitor justo, ut dignissim nunc. Morbi vitae augue
                        |  dignissim velit ornare rhoncus vitae sit amet leo.
                        | Maecenas euismod libero ligula, ac fringilla risus.
-                       br
-                       button.btn.btn--black Play video
+                       
                   li.next
                     .coverImg
                     .copy 
@@ -175,11 +138,16 @@
                       p.description
             .col
               .titleCopy
-                h2 New Problems, New Thinking
-                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
-                 | Nam nec gravida justo. Sed quis porttitor justo, ut 
-                 | dignissim nunc. Nam nec gravida justo. Sed quis porttitor 
-                 | justo, ut dignissim nunc.
+                h2 New Problems, 
+                  br
+                  | New Thinking
+                p Some rocked the boat. Others changed the game. But they all
+                  br
+                  | questioned the answers. Meet and be inspired by 10 incredible
+                  br
+                  | Monash people who are creating the extraordinary - here and
+                  br
+                  | around the world.
                  
               .linkSlider.linkSlider--right
                 ul
@@ -193,14 +161,67 @@
                        | porttitor justo, ut dignissim nunc. Morbi vitae augue
                        |  dignissim velit ornare rhoncus vitae sit amet leo.
                        | Maecenas euismod libero ligula, ac fringilla risus.
-                       br
-                       button.btn.btn--black Play video
+                       
                   li.next
                     .coverImg
                     .copy 
                       h5.name
                       span.creds
                       p.description
+        .clear
+              
+              
+      .section(data-name="flexiblelearning")
+        .bg
+        .content
+          .halves
+            //- left
+            .col
+              h2 Flexible
+                br
+                | Learning
+              p.description 
+                | Wherever you're headed, you'll find a course at Monash that can get  
+                | you there, Our range of programs include:
+                
+              .box
+                h4.title Specialist Degrees
+                p.description 
+                  | If you know what you want to do and are looking for a direct 
+                  | route into a particular field or career, then a specialist 
+                  | degree might be right for you.
+
+              .box
+                h4.title Double Degrees
+                p.description 
+                  | A Monash double degree lets you study towards two degrees 
+                  | at the same time. You can combine two undergraduate degrees 
+                  | and complete the degrees in two years less than if you did 
+                  | them separately. We also offer double degrees that incorporate 
+                  | an undergraduate degree and graduate master’s degree, accelerating 
+                  | your progress to a higher level of qualification.
+
+                  
+              button.cta.btn.btn--black Find a Course
+            
+            //- right
+            .col
+              .box
+                h4.title Comprehensive Degrees
+                p.description 
+                  | These courses offer a wide range of majors allowing you to 
+                  | build your studies around your professional and personal needs. 
+                  | You have the option to choose your major at the start of your 
+                  | course, or study a range of options before narrowing your focus.
+              .box
+                h4.title Graduate Degrees
+                p.description 
+                  | Our wide range of graduate degrees can help you advance your 
+                  | career, qualify to practice in a profession or allow you to 
+                  | expand your knowledge and skills into a new discipline.
+              
+            .clear
+        .lineDown(data-parallax="-4")
               
       .section(data-name="viewthecollection")
         .bg
@@ -209,6 +230,8 @@
             h2 View the Collection
             button.cta.btn.btn--white View Now
       .section(data-name="choosemonash")
+        .bg
+        .bg2
         .content
           h2 Choose Monash
           p.description Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
@@ -218,37 +241,150 @@
             | nunc. Nam nec gravida justo. Sed quis porttitor justo, ut 
             | dignissim nunc.
           .halves
+            //- left
             .col
-              h3 International Experience
-              .vline
-              p.description To take on the world you need a truly international 
-                | outlook. Monash offers students the opportunity to become 
-                | genuine global thinkers with campuses in Australia, Malaysia, 
-                | China India and Italy. 
-                br
-                br
-                | We also offer one of the most extensive international 
-                | exchange and study tour programs with opportunities available 
-                | in 30 countries around the globe.
-
-
+              .image
+                .img
               
+              .quality
+                .logo
+                h3 International Experience
+                p.description To take on the world you need a truly international 
+                  | outlook. Monash offers students the opportunity to become 
+                  | genuine global thinkers with campuses in Australia, Malaysia, 
+                  | China India and Italy. 
+                  br
+                  br
+                  | We also offer one of the most extensive international 
+                  | exchange and study tour programs with opportunities available 
+                  | in 30 countries around the globe.
+              
+              .quality
+                .logo
+                h3 International Experience
+                p.description To take on the world you need a truly international 
+                  | outlook. Monash offers students the opportunity to become 
+                  | genuine global thinkers with campuses in Australia, Malaysia, 
+                  | China India and Italy. 
+                  br
+                  br
+                  | We also offer one of the most extensive international 
+                  | exchange and study tour programs with opportunities available 
+                  | in 30 countries around the globe.
+              
+              .quality
+                .logo
+                h3 International Experience
+                p.description To take on the world you need a truly international 
+                  | outlook. Monash offers students the opportunity to become 
+                  | genuine global thinkers with campuses in Australia, Malaysia, 
+                  | China India and Italy. 
+                  br
+                  br
+                  | We also offer one of the most extensive international 
+                  | exchange and study tour programs with opportunities available 
+                  | in 30 countries around the globe.
+  
+              .quality
+                .logo
+                h3 International Experience
+                p.description To take on the world you need a truly international 
+                  | outlook. Monash offers students the opportunity to become 
+                  | genuine global thinkers with campuses in Australia, Malaysia, 
+                  | China India and Italy. 
+                  br
+                  br
+                  | We also offer one of the most extensive international 
+                  | exchange and study tour programs with opportunities available 
+                  | in 30 countries around the globe.
+                
+            //- right
             .col
-              h3 Courses and Specifications
-              .vline
-              p.description When it comes to study, we know that one size does 
-                | not fit all so we have a wide range of courses for you to 
-                | choose from. Whether you have a passion for the arts, are 
-                | focused on a career in medicine, or want to pursue a career 
-                | in the global business world, there's a course to suit you. 
-                | You can choose an education experience that will prepare you 
-                | for a successful career.
+              .quality
+                .logo(data-name="experience")
+                h3 International Experience
+                p.description To take on the world you need a truly international 
+                  | outlook. Monash offers students the opportunity to become 
+                  | genuine global thinkers with campuses in Australia, Malaysia, 
+                  | China India and Italy. 
+                  br
+                  br
+                  | We also offer one of the most extensive international 
+                  | exchange and study tour programs with opportunities available 
+                  | in 30 countries around the globe.
+              
+              .quality
+                .logo(data-name="size")
+                h3 Size and Scale
+                p.description To take on the world you need a truly international 
+                  | outlook. Monash offers students the opportunity to become 
+                  | genuine global thinkers with campuses in Australia, Malaysia, 
+                  | China India and Italy. 
+                  br
+                  br
+                  | We also offer one of the most extensive international 
+                  | exchange and study tour programs with opportunities available 
+                  | in 30 countries around the globe.
+                  
+              .image
+                .img
+                  
+              .quality
+                .logo(data-name="partner")
+                h3 International Experience
+                p.description To take on the world you need a truly international 
+                  | outlook. Monash offers students the opportunity to become 
+                  | genuine global thinkers with campuses in Australia, Malaysia, 
+                  | China India and Italy. 
+                  br
+                  br
+                  | We also offer one of the most extensive international 
+                  | exchange and study tour programs with opportunities available 
+                  | in 30 countries around the globe.
+                  
+                  
+              .quality
+                .logo(data-name="bulb")
+                h3 Courses and Specialisations
+                p.description To take on the world you need a truly international 
+                  | outlook. Monash offers students the opportunity to become 
+                  | genuine global thinkers with campuses in Australia, Malaysia, 
+                  | China India and Italy. 
+                  br
+                  br
+                  | We also offer one of the most extensive international 
+                  | exchange and study tour programs with opportunities available 
+                  | in 30 countries around the globe.
+              
+            .clear
         
-      .section(data-name="stats")
-      .section(data-name="facts")
       .section(data-name="makeithappen")
+        .bg
+        .overlay
+          .content
+            h2 Make it happen
+            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+              | Nulla eget diam non nulla  commodo vehicula. Pellentesque habitant morbi 
+            button.cta.btn.btn--white Study at Monash
       .section(data-name="contact")
+        .content
+          .halves
+            .col
+              h2 Phone
+              span 61 3 9520 5210
+            .col
+              h2 Email
+              span contact@monash.edu.au
       .section(data-name="footer")
+        .content
+          .attr
+            span CRICOS provider: Monash University 00008C
+          .social
+            ul
+              li.yt: a(href="#", target="_blank"): .icon
+              li.tt: a(href="#", target="_blank"): .icon
+              li.fb: a(href="#", target="_blank"): .icon
+              li.insta: a(href="#", target="_blank"): .icon
       
     //scripts
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")

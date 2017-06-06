@@ -12,11 +12,12 @@
   .section {
     display: block;
     width: 100%;
+    position: relative;
 
 
     &[data-name="preheader"] {
       position: relative;
-      height: 84rem;
+      height: 89rem;
       z-index: 0;
 
       .bg {
@@ -58,21 +59,21 @@
           position: absolute;
 
           h1 {
-            font-size: 4rem;
+            font-size: 3rem;
             @include TitleFont();
           }
 
           p.lead {
-            font-size: 2.2rem;
-            line-height: 150%;
+            font-size: 1.7rem;
+            line-height: 200%;
             width: 100%;
             display: inline-block;
-            margin-top: 3rem;
+            margin-top: 5rem;
             font-weight: 300;
           }
 
           button.cta {
-            margin-top: 3rem;
+            margin-top: 5rem;
           }
 
         }
@@ -117,7 +118,7 @@
       z-index: 4;
 
         nav {
-          text-align: center;
+          text-align: right;
           height: 7.5rem;
           line-height: 7.5rem;
 
@@ -125,6 +126,7 @@
             display: inline-block;
             height: 7.5rem;
             line-height: 7.5rem;
+            width: 100%;
 
             li {
               display: inline-block;
@@ -134,7 +136,9 @@
               width: 12rem;
               line-height: 7.5rem;
               vertical-align: top;
-              margin: 0rem 2rem;
+              margin: 0rem;
+              margin-right: 1rem;
+              text-align: center;
 
               a {
                 display: inline;
@@ -151,6 +155,11 @@
               &.logo {
                 height: 3rem;
                 vertical-align: middle;
+                float: left;
+                transform: translateY(-50%);
+                top: 50%;
+                position: relative;
+                margin-left: 1rem;
 
                 a {
                   display: inline-block;
@@ -195,12 +204,13 @@
 
       .lineDown {
         position: absolute;
-        width: 1px;
+        width: 2px;
+        border-right:1px solid $white;
         background: $black;
         height: 40rem;
         left: 50%;
         margin-left: -50rem;
-        bottom: -10rem;
+        bottom: -40rem;
       }
 
       .image1, .image2 {
@@ -243,7 +253,6 @@
 
         h2 {
           @include TitleFont();
-          line-height: 200%;
           font-size: 2.8rem;
         }
         .textSpace {
@@ -262,30 +271,40 @@
 
 
     &[data-name="nextgen"] {
-      background: $lightgray;
+      background: $white;
       color: $black;
       height: 130rem;
       position: relative;
       z-index: 0;
 
+      .bg {
+        position: absolute;
+        width: 100%;
+        height: 70%;
+        background-color: $black;
+      }
+
       .content {
         width: 116rem;
         margin:auto;
         padding-top: 20rem;
+        position: relative;
 
         h2 {
           @include TitleFont();
-          line-height: 200%;
-          font-size: 2.2rem;
+          font-size: 2.8rem;
+          color: $white;
         }
 
         h2 ~ p {
           margin-top: 2rem;
+          color: $white;
         }
 
         > p {
           width: 80rem;
-          font-size: 1.6rem;
+          font-size: 1.7rem;
+          color: $white;
         }
 
 
@@ -295,6 +314,8 @@
           //common
           .vidCover {
             box-shadow: $boxShadow;
+            background: $lightgray;
+            border: 1px solid #eee;
           }
 
           .title {
@@ -366,13 +387,16 @@
 
                   &.current {
                     display: block;
+
+                    &:first-child {
+                      color: $white;
+                    }
                   }
 
                   .vidCover {
                     width: 36rem;
                     height: 24rem;
                     box-shadow: none;
-                    border: 1px solid #CCC;
                   }
 
                   .description {
@@ -386,72 +410,8 @@
       }
     }
 
-    &[data-name="flexiblelearning"] {
-      height: 78rem;
-      background: $black;
-      color: $white;
-      text-align: center;
-
-      .content {
-        width: 116rem;
-        margin:auto;
-        padding-top: 16rem;
-
-        h2 {
-          @include TitleFont();
-          line-height: 200%;
-          font-size: 2.2rem;
-        }
-
-        .thirds {
-          text-align: left;
-          margin-top: 7rem;
-          position: relative;
-
-          .col {
-            font-size: 1.6rem;
-            padding-left: 5rem;
-            padding-right: 5rem;
-
-            h4.title {
-              font-size: 2.3rem;
-              text-transform: uppercase;
-              letter-spacing: 1px;
-              line-height: 120%;
-            }
-
-            .vline {
-              display: inline-block;
-              float: left;
-              width: 3px;
-              background: $gray;
-              height: 6rem;
-              vertical-align: top;
-              margin-top: 3.5rem;
-
-            }
-
-            p.description {
-              float: right;
-              line-height: 150%;
-              display: inline-block;
-              width: calc(100% - 2rem);
-              vertical-align: top;
-              margin-top: 3rem;
-              font-size: 1.6rem;
-            }
-
-          }
-        }
-      }
-
-      button.cta {
-        margin-top: 8rem;
-      }
-    }
-
     &[data-name="newthinking"] {
-      height: 140rem;
+      height: auto;
       background: $white;
       color: $black;
       text-align: left;
@@ -459,18 +419,20 @@
       .content {
         width: 116rem;
         margin:auto;
-        padding-top: 20rem;
+        padding-top: 15rem;
+        padding-bottom: 15rem;
 
         h2 {
           @include TitleFont();
-          line-height: 200%;
-          font-size: 2.2rem;
+          line-height: 150%;
+          font-size: 2.8rem;
         }
 
         .halves {
 
           .linkSlider {
             display: inline-block;
+            position: relative;
 
             ul li {
               .coverImg {
@@ -507,7 +469,10 @@
               }
 
               &.next {
-                display: none;
+                .coverImg {
+                    box-shadow: none;
+                    background: $lightgray;
+                }
               }
             }
           }
@@ -515,6 +480,19 @@
           //left
           .col:first-child {
             padding-right: 4rem;
+
+            .linkSlider {
+              ul {
+                li {
+                  &.next {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 60rem;
+                  }
+                }
+              }
+            }
           }
 
           //right
@@ -532,12 +510,114 @@
             }
 
             .linkSlider {
-              margin-top: 11rem;
+              margin-top: 5rem;
+
+              ul {
+                li {
+                  &.next {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 60rem;
+                  }
+                }
+              }
             }
           }
 
 
         }
+      }
+    }
+
+    &[data-name="flexiblelearning"] {
+      height: auto;
+      background: $white;
+      color: $black;
+      text-align: center;
+      position: relative;
+
+      .bg {
+        position: absolute;
+        width: 100%;
+        height: 61rem;
+        top: 45rem;
+        background-color: $lightgray;
+      }
+
+      .content {
+        width: 116rem;
+        margin:auto;
+        padding-top: 15rem;
+        padding-bottom: 15rem;
+
+        h2 {
+          @include TitleFont();
+          line-height: 150%;
+          font-size: 2.8rem;
+        }
+
+
+        h2 ~ p {
+          font-size: 1.7rem;
+          margin-top: 3rem;
+          margin-bottom: 10rem;
+        }
+
+        .halves {
+          text-align: left;
+          margin-top: 7rem;
+          position: relative;
+
+          .col {
+            font-size: 1.6rem;
+            padding-left: 5rem;
+            padding-right: 5rem;
+            margin-bottom: 5rem;
+
+            .box {
+              box-shadow: $boxShadow;
+              margin-top: 5rem;
+              background: $white;
+              padding: 7rem 5rem;
+
+              &:first-child {
+                margin-top: 10rem;
+              }
+
+              h4.title {
+                font-size: 2.3rem;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                line-height: 120%;
+              }
+
+              p.description {
+                line-height: 150%;
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 3rem;
+                font-size: 1.6rem;
+              }
+            }
+          }
+        }
+      }
+
+      button.cta {
+        margin-top: 8rem;
+      }
+
+      .lineDown {
+        position: absolute;
+        width: 2px;
+        border-right:1px solid $white;
+        background: $black;
+        height: 40rem;
+        left: 50%;
+        margin-left: 70rem;
+        bottom: -140rem;
+        z-index: 3;
       }
     }
 
@@ -552,7 +632,7 @@
         width: 100%;
         height: 100%;
         background-size: cover;
-        background-image: $preheaderbg;
+        background-image: $collectionbg;
         background-position: 50% 50%;
       }
 
@@ -570,19 +650,19 @@
 
           h2 {
             @include TitleFont();
-            line-height: 200%;
+            line-height: 100%;
             font-size: 2.2rem;
           }
 
           button.cta {
-            margin-top: 2rem;
+            margin-top: 5rem;
           }
         }
 
       }
     }
     &[data-name="choosemonash"] {
-      height: 60rem;
+      height: auto;
       background: $white;
       color: $black;
       text-align: center;
@@ -590,7 +670,8 @@
       .content {
         width: 116rem;
         margin:auto;
-        padding-top: 10rem;
+        padding-top: 15rem;
+        padding-bottom: 15rem;
 
         h2 {
           @include TitleFont();
@@ -610,31 +691,34 @@
             padding-left: 4rem;
             padding-right: 4rem;
 
-            h3 {
-              margin-top: 3rem;
-              font-size: 2rem;
-              text-transform: uppercase;
+            .image { //container
+              width: 100%;
+              height: 40rem;
+
+              .img {
+                width: 100%;
+                height: 36rem;
+                box-shadow: $boxShadow;
+              }
             }
 
-            .vline {
-              display: inline-block;
-              float: left;
-              width: 3px;
-              background: $gray;
-              height: 6rem;
-              vertical-align: top;
-              margin-top: 3.5rem;
+            .quality {
+              padding: 0rem 3rem;
+              height: 40rem;
 
-            }
+              h3 {
+                margin-top: 3rem;
+                font-size: 2.5rem;
+                text-transform: uppercase;
+              }
 
-            p.description {
-              float: right;
-              line-height: 150%;
-              display: inline-block;
-              width: calc(100% - 3rem);
-              vertical-align: top;
-              margin-top: 3rem;
-              font-size: 1.6rem;
+              p.description {
+                line-height: 150%;
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 3rem;
+                font-size: 1.6rem;
+              }
             }
           }
 
@@ -650,35 +734,172 @@
         }
       }
     }
-    &[data-name="stats"] {
-      height: 42rem;
-      background: $black;
-      color: $white;
-      text-align: center;
-    }
-    &[data-name="facts"] {
-      height: 96rem;
-      background: $white;
-      color: $black;
-      text-align: center;
-    }
+
     &[data-name="makeithappen"] {
+      position: relative;
       height: 40rem;
-      background: $gray;
-      color: $white;
-      text-align: center;
+      z-index: 0;
+      background: $black;
+
+      .bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-image: $makeithappenbg;
+        background-position: 50% 50%;
+        opacity: 0.3;
+      }
+
+      .overlay {
+        color: #FFF;
+        position: relative;
+        text-align: center;
+        height: 100%;
+
+
+        .content {
+          width: 116rem;
+          margin:auto;
+          padding-top: 10rem;
+
+          h2 {
+            @include TitleFont();
+            font-size: 2.2rem;
+            margin-bottom: 0rem;
+          }
+
+          p {
+            max-width: 64rem;
+            display: block;
+            margin: auto;
+            margin-top: 3rem;
+          }
+
+          button.cta {
+            margin-top: 3rem;
+          }
+        }
+
+      }
     }
     &[data-name="contact"] {
       height: 13rem;
-      background: $lightgray;
-      color: $black;
+      background: $black;
+      color: $white;
       text-align: center;
+      border-top: 1px solid $lightgray;
+      border-bottom: 1px solid $lightgray;
+
+      .content {
+        width: 100%;
+        max-width: 120rem;
+        margin: auto;
+
+        .halves {
+          .col {
+            height: 100%;
+
+            &:first-child {
+              border-right: 1px solid $lightgray;
+            }
+
+            h2 {
+              @include TitleFont();
+              font-size: 2.2rem;
+              margin-bottom: 0rem;
+              margin-top: 3rem;
+            }
+
+            span {
+              display: block;
+              margin-top: 2rem;
+              font-size: 1.7rem;
+              font-weight: 300;
+            }
+          }
+        }
+      }
     }
+
     &[data-name="footer"] {
       height: 7.5rem;
       background: $black;
       color: $white;
       text-align: center;
+      line-height: 7.5rem;
+
+      .content {
+        .attr {
+          float: left;
+          margin-left: 3rem;
+
+          span {
+            font-size: 1.4rem;
+            font-weight: 300;
+          }
+        }
+
+        .social {
+          float: right;
+          margin-right: 3rem;
+
+          ul {
+            li {
+              float: right;
+              width: 5rem;
+              height: 3rem;
+              display: inline-block;
+              vertical-align: middle;
+              margin-top: 2rem;
+              @include Transition(300ms);
+
+              .icon {
+                width: 5rem;
+                height: 3rem;
+                background-repeat: no-repeat !important;
+              }
+
+              &:hover {
+                opacity: 0.6;
+              }
+
+              &.yt {
+                a {
+                  .icon {
+                    background: $ytIcon;
+                  }
+                }
+              }
+
+              &.tt {
+                a {
+                  .icon {
+                    background: $ttIcon;
+                  }
+                }
+              }
+
+              &.fb {
+                a {
+                  .icon {
+                    background: $fbIcon;
+                  }
+                }
+              }
+
+              &.insta {
+                a {
+                  .icon {
+                    background: $instaIcon;
+                  }
+                }
+              }
+
+            }
+          }
+        }
+      }
     }
   }
 }
