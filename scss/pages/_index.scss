@@ -294,15 +294,16 @@
           @include TitleFont();
           font-size: 2.8rem;
           color: $white;
+          text-align: center;
         }
 
         h2 ~ p {
           margin-top: 2rem;
           color: $white;
+          text-align: center;
         }
 
         > p {
-          width: 80rem;
           font-size: 1.7rem;
           color: $white;
         }
