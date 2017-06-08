@@ -308,6 +308,122 @@
           color: $white;
         }
 
+        .carousel__controls {
+          display: none;
+        }
+        .videoCarousel {
+
+          height: $carouselHeight;
+          width: $carouselWidth;
+          overflow: hidden;
+          position: relative;
+          text-align: center;
+
+          // makes radio buttons disappear
+          & .carousel__activator {
+            display: none;
+          }
+
+
+
+          @for $i from 1 through $numOfSlides {
+            // creates these classes for each image/video by looping
+
+
+
+            .carousel__activator:nth-of-type(#{$i}) {
+
+              // when arrow (carousel__controls) are clicked, changes
+              // id of carousel__activator and sets 'checked' class
+              // and moves the slide
+              &:checked ~ .carousel__track {
+                  transform: translateX(-(($i - 1) * 100%));
+              }
+
+              // styles for the slide itself - should put in transitions
+              &:checked ~ .carousel__slide:nth-of-type(#{$i}) {
+                  top: 0;
+                  left: 0;
+                  right: 0;
+              }
+
+              &:checked ~ .carousel__controls:nth-of-type(#{$i}) {
+                  display: block;
+              }
+            }
+
+              // sets the slides' original place along x-axis
+              .carousel__track .carousel__slide:nth-of-type(#{$i}) {
+                transform: translateX(($i - 1)*100%);
+              }
+          }
+
+          .carousel__control {
+            height: 30px;
+            width: 30px;
+            margin-top: -15px;
+            top: 50%;
+            position: absolute;
+            display: block;
+            cursor: pointer;
+            border-width: 5px 5px 0 0;
+            border-style: solid;
+            border-color: #fafafa;
+            opacity: 0.35;
+            outline: 0;
+            z-index: 3;
+          }
+          .carousel__control:hover {
+            opacity: 1;
+          }
+          .carousel__control--forward {
+            left: 10px;
+            transform: rotate(-135deg);
+          }
+          .carousel__control--backward {
+            right: 10px;
+            transform: rotate(45deg);
+          }
+          .carousel__track {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 0;
+            margin: 0;
+
+          }
+
+          .carousel__track .carousel__slide {
+            display: block;
+            top: 0;
+            left: 0;
+            right: 0;
+          }
+
+          .carousel__slide {
+            height: 100%;
+            position: absolute;
+          }
+
+          & .image1 {
+            content: $image1;
+          }
+
+          & .image2 {
+            content: $image2;
+          }
+
+          & .image3 {
+            content: $image1;
+          }
+
+          & .image4 {
+            content: $image2;
+          }
+
+        }
 
         .videoExpose {
           margin-top: 4rem;

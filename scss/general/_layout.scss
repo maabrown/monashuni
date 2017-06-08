@@ -27,3 +27,21 @@ html, body {
     display: inline-block;
   }
 }
+
+.eighteenths {
+  display: block;
+  width: 100%;
+  .col-3 {
+    float: left;
+    width: 16.65%;
+    display: inline-block;
+    padding-right: 2%;
+  }
+
+  .col-6 {
+    float: left;
+    width: 33.33%;
+    display: inline-block;
+    padding-right: 2%;
+  }
+}
