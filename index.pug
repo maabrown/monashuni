@@ -94,10 +94,23 @@
                     label.carousel__control.carousel__control--forward(for= `${(idx == panels.length - 1) ? panels[0] : panels[idx + 1]}`)
                 
                 .carousel__track
-                  each val in panels
-                    .carousel__slide
-                      img(class=val)
-          
+                  //- each val in panels
+                  //-   .carousel__slide
+                  //-     img(class=val)
+                
+                  .carousel__slide
+                      img(class='image1')
+                      p.description Beyonce was born on September 4, 1981.
+                      
+                  .carousel__slide
+                      img(class='image2')
+                      p.description Beyonce is worth over 300 million dollars.
+                      
+                  .carousel__slide
+                      img(class='image3')
+                  
+                  .carousel__slide 
+                      img(class='image4')
           
           .videoExpose
             .mainVid
