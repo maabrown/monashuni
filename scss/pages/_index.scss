@@ -315,8 +315,12 @@
 
           height: $carouselHeight;
           width: $carouselWidth;
-          overflow: hidden;
+          // don't want overflow hidden because we want slides to show
+          // the entire length of the page
+          // overflow: hidden;
+          // you want the carousel relative to its normal position
           position: relative;
+          // centers the slides within the videoCarousel div
           text-align: center;
 
           // makes radio buttons disappear
@@ -336,11 +340,13 @@
               // when arrow (carousel__controls) are clicked, changes
               // id of carousel__activator and sets 'checked' class
               // and moves the slide
+              // percentage is based on the size of the element - not the
+              // carousel track, so having the same size image matters
               &:checked ~ .carousel__track {
-                  transform: translateX(-(($i - 1) * 100%));
+                  transform: translateX(-(($i - 1) * $percentageMove));
               }
 
-              // styles for the slide itself - should put in transitions
+              // styles for the slide itself - need to put in transition/animation
               &:checked ~ .carousel__slide:nth-of-type(#{$i}) {
                   top: 0;
                   left: 0;
@@ -354,7 +360,7 @@
 
               // sets the slides' original place along x-axis
               .carousel__track .carousel__slide:nth-of-type(#{$i}) {
-                transform: translateX(($i - 1)*100%);
+                transform: translateX(($i - 1) *$percentageMove);
               }
           }
 
@@ -392,7 +398,6 @@
             left: 0;
             padding: 0;
             margin: 0;
-
           }
 
           .carousel__track .carousel__slide {
