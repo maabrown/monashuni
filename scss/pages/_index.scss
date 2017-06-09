@@ -273,7 +273,7 @@
     &[data-name="nextgen"] {
       background: $white;
       color: $black;
-      height: 130rem;
+      height: 90rem;
       position: relative;
       z-index: 0;
 
@@ -359,10 +359,13 @@
 
               &:checked ~ .carousel__track .carousel__slide:nth-of-type(#{$i}) {
 
+                h2 {
+                  color: black;
+                }
+
                 p {
                   visibility: visible;
-                  color: white;
-                  padding-top: 4rem;
+                  color: black;
                 }
 
                 .img-wrapper {
@@ -373,10 +376,13 @@
               // adds styling to the carousel item to the right
               &:checked ~ .carousel__track .carousel__slide:nth-of-type(#{$i + 1}) {
 
+                h2 {
+                  color: black;
+                }
+
                 p {
                   visibility: visible;
-                  color: white;
-                  padding-top: 4rem;
+                  color: black;
                 }
 
                 .img-wrapper {
@@ -392,7 +398,7 @@
                       visibility: hidden;
                     }
                   }
-                  @if $i == $numOfSlides {
+                  @if $i == ($numOfSlides - 1) {
                     .carousel__control--forward {
                       visibility: hidden;
                     }
@@ -429,11 +435,11 @@
           //   opacity: 1;
           // }
 
-          .carousel__control--forward {
+          .carousel__control--backward {
             left: 12%;
             transform: rotate(-135deg);
           }
-          .carousel__control--backward {
+          .carousel__control--forward {
             right: 7%;
             transform: rotate(45deg);
           }
@@ -462,6 +468,23 @@
 
             p {
               visibility: hidden;
+            }
+
+            & .videoDescription {
+              width: $carouselImageWidth;
+              padding-top: 2rem;
+
+              h2 {
+                text-align: left;
+              }
+
+              p {
+                text-align: left;
+                padding-left: 2rem;
+                border-left-color: black;
+                border-left-width: thin;
+                border-left-style: solid;
+              }
             }
 
           }
@@ -606,6 +629,263 @@
     }
 
     &[data-name="newthinking"] {
+      background: $white;
+      color: $black;
+      height: 90rem;
+      position: relative;
+      z-index: 0;
+
+      .bg {
+        position: absolute;
+        width: 100%;
+        height: 70%;
+        background-color: $black;
+      }
+
+      .content {
+        width: 116rem;
+        margin:auto;
+        padding-top: 20rem;
+        position: relative;
+
+        h2 {
+          @include TitleFont();
+          font-size: 2.8rem;
+          color: $white;
+          text-align: center;
+        }
+
+        h2 ~ p {
+          margin-top: 2rem;
+          color: $white;
+          text-align: center;
+        }
+
+        > p {
+          font-size: 1.7rem;
+          color: $white;
+        }
+
+
+
+        .videoCarousel {
+
+          .carousel__controls {
+            display: none;
+          }
+
+          height: $carouselHeight;
+          width: $carouselWidth;
+          // don't want overflow hidden because we want slides to show
+          // the entire length of the page
+          // overflow: hidden;
+          // you want the carousel relative to its normal position
+          position: relative;
+          // centers the slides within the videoCarousel div
+          // text-align: center;
+          margin-top: 5rem;
+
+          // makes radio buttons disappear
+          & .carousel__activator {
+            display: none;
+          }
+
+
+
+          @for $i from 1 through $numOfSlides {
+            // creates these classes for each image/video by looping
+
+
+
+            .carousel__activator:nth-of-type(#{$i}) {
+
+              // when arrow (carousel__controls) are clicked, changes
+              // id of carousel__activator and sets 'checked' class
+              // and moves the slide
+              // percentage is based on the size of the element - not the
+              // carousel track, so having the same size image matters
+              &:checked ~ .carousel__track {
+                  transform: translateX(-(($i - 1) * $percentageMove) + 10%);
+              }
+
+              // styles for the slide itself - need to put in transition/animation
+              &:checked ~ .carousel__slide:nth-of-type(#{$i}) {
+                  top: 0;
+                  left: 0;
+                  right: 0;
+              }
+
+              &:checked ~ .carousel__track .carousel__slide:nth-of-type(#{$i}) {
+
+                h2 {
+                  color: black;
+                }
+
+                p {
+                  visibility: visible;
+                  color: black;
+                }
+
+                .img-wrapper {
+                  visibility: hidden;
+                }
+              }
+
+              // adds styling to the carousel item to the right
+              &:checked ~ .carousel__track .carousel__slide:nth-of-type(#{$i + 1}) {
+
+                h2 {
+                  color: black;
+                }
+
+                p {
+                  visibility: visible;
+                  color: black;
+                }
+
+                .img-wrapper {
+                  visibility: hidden;
+                }
+              }
+
+              &:checked ~ .carousel__controls:nth-of-type(#{$i}) {
+                  display: block;
+
+                  @if $i == 1 {
+                    .carousel__control--backward {
+                      visibility: hidden;
+                    }
+                  }
+                  @if $i == ($numOfSlides - 1) {
+                    .carousel__control--forward {
+                      visibility: hidden;
+                    }
+                  }
+              }
+
+            }
+
+              // sets the slides' original place along x-axis
+              .carousel__track .carousel__slide:nth-of-type(#{$i}) {
+                transform: translateX(($i - 1) *$percentageMove + 10%);
+              }
+
+          }
+
+          .carousel__control {
+            height: 30px;
+            width: 30px;
+            margin-top: -15px;
+            top: 24%;
+            position: absolute;
+            display: block;
+            cursor: pointer;
+            border-width: 5px 5px 0 0;
+            border-style: solid;
+            border-color: black;
+            // opacity: 0.35;
+            outline: 0;
+            z-index: 3;
+          }
+
+          // i don't know if we want this hover capability
+          // .carousel__control:hover {
+          //   opacity: 1;
+          // }
+
+          .carousel__control--backward {
+            left: 12%;
+            transform: rotate(-135deg);
+          }
+          .carousel__control--forward {
+            right: 7%;
+            transform: rotate(45deg);
+          }
+          .carousel__track {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            padding: 0;
+            margin: 0;
+            // smoothes the movement between slides
+            transition: transform .5s ease 0s;
+          }
+
+          .carousel__track .carousel__slide {
+            display: block;
+            top: 0;
+            left: 0;
+            right: 0;
+          }
+
+          .carousel__slide {
+            height: 100%;
+            position: absolute;
+
+            p {
+              visibility: hidden;
+            }
+
+            & .videoDescription {
+              width: $carouselImageWidth;
+              padding-top: 2rem;
+
+              h2 {
+                text-align: left;
+              }
+
+              p {
+                text-align: left;
+                padding-left: 2rem;
+                border-left-color: black;
+                border-left-width: thin;
+                border-left-style: solid;
+              }
+            }
+
+          }
+
+          & .image1 {
+            content: $image1;
+            height: $carouselImageHeight;
+            width: $carouselImageWidth;
+          }
+
+          & .image2 {
+            content: $image2;
+            height: $carouselImageHeight;
+            width: $carouselImageWidth;
+          }
+
+          & .image3 {
+            content: $image1;;
+            height: $carouselImageHeight;
+            width: $carouselImageWidth;
+            z-index: -1;
+          }
+
+
+          & .image4 {
+            content: $image2;
+            height: $carouselImageHeight;
+            width: $carouselImageWidth;
+          }
+
+          & .img-wrapper {
+            background-color: white;
+            height: $carouselImageHeight;
+            width: $carouselImageWidth;
+            display: inline;
+            z-index: 2;
+            opacity: 0.8;
+            position: absolute;
+          }
+        }
+      }
+
+    // &[data-name="newthinking"] {
       height: auto;
       background: $white;
       color: $black;

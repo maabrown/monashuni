@@ -74,13 +74,6 @@
             br
             | Sed quis porttitor justo, ut dignissim nunc.
           
-          //- Original implementation of images
-          //- .videoCarousel
-          //-   .eighteenths
-          //-     .image1.col-3
-          //-     .image2.col-6
-          //-     .image1.col-6
-          //-     .image1.col-3
           .videoCarousel
             .carousel-container
               .carousel.my-carousel.carousel--translate
@@ -101,22 +94,37 @@
                   .carousel__slide
                       .img-wrapper
                       img(class='image1')
-                      p.description Beyonce was born on September 4, 1981.
+
+                      div.videoDescription
+                        h2 Beyonce
+                        p Beyonce was born on September 4, 1981.
                       
                   .carousel__slide
                       .img-wrapper
                       img(class='image2')
-                      p.description Beyonce is worth over 300 million dollars.
+
+                      div.videoDescription
+                        h2 Beyonce
+                        p Beyonce is worth over 300 million dollars.
                       
                   .carousel__slide
                       .img-wrapper
                       img(class='image3')
+
+                      div.videoDescription
+                        h2 Beyonce
+                        p Beyonce has 22 Grammy awards and has been nominated 62 times.
                   
                   .carousel__slide 
                       .img-wrapper
                       img(class='image4')
+
+                      div.videoDescription
+                        h2 Beyonce
+                        p She has produced 6 albums as a solo artist.
+
           
-          .videoExpose
+          //- .videoExpose
             .mainVid
               ul
                 li.current
@@ -158,9 +166,70 @@
                     p.description Lorem ipsum dolor sit amet, consecte ntur 
                       | adipisc ing elit. Nam nec gravida justo. Sed quis porttitor 
                       | justo, ut digniss.
-              
-            
+
       .section(data-name="newthinking")
+        .bg(data-parallax="-20")
+        .content
+          h2 New Problems, New Thinking
+          p Some rocked the boat. Others changed the game but they all 
+            | questioned the answers. 
+            br
+            | Meet and be inspired by 10 incredible Monash people who
+            | are creating the extraordinary -  
+            br
+            | here and around the world.
+          
+          .videoCarousel
+            .carousel-container
+              .carousel.my-carousel.carousel--translate
+                - var panels = ['image1', 'image2', 'image3', 'image4']
+                each val in panels
+                  input.carousel__activator(type="radio", name="activator", id=val, checked=(val == panels[2]))
+                
+                each val, idx in panels
+                  .carousel__controls
+                    label.carousel__control.carousel__control--backward(for=`${(idx == 0) ? panels[panels.length - 1] : panels[idx - 1]}`)
+                    label.carousel__control.carousel__control--forward(for= `${(idx == panels.length - 1) ? panels[0] : panels[idx + 1]}`)
+                
+                .carousel__track
+                  //- each val in panels
+                  //-   .carousel__slide
+                  //-     img(class=val)
+                
+                  .carousel__slide
+                      .img-wrapper
+                      img(class='image1')
+
+                      div.videoDescription
+                        h2 Beyonce
+                        p Beyonce was born on September 4, 1981.
+                      
+                  .carousel__slide
+                      .img-wrapper
+                      img(class='image2')
+
+                      div.videoDescription
+                        h2 Beyonce
+                        p Beyonce is worth over 300 million dollars.
+                      
+                  .carousel__slide
+                      .img-wrapper
+                      img(class='image3')
+
+                      div.videoDescription
+                        h2 Beyonce
+                        p Beyonce has 22 Grammy awards and has been nominated 62 times.
+                  
+                  .carousel__slide 
+                      .img-wrapper
+                      img(class='image4')
+
+                      div.videoDescription
+                        h2 Beyonce
+                        p She has produced 6 albums as a solo artist.
+
+      
+      //- .section(data-name="newthinking")
         .content
           .halves
             .col
