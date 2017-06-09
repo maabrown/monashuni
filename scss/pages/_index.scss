@@ -367,6 +367,17 @@
                 }
               }
 
+              // adds styling to the carousel item to the right
+              &:checked ~ .carousel__track .carousel__slide:nth-of-type(#{$i + 1}) {
+                filter: grayscale(0%);
+
+                p {
+                  visibility: visible;
+                  color: white;
+                  padding-top: 4rem;
+                }
+              }
+
               &:checked ~ .carousel__controls:nth-of-type(#{$i}) {
                   display: block;
 
