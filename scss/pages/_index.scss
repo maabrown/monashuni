@@ -109,8 +109,6 @@
       }
     }
 
-
-
     &.mainHeader {
       background: $black;
       color: #FFF;
@@ -268,7 +266,6 @@
         }
       }
     }
-
 
     &[data-name="nextgen"] {
       background: $white;
@@ -654,13 +651,13 @@
 
         h2 ~ p {
           margin-top: 2rem;
-          color: $white;
+          color: $black;
           text-align: center;
         }
 
         > p {
           font-size: 1.7rem;
-          color: $white;
+          color: $black;
         }
 
 
@@ -881,129 +878,9 @@
       }
     }
 
-    // &[data-name="newthinking"] {
-    //   height: auto;
-    //   background: $white;
-    //   color: $black;
-    //   text-align: left;
-    //
-    //   .content {
-    //     width: 116rem;
-    //     margin:auto;
-    //     padding-top: 15rem;
-    //     padding-bottom: 15rem;
-    //
-    //     h2 {
-    //       @include TitleFont();
-    //       line-height: 150%;
-    //       font-size: 2.8rem;
-    //     }
-    //
-    //     .halves {
-    //
-    //       .linkSlider {
-    //         display: inline-block;
-    //         position: relative;
-    //
-    //         ul li {
-    //           .coverImg {
-    //             width: 56rem;
-    //             height: 31rem;
-    //             box-shadow: $boxShadow;
-    //           }
-    //
-    //           .copy {
-    //             margin-top: 2rem;
-    //             width: 100%;
-    //
-    //             h5.name {
-    //               font-size: 2.2rem;
-    //               text-transform: uppercase;
-    //             }
-    //
-    //             span.creds {
-    //               font-size: 1.8rem;
-    //               font-weight: 300;
-    //               margin-top: 1rem;
-    //               display: block;
-    //             }
-    //
-    //             p.description {
-    //               margin-top: 2rem;
-    //               font-size: 1.6rem;
-    //               width: 100%;
-    //             }
-    //
-    //             button.btn {
-    //               margin-top: 2rem;
-    //             }
-    //           }
-    //
-    //           &.next {
-    //             .coverImg {
-    //                 box-shadow: none;
-    //                 background: $lightgray;
-    //             }
-    //           }
-    //         }
-    //       }
-    //
-    //       //left
-    //       .col:first-child {
-    //         padding-right: 4rem;
-    //
-    //         .linkSlider {
-    //           ul {
-    //             li {
-    //               &.next {
-    //                 display: block;
-    //                 position: absolute;
-    //                 top: 0;
-    //                 right: 60rem;
-    //               }
-    //             }
-    //           }
-    //         }
-    //       }
-    //
-    //       //right
-    //       .col:last-child {
-    //         padding-left: 1rem;
-    //
-    //         .titleCopy {
-    //           width: 60rem;
-    //           padding-left: 3rem;
-    //
-    //           p {
-    //             margin-top: 2rem;
-    //             font-size: 1.6rem;
-    //           }
-    //         }
-    //
-    //         .linkSlider {
-    //           margin-top: 5rem;
-    //
-    //           ul {
-    //             li {
-    //               &.next {
-    //                 display: block;
-    //                 position: absolute;
-    //                 top: 0;
-    //                 left: 60rem;
-    //               }
-    //             }
-    //           }
-    //         }
-    //       }
-    //
-    //
-    //     }
-    //   }
-    // }
-
     &[data-name="flexiblelearning"] {
       height: auto;
-      background: $white;
+      background: $black;
       color: $black;
       text-align: center;
       position: relative;
@@ -1013,7 +890,6 @@
         width: 100%;
         height: 61rem;
         top: 45rem;
-        background-color: $lightgray;
       }
 
       .content {
@@ -1026,6 +902,7 @@
           @include TitleFont();
           line-height: 150%;
           font-size: 2.8rem;
+          color: $white;
         }
 
 
@@ -1033,6 +910,7 @@
           font-size: 1.7rem;
           margin-top: 3rem;
           margin-bottom: 10rem;
+          color: $white;
         }
 
         .halves {
@@ -1041,16 +919,56 @@
           position: relative;
 
           .col {
+
+            &.original-image {
+              background-image: $image1;
+              background-size: cover;
+            }
+
+            // use CSS to flip the image
+            &.flipped-image {
+              background-image: $image1;
+              background-size: cover;
+              transform: scale(-1,1);
+
+              // use CSS to flip the text back so reader can read it
+              & .box {
+                transform: scale(-1,1);
+              }
+            }
+
+            &.padding-left {
+              padding-left: 5rem;
+            }
+
+            &.padding-right {
+              padding-right: 5rem;
+            }
+
             font-size: 1.6rem;
-            padding-left: 5rem;
-            padding-right: 5rem;
             margin-bottom: 5rem;
 
             .box {
-              box-shadow: $boxShadow;
-              margin-top: 5rem;
-              background: $white;
+              // box-shadow: $boxShadow;
+              // margin-top: 5rem;
+              // background: $white;
               padding: 7rem 5rem;
+              color: white;
+              text-align: center;
+              // setting the height of box divs to even out the text size
+              height: 34rem;
+
+              &.border-right {
+                border-right-color: white;
+                border-right-width: thin;
+                border-right-style: solid;
+              }
+
+              &.border-bottom {
+                border-bottom-color: white;
+                border-bottom-width: thin;
+                border-bottom-style: solid;
+              }
 
               &:first-child {
                 margin-top: 10rem;
@@ -1076,7 +994,8 @@
       }
 
       button.cta {
-        margin-top: 8rem;
+        // margin-top: 8rem;
+        border-color: white;
       }
 
       .lineDown {

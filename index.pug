@@ -123,49 +123,6 @@
                         h2 Beyonce
                         p She has produced 6 albums as a solo artist.
 
-          
-          //- .videoExpose
-            .mainVid
-              ul
-                li.current
-                  .vidCover
-                  h4.title Question the Answers
-                  p.description Lorem ipsum dolor sit amet, consecte ntur 
-                    | adipisc ing elit. Nam nec gravida justo. Sed quis porttitor 
-                    | justo, ut digniss.
-                li
-                  .vidCover
-                  h4.title Question the Answers
-                  p.description Lorem ipsum dolor sit amet, consecte ntur 
-                  | adipisc ing elit. Nam nec gravida justo. Sed quis porttitor 
-                  | justo, ut digniss.
-            .sideScroll
-              .scrollContainer
-                ul
-                  li.current
-                    .vidCover
-                    h4.title Question the Answers
-                    p.description Lorem ipsum dolor sit amet, consecte ntur 
-                      | adipisc ing elit. Nam nec gravida justo. Sed quis porttitor 
-                      | justo, ut digniss.
-                  li.current
-                    .vidCover
-                    h4.title Question the Answers
-                    p.description Lorem ipsum dolor sit amet, consecte ntur 
-                      | adipisc ing elit. Nam nec gravida justo. Sed quis porttitor 
-                      | justo, ut digniss.
-                  li
-                    .vidCover
-                    h4.title Question the Answers
-                    p.description Lorem ipsum dolor sit amet, consecte ntur 
-                      | adipisc ing elit. Nam nec gravida justo. Sed quis porttitor 
-                      | justo, ut digniss.
-                  li
-                    .vidCover
-                    h4.title Question the Answers
-                    p.description Lorem ipsum dolor sit amet, consecte ntur 
-                      | adipisc ing elit. Nam nec gravida justo. Sed quis porttitor 
-                      | justo, ut digniss.
 
       .section(data-name="newthinking")
         .bg(data-parallax="-20")
@@ -228,87 +185,26 @@
                       div.videoDescription
                         h2 Beyonce
                         p She has produced 6 albums as a solo artist.
-
-      
-      //- .section(data-name="newthinking")
-        .content
-          .halves
-            .col
-              .linkSlider.linkSlider--left
-                ul
-                  li.current
-                    .coverImg
-                    .copy 
-                      h5.name Ben Kiernan
-                      span.creds Job title, Company
-                      p.description Lorem ipsum dolor sit amet, consectetur 
-                       | adipiscing elit. Nam nec gravida justo. Sed quis 
-                       | porttitor justo, ut dignissim nunc. Morbi vitae augue
-                       |  dignissim velit ornare rhoncus vitae sit amet leo.
-                       | Maecenas euismod libero ligula, ac fringilla risus.
-                       
-                  li.next
-                    .coverImg
-                    .copy 
-                      h5.name
-                      span.creds
-                      p.description
-            .col
-              .titleCopy
-                h2 New Problems, 
-                  br
-                  | New Thinking
-                p Some rocked the boat. Others changed the game. But they all
-                  br
-                  | questioned the answers. Meet and be inspired by 10 incredible
-                  br
-                  | Monash people who are creating the extraordinary - here and
-                  br
-                  | around the world.
-                 
-              .linkSlider.linkSlider--right
-                ul
-                  li.current
-                    .coverImg
-                    .copy 
-                      h5.name Ben Kiernan
-                      span.creds Job title, Company
-                      p.description Lorem ipsum dolor sit amet, consectetur 
-                       | adipiscing elit. Nam nec gravida justo. Sed quis 
-                       | porttitor justo, ut dignissim nunc. Morbi vitae augue
-                       |  dignissim velit ornare rhoncus vitae sit amet leo.
-                       | Maecenas euismod libero ligula, ac fringilla risus.
-                       
-                  li.next
-                    .coverImg
-                    .copy 
-                      h5.name
-                      span.creds
-                      p.description
-        .clear
-              
               
       .section(data-name="flexiblelearning")
         .bg
         .content
+          .title
+            h2 Study with Monash
+            p Wherever you're headed, you'll find a course at Monash that can get you there, <br>
+              | Our range of programs include:
           .halves
             //- left
-            .col
-              h2 Flexible
-                br
-                | Learning
-              p.description 
-                | Wherever you're headed, you'll find a course at Monash that can get  
-                | you there, Our range of programs include:
-                
-              .box
+            .col.original-image.padding-left
+
+              .box.border-right.border-bottom
                 h4.title Specialist Degrees
                 p.description 
                   | If you know what you want to do and are looking for a direct 
                   | route into a particular field or career, then a specialist 
                   | degree might be right for you.
 
-              .box
+              .box.border-right
                 h4.title Double Degrees
                 p.description 
                   | A Monash double degree lets you study towards two degrees 
@@ -319,11 +215,11 @@
                   | your progress to a higher level of qualification.
 
                   
-              button.cta.btn.btn--black Find a Course
+              //- 
             
             //- right
-            .col
-              .box
+            .col.flipped-image.padding-left
+              .box.border-bottom
                 h4.title Comprehensive Degrees
                 p.description 
                   | These courses offer a wide range of majors allowing you to 
@@ -336,8 +232,11 @@
                   | Our wide range of graduate degrees can help you advance your 
                   | career, qualify to practice in a profession or allow you to 
                   | expand your knowledge and skills into a new discipline.
-              
             .clear
+        
+          .button-div
+            button.cta.btn.btn--black Find a Course
+
         .lineDown(data-parallax="-4")
               
       .section(data-name="viewthecollection")
@@ -346,6 +245,7 @@
           .content
             h2 View the Collection
             button.cta.btn.btn--white View Now
+      
       .section(data-name="choosemonash")
         .bg
         .bg2
