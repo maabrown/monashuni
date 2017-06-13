@@ -1081,11 +1081,8 @@
           }
 
           &.grey-background {
-            background-color: #e8e8e8;
+            background-color: #f2f2f2;
           }
-
-
-
 
           .col {
             width: 50%;
@@ -1111,6 +1108,10 @@
 
             .g8-image {
               content: $experience;
+            }
+
+            .trendup-image {
+              content: $trendup;
             }
           }
 
@@ -1230,8 +1231,8 @@
     }
     &[data-name="contact"] {
       height: 13rem;
-      background: $black;
-      color: $white;
+      background: #e6e6e6;
+      color: $black;
       text-align: center;
       border-top: 1px solid $lightgray;
       border-bottom: 1px solid $lightgray;
