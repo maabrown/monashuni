@@ -1017,6 +1017,19 @@
       position: relative;
       height: 64rem;
       z-index: 0;
+      margin-top: 40rem;
+
+      .lineDown {
+        position: absolute;
+        width: 2px;
+        border-right:1px solid grey;
+        background: grey;
+        height: 40rem;
+        right: 15%;
+        margin-left: -50rem;
+        bottom: -47rem;
+        z-index: 1;
+      }
 
       .bg {
         position: absolute;
