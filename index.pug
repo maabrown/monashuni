@@ -79,7 +79,7 @@
               .carousel.my-carousel.carousel--translate
                 - var panels = ['image1', 'image2', 'image3', 'image4']
                 each val in panels
-                  input.carousel__activator(type="radio", name="activator", id=val, checked=(val == panels[2]))
+                  input.carousel__activator-gallery-one(type="radio", name="gallery-one-activator", id=val, checked=(val == panels[1]))
                 
                 each val, idx in panels
                   .carousel__controls
@@ -182,9 +182,10 @@
           .videoCarousel
             .carousel-container
               .carousel.my-carousel.carousel--translate
-                - var panels = ['image1', 'image2', 'image3', 'image4']
+                - var panels = ['image5', 'image6', 'image7', 'image8']
+                - var panels_length = panels.length + 4;
                 each val in panels
-                  input.carousel__activator(type="radio", name="activator", id=val, checked=(val == panels[2]))
+                  input.carousel__activator(type="radio", name="activator", id=(val), checked=(val == panels[2]))
                 
                 each val, idx in panels
                   .carousel__controls
@@ -198,7 +199,7 @@
                 
                   .carousel__slide
                       .img-wrapper
-                      img(class='image1')
+                      img(class='image5')
 
                       div.videoDescription
                         h2 Beyonce
@@ -206,7 +207,7 @@
                       
                   .carousel__slide
                       .img-wrapper
-                      img(class='image2')
+                      img(class='image6')
 
                       div.videoDescription
                         h2 Beyonce
@@ -214,7 +215,7 @@
                       
                   .carousel__slide
                       .img-wrapper
-                      img(class='image3')
+                      img(class='image7')
 
                       div.videoDescription
                         h2 Beyonce
@@ -222,7 +223,7 @@
                   
                   .carousel__slide 
                       .img-wrapper
-                      img(class='image4')
+                      img(class='image8')
 
                       div.videoDescription
                         h2 Beyonce

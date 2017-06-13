@@ -310,7 +310,7 @@
 
 
 
-        .videoCarousel {
+        > .videoCarousel {
 
           .carousel__controls {
             display: none;
@@ -328,7 +328,7 @@
           margin-top: 5rem;
 
           // makes radio buttons disappear
-          & .carousel__activator {
+          & .carousel__activator-gallery-one {
             display: none;
           }
 
@@ -337,9 +337,7 @@
           @for $i from 1 through $numOfSlides {
             // creates these classes for each image/video by looping
 
-
-
-            .carousel__activator:nth-of-type(#{$i}) {
+            .carousel__activator-gallery-one:nth-of-type(#{$i}) {
 
               // when arrow (carousel__controls) are clicked, changes
               // id of carousel__activator and sets 'checked' class
@@ -639,7 +637,6 @@
         position: absolute;
         width: 100%;
         height: 70%;
-        background-color: $black;
       }
 
       .content {
@@ -651,7 +648,7 @@
         h2 {
           @include TitleFont();
           font-size: 2.8rem;
-          color: $white;
+          color: $black;
           text-align: center;
         }
 
@@ -694,8 +691,6 @@
 
           @for $i from 1 through $numOfSlides {
             // creates these classes for each image/video by looping
-
-
 
             .carousel__activator:nth-of-type(#{$i}) {
 
@@ -847,19 +842,19 @@
 
           }
 
-          & .image1 {
+          & .image5 {
             content: $image1;
             height: $carouselImageHeight;
             width: $carouselImageWidth;
           }
 
-          & .image2 {
+          & .image6 {
             content: $image2;
             height: $carouselImageHeight;
             width: $carouselImageWidth;
           }
 
-          & .image3 {
+          & .image7 {
             content: $image1;;
             height: $carouselImageHeight;
             width: $carouselImageWidth;
@@ -867,7 +862,7 @@
           }
 
 
-          & .image4 {
+          & .image8 {
             content: $image2;
             height: $carouselImageHeight;
             width: $carouselImageWidth;
@@ -884,126 +879,127 @@
           }
         }
       }
+    }
 
     // &[data-name="newthinking"] {
-      height: auto;
-      background: $white;
-      color: $black;
-      text-align: left;
-
-      .content {
-        width: 116rem;
-        margin:auto;
-        padding-top: 15rem;
-        padding-bottom: 15rem;
-
-        h2 {
-          @include TitleFont();
-          line-height: 150%;
-          font-size: 2.8rem;
-        }
-
-        .halves {
-
-          .linkSlider {
-            display: inline-block;
-            position: relative;
-
-            ul li {
-              .coverImg {
-                width: 56rem;
-                height: 31rem;
-                box-shadow: $boxShadow;
-              }
-
-              .copy {
-                margin-top: 2rem;
-                width: 100%;
-
-                h5.name {
-                  font-size: 2.2rem;
-                  text-transform: uppercase;
-                }
-
-                span.creds {
-                  font-size: 1.8rem;
-                  font-weight: 300;
-                  margin-top: 1rem;
-                  display: block;
-                }
-
-                p.description {
-                  margin-top: 2rem;
-                  font-size: 1.6rem;
-                  width: 100%;
-                }
-
-                button.btn {
-                  margin-top: 2rem;
-                }
-              }
-
-              &.next {
-                .coverImg {
-                    box-shadow: none;
-                    background: $lightgray;
-                }
-              }
-            }
-          }
-
-          //left
-          .col:first-child {
-            padding-right: 4rem;
-
-            .linkSlider {
-              ul {
-                li {
-                  &.next {
-                    display: block;
-                    position: absolute;
-                    top: 0;
-                    right: 60rem;
-                  }
-                }
-              }
-            }
-          }
-
-          //right
-          .col:last-child {
-            padding-left: 1rem;
-
-            .titleCopy {
-              width: 60rem;
-              padding-left: 3rem;
-
-              p {
-                margin-top: 2rem;
-                font-size: 1.6rem;
-              }
-            }
-
-            .linkSlider {
-              margin-top: 5rem;
-
-              ul {
-                li {
-                  &.next {
-                    display: block;
-                    position: absolute;
-                    top: 0;
-                    left: 60rem;
-                  }
-                }
-              }
-            }
-          }
-
-
-        }
-      }
-    }
+    //   height: auto;
+    //   background: $white;
+    //   color: $black;
+    //   text-align: left;
+    //
+    //   .content {
+    //     width: 116rem;
+    //     margin:auto;
+    //     padding-top: 15rem;
+    //     padding-bottom: 15rem;
+    //
+    //     h2 {
+    //       @include TitleFont();
+    //       line-height: 150%;
+    //       font-size: 2.8rem;
+    //     }
+    //
+    //     .halves {
+    //
+    //       .linkSlider {
+    //         display: inline-block;
+    //         position: relative;
+    //
+    //         ul li {
+    //           .coverImg {
+    //             width: 56rem;
+    //             height: 31rem;
+    //             box-shadow: $boxShadow;
+    //           }
+    //
+    //           .copy {
+    //             margin-top: 2rem;
+    //             width: 100%;
+    //
+    //             h5.name {
+    //               font-size: 2.2rem;
+    //               text-transform: uppercase;
+    //             }
+    //
+    //             span.creds {
+    //               font-size: 1.8rem;
+    //               font-weight: 300;
+    //               margin-top: 1rem;
+    //               display: block;
+    //             }
+    //
+    //             p.description {
+    //               margin-top: 2rem;
+    //               font-size: 1.6rem;
+    //               width: 100%;
+    //             }
+    //
+    //             button.btn {
+    //               margin-top: 2rem;
+    //             }
+    //           }
+    //
+    //           &.next {
+    //             .coverImg {
+    //                 box-shadow: none;
+    //                 background: $lightgray;
+    //             }
+    //           }
+    //         }
+    //       }
+    //
+    //       //left
+    //       .col:first-child {
+    //         padding-right: 4rem;
+    //
+    //         .linkSlider {
+    //           ul {
+    //             li {
+    //               &.next {
+    //                 display: block;
+    //                 position: absolute;
+    //                 top: 0;
+    //                 right: 60rem;
+    //               }
+    //             }
+    //           }
+    //         }
+    //       }
+    //
+    //       //right
+    //       .col:last-child {
+    //         padding-left: 1rem;
+    //
+    //         .titleCopy {
+    //           width: 60rem;
+    //           padding-left: 3rem;
+    //
+    //           p {
+    //             margin-top: 2rem;
+    //             font-size: 1.6rem;
+    //           }
+    //         }
+    //
+    //         .linkSlider {
+    //           margin-top: 5rem;
+    //
+    //           ul {
+    //             li {
+    //               &.next {
+    //                 display: block;
+    //                 position: absolute;
+    //                 top: 0;
+    //                 left: 60rem;
+    //               }
+    //             }
+    //           }
+    //         }
+    //       }
+    //
+    //
+    //     }
+    //   }
+    // }
 
     &[data-name="flexiblelearning"] {
       height: auto;
