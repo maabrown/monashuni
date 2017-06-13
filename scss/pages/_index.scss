@@ -1012,7 +1012,6 @@
       }
     }
 
-
     &[data-name="viewthecollection"] {
       position: relative;
       height: 64rem;
@@ -1051,20 +1050,10 @@
           width: 116rem;
           margin:auto;
           padding-top: 27rem;
-
-          h2 {
-            @include TitleFont();
-            line-height: 100%;
-            font-size: 2.2rem;
-          }
-
-          button.cta {
-            margin-top: 5rem;
-          }
         }
-
       }
     }
+
     &[data-name="choosemonash"] {
       height: auto;
       background: $white;
@@ -1072,10 +1061,62 @@
       text-align: center;
 
       .content {
-        width: 116rem;
+        // width: 116rem;
         margin:auto;
         padding-top: 15rem;
         padding-bottom: 15rem;
+
+        // creating a mini-grid system
+        .content-row {
+          width: 100%;
+          padding-left: 8rem;
+          padding-right: 8rem;
+          padding-top: 3rem;
+          padding-bottom: 3rem;
+
+          &.clearfix:after {
+            content: " ";
+            display: table;
+            clear: both;
+          }
+
+          &.grey-background {
+            background-color: #e8e8e8;
+          }
+
+
+
+
+          .col {
+            width: 50%;
+            float: left;
+            text-align: left;
+
+
+            h3 {
+                font-size: 2.3rem;
+                text-transform: uppercase;
+                margin-top: 2rem;
+            }
+
+            p {
+              margin-top: 2rem;
+              font-size: 1.5rem;
+              padding-right: 2rem;
+            }
+
+            .bulb-image {
+              content: $experience;
+            }
+
+            .g8-image {
+              content: $experience;
+            }
+          }
+
+
+
+        }
 
         h2 {
           @include TitleFont();
