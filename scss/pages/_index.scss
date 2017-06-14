@@ -1371,7 +1371,7 @@
 
       @include breakpoint(sm) {
 
-        $transition-duration: .5s;
+        $transition-duration: .1s;
 
         position: fixed;
         z-index: 7;
@@ -1391,8 +1391,8 @@
         .toggle-container {
           position: absolute;
           display: inline-block;
-          width: 200px;
-          height: 150px;
+          width: 100px;
+          height: 90px;
           background-color: transparent;
 
           // makes the X for when the mobile menu is opened
@@ -1458,17 +1458,17 @@
           // moves the words away from the X
           & ~ .mobile-nav {
             // these values may need to change based on menu
-            transform: translate(200px, 250px);
-            margin-bottom: 300px;
+            transform: translate(80px, 50px);
+            margin-bottom: 10px;
             pointer-events: auto;
 
             // making titles back into nav items from lines
             & .mobile-nav-item {
                 color: white;
                 letter-spacing: 3px;
-                height: 40px;
-                line-height: 40px;
-                margin-top: 14px;
+                height: 5px;
+                line-height: 14px;
+                margin-top: 5px;
                 opacity: 1;
                 transform: scaleY(1);
                 transition: $transition-duration;
