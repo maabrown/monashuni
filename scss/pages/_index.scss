@@ -191,6 +191,8 @@
           height: 7.5rem;
           display: block;
         }
+
+
     }
 
     &[data-name="intro"] {
@@ -268,6 +270,9 @@
     }
 
     &[data-name="nextgen"] {
+
+
+
       background: $white;
       color: $black;
       height: 90rem;
@@ -521,6 +526,9 @@
           }
         }
 
+
+
+        // i don't think i need all the code below here
         .videoExpose {
           margin-top: 4rem;
 
@@ -1347,5 +1355,128 @@
         }
       }
     }
+
+    &[data-name="mobile-menu"] {
+
+      @include breakpoint(lg) {
+        display: none;
+      }
+
+      @include breakpoint(md) {
+
+        $transition-duration: .5s;
+
+        position: relative;
+        // margin: 35px auto 0;
+        // width: 300px;
+        background-color: black;
+        overflow: hidden;
+
+        // dont want to show radio button
+        #toggle {
+          display: none;
+        }
+
+        .mobile-nav {
+          margin-top: 50px;
+          margin-left: 40px;
+        }
+
+        // when menu is clicked
+        #toggle:checked {
+
+          // making titles back into nav items from lines
+          & ~ .mobile-nav {
+
+            .mobile-nav-item {
+              color: white;
+              letter-spacing: 3px;
+              height: 40px;
+              line-height: 40px;
+              margin-top: 14px;
+              opacity: 1;
+              transform: scaleY(1);
+              transition: $transition-duration;
+
+            // hiding lines
+            &:before {
+              opacity: 0;
+            }
+          }
+        }
+
+
+        }
+
+
+
+        // show items as lines, making hamburger menu
+        // this is it's initial setting
+        .mobile-nav-item {
+          position: relative;
+          display: inline-block;
+          float: left;
+          clear: both;
+          // by setting color to transparent the lines
+          // cover the words
+          color: transparent;
+          // sets the font size of the words
+          font-size: 37px;
+          // determines how long the lines are
+          letter-spacing: 8.8px;
+          height: 50px;
+          line-height: 50px;
+          text-transform: uppercase;
+          white-space: nowrap;
+          margin-bottom: 20px;
+          // shrinks the words height
+          transform: scaleY(0.2);
+          transition: $transition-duration, opacity 1s;
+
+          // adjusting the line length for hamburger to be even
+          // will need to be adjusted based on the words used
+          &:nth-child(2) {
+            letter-spacing: -6px;
+          }
+
+          // adjusting the line line length
+          &:nth-child(3) {
+            letter-spacing: 0px;
+          }
+
+          &:before {
+
+            position: absolute;
+            // want the line to be empty content which then
+            // is just the background color
+            content: ' ';
+            // moves the hamburger down to the middle of the
+            // words
+            top: 50%;
+            left: 0;
+            // lines take up the entire width of the word
+            // in the a tag
+            width: 100%;
+            // determines how thick the hamberger lines are
+            height: 50px;
+            // sets the color of the hamburger lines
+            background-color: white;
+            // with the top property moves lines to middle of words
+            transform: translateY(-50%);
+            transition: $transition-duration;
+          }
+
+        }
+
+
+
+        a {
+          text-decoration: none;
+        }
+      }
+    }
+
   }
+
+
 }
