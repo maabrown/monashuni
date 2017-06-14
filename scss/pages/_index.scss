@@ -696,9 +696,37 @@
               }
             }
           }
+        } // end of videoExpose
+
+        @include breakpoint(sm) {
+
+          width: 30rem;
+          padding-top: 15rem;
+
+          p {
+            font-size: 1.3rem;
+          }
+
+          .videoCarousel {
+
+            @for $i from 1 to $numOfSlides {
+              .carousel__activator-gallery-one:nth-of-type(#{$i}) {
+
+                // when arrow (carousel__controls) are clicked, changes
+                // id of carousel__activator and sets 'checked' class
+                // and moves the slide
+                // percentage is based on the size of the element - not the
+                // carousel track, so having the same size image matters
+                &:checked ~ .carousel__slide:nth-of-type(#{$i}) {
+                  display: block;
+                }
+
+            }
+          }
         }
-      }
-    }
+       }
+      } // end of content
+    } // end of nextgen
 
     &[data-name="newthinking"] {
       background: $white;
