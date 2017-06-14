@@ -47,6 +47,10 @@
             background-image: $logo_white;
             width: 20rem;
             height: 6rem;
+
+            @include breakpoint(sm) {
+              visibility: hidden;
+            }
           }
         }
 
@@ -95,6 +99,7 @@
           top: 74rem;
 
           @include Transition();
+
 
 
           &:hover {
@@ -192,7 +197,9 @@
           display: block;
         }
 
-
+        @include breakpoint(sm) {
+          display:none;
+        }
     }
 
     &[data-name="intro"] {
@@ -1362,7 +1369,7 @@
         display: none;
       }
 
-      @include breakpoint(md) {
+      @include breakpoint(sm) {
 
         $transition-duration: .5s;
 

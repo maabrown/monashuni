@@ -13,6 +13,10 @@
     //make sure we get a tasty full size splash view
     $('.section[data-name="preheader"]').height(window.innerHeight - $('nav').height());
     mainHeaderPosY = $mainHeader.offset().top
+
+    $('.section[data-name="preheader"]').height(window.innerHeight + $('[data-name="mobile-menu"]').height());
+    mainHeaderPosY = $mainHeader.offset().top
+
   }
 
   // called by window.scroll function()
