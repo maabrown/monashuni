@@ -2,11 +2,12 @@
 
   //main vars
   var $mainHeader = $('.mainHeader'),
+    // jQuery method offset returns current position relative to the document
     mainHeaderPosY = $mainHeader.offset().top,
     $scrollDownBtn = $('button.scrollDown'),
     $topLogo = $('.topLogo');
 
-
+  // this function is called by window.scroll() method
   var setLayout = function() {
 
     //make sure we get a tasty full size splash view
@@ -14,10 +15,15 @@
     mainHeaderPosY = $mainHeader.offset().top
   }
 
-
+  // called by window.scroll function()
+  // windowY is the vertical position of the Window
   var setFixedHeader = function(windowY) {
 
     //manage fixed header
+
+    // if window Y position is greater than mainHeader's position (aka you've scrolled past the navbar)
+    // and doesn't have the class mainHeader--fixed add it
+    // mainHeader--fixed
     if(windowY >= mainHeaderPosY && !$mainHeader.hasClass('mainHeader--fixed')) {
       $mainHeader.addClass('mainHeader--fixed');
     } else if(windowY < mainHeaderPosY && $mainHeader.hasClass('mainHeader--fixed')) {
@@ -32,7 +38,7 @@
 
     $('.section').each(function() {
       if(
-        windowY > $(this).offset().top && 
+        windowY > $(this).offset().top &&
         windowY < $(this).offset().top + $(this).height()
       ) $('body').attr('data-scrolllocation', $(this).attr('data-name'));
     });
@@ -40,6 +46,9 @@
 
   //scroll (might need to debounce)
   $(window).scroll(function() {
+
+    // gives you the value of vertical position of scrollbar of selected
+    // element, 'this' refers to the Window
     var windowY = $(this).scrollTop();
 
     setFixedHeader(windowY);

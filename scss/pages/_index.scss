@@ -1366,7 +1366,9 @@
 
         $transition-duration: .5s;
 
-        position: relative;
+        position: fixed;
+        z-index: 7;
+        border-bottom: 2px solid white;
         // margin: 35px auto 0;
         // width: 300px;
         background-color: black;
