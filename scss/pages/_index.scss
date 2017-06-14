@@ -1416,6 +1416,10 @@
           background-image: $logo_white;
           width: 20rem;
           height: 6rem;
+          display: inline-block;
+          float: right;
+          margin-top: 10%;
+          margin-right: 5%;
         }
 
         .mobile-nav {
@@ -1466,7 +1470,10 @@
             }
           }
 
-
+          // don't show the logo when the menu is opened
+          & ~ .mobile-nav-logo {
+            visibility: hidden;
+          }
         } // end of #toggle:checked
 
 
