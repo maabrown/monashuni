@@ -7,12 +7,13 @@
       
       .section(data-name="mobile-menu")
         input(id="toggle" type="checkbox")
-        label.togglecontainer
+        label(class="toggle-container" for="toggle")
           span.button-toggle.button-mobile
         nav.mobile-nav
           a.mobile-nav-item About
           a.mobile-nav-item Our Stories
           a.mobile-nav-item Courses
+        .mobile-nav-logo
           
       .section(data-name="preheader")
         .bg

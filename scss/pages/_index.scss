@@ -1377,36 +1377,97 @@
           display: none;
         }
 
+        // have to give CSS to lable to get toggle to work
+        // make sure that input ID is same as label for attr
+        .toggle-container {
+          position: absolute;
+          display: inline-block;
+          width: 200px;
+          height: 250px;
+          background-color: transparent;
+
+          // makes the X for when the mobile menu is opened
+          &:before, &:after {
+            position: absolute;
+            content: '';
+            top: 50%;
+            left: 15%;
+            // determines how big the X is
+            width: 90%;
+            // determines thickness of X
+            height: 6px;
+            // determines color of X
+            background-color: white;
+            border-radius: 5px;
+            transition: $transition-duration;
+          }
+
+          // uses psedo elements to make the X
+          &:before {
+            transform: translateY(-50%) rotate(45deg) scale(0);
+          }
+
+          &:after {
+            transform: translateY(-50%) rotate(-45deg) scale(0)
+          }
+        }
+
+        .mobile-nav-logo {
+          background-image: $logo_white;
+          width: 20rem;
+          height: 6rem;
+        }
+
         .mobile-nav {
-          margin-top: 50px;
-          margin-left: 40px;
+          display: inline-block;
+          margin: 25px 25px 20px;
+          pointer-events: none;
+          // margin-top: 50px;
+          // margin-left: 40px;
         }
 
         // when menu is clicked
         #toggle:checked {
 
-          // making titles back into nav items from lines
-          & ~ .mobile-nav {
+          // shows the X - use of scale(1)
+          & ~ .toggle-container {
 
-            .mobile-nav-item {
-              color: white;
-              letter-spacing: 3px;
-              height: 40px;
-              line-height: 40px;
-              margin-top: 14px;
-              opacity: 1;
-              transform: scaleY(1);
-              transition: $transition-duration;
-
-            // hiding lines
             &:before {
-              opacity: 0;
+              transform: translateY(-50%) rotate(45deg) scale(1);
+            }
+
+            &:after {
+              transform: translateY(-50%) rotate(-45deg) scale(1);
             }
           }
-        }
+
+          // moves the words away from the X
+          & ~ .mobile-nav {
+            // these values may need to change based on menu
+            transform: translate(200px, 250px);
+            margin-bottom: 300px;
+            pointer-events: auto;
+
+            // making titles back into nav items from lines
+            & .mobile-nav-item {
+                color: white;
+                letter-spacing: 3px;
+                height: 40px;
+                line-height: 40px;
+                margin-top: 14px;
+                opacity: 1;
+                transform: scaleY(1);
+                transition: $transition-duration;
+
+              // hiding lines
+              &:before {
+                opacity: 0;
+              }
+            }
+          }
 
 
-        }
+        } // end of #toggle:checked
 
 
 
@@ -1444,8 +1505,8 @@
             letter-spacing: 0px;
           }
 
+          // uses 'before' pseudo element to make lines
           &:before {
-
             position: absolute;
             // want the line to be empty content which then
             // is just the background color
@@ -1468,15 +1529,11 @@
 
         }
 
-
-
         a {
           text-decoration: none;
         }
-      }
-    }
 
-  }
-
-
-}
+      } // end of breakpoint md
+    } //end of data-name=mobile-menu
+  } // end of .section
+} // end of .index
