@@ -5,7 +5,9 @@
     // jQuery method offset returns current position relative to the document
     mainHeaderPosY = $mainHeader.offset().top,
     $scrollDownBtn = $('button.scrollDown'),
-    $topLogo = $('.topLogo');
+    $topLogo = $('.topLogo'),
+    $mobileMenu = $('[data-name="mobile-menu"]');
+
 
   // this function is called by window.scroll() method
   var setLayout = function() {
@@ -14,7 +16,8 @@
     $('.section[data-name="preheader"]').height(window.innerHeight - $('nav').height());
     mainHeaderPosY = $mainHeader.offset().top
 
-    $('.section[data-name="preheader"]').height(window.innerHeight + $('[data-name="mobile-menu"]').height());
+    // this is when it is mobile
+    $('.section[data-name="preheader"]').height(window.innerHeight + $mobileMenu.height());
     mainHeaderPosY = $mainHeader.offset().top
 
   }
@@ -85,6 +88,7 @@
       scrollTop: mainHeaderPosY
     }, 2000);
   });
+
 
 
 

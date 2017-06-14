@@ -1392,7 +1392,7 @@
           position: absolute;
           display: inline-block;
           width: 200px;
-          height: 250px;
+          height: 150px;
           background-color: transparent;
 
           // makes the X for when the mobile menu is opened
@@ -1498,10 +1498,8 @@
           // cover the words
           color: transparent;
           // sets the font size of the words
-          font-size: 37px;
-          // determines how long the lines are
-          letter-spacing: 8.8px;
-          height: 50px;
+          font-size: 18px;
+          height: 2px;
           line-height: 50px;
           text-transform: uppercase;
           white-space: nowrap;
@@ -1512,13 +1510,23 @@
 
           // adjusting the line length for hamburger to be even
           // will need to be adjusted based on the words used
+          &:nth-child(1) {
+            letter-spacing: -2.2px;
+          }
+
           &:nth-child(2) {
-            letter-spacing: -6px;
+            letter-spacing: -5.8px;
           }
 
           // adjusting the line line length
           &:nth-child(3) {
-            letter-spacing: 0px;
+            letter-spacing: -4.5px;
+          }
+
+          // this is for after the third line
+          // you want to make them disappear
+          &:nth-child(n+3) {
+
           }
 
           // uses 'before' pseudo element to make lines
