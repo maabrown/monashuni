@@ -707,23 +707,46 @@
             font-size: 1.3rem;
           }
 
-          .videoCarousel {
+          > .videoCarousel {
 
             @for $i from 1 to $numOfSlides {
               .carousel__activator-gallery-one:nth-of-type(#{$i}) {
 
-                // when arrow (carousel__controls) are clicked, changes
-                // id of carousel__activator and sets 'checked' class
-                // and moves the slide
-                // percentage is based on the size of the element - not the
-                // carousel track, so having the same size image matters
-                &:checked ~ .carousel__slide:nth-of-type(#{$i}) {
+                // when checked only show the one needed
+                &:checked ~ .carousel__track .carousel__slide:nth-of-type(#{$i}) {
+                  display: block;
+                  transform: none;
+                }
+
+                // when checked only show arrows for one vid
+                &:checked ~ .carousel__track .carousel__controls:nth-of-type(#{$i}) {
                   display: block;
                 }
 
+                // don't move the carousel track
+                &:checked ~ .carousel__track {
+                  transform: none;
+                }
             }
           }
-        }
+
+          // position the carousel slide on the screen
+          .carousel__track .carousel__slide {
+            height: 100%;
+            right: 0;
+            position: absolute;
+            // hide all the images that aren't checked
+            display: none;
+            overflow-y: auto;
+            top: 0;
+            left: 0;
+            transform: none;
+          }
+
+          .carousel__control {
+            border-color: white;
+          }
+        }// end of videoCarousel mobile
        }
       } // end of content
     } // end of nextgen
