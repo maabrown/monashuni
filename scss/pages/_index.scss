@@ -47,10 +47,10 @@
             background-image: $logo_white;
             width: 20rem;
             height: 6rem;
+          }
 
-            @include breakpoint(sm) {
-              visibility: hidden;
-            }
+          @include breakpoint(sm) {
+            display: none;
           }
         }
 
@@ -80,7 +80,18 @@
             margin-top: 5rem;
           }
 
+          @include breakpoint(sm) {
+            width: 30rem;
+            top: 62%;
+
+            p.lead {
+              font-size: 1.4rem;
+              margin-top: 2rem;
+            }
+          }
+
         }
+
 
         button.scrollDown {
           background: transparent;
@@ -109,6 +120,10 @@
 
           &:active, &:focus, &:visited {
             outline: none;
+          }
+
+          @include breakpoint(sm) {
+            display: none;
           }
         }
       }
