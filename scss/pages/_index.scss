@@ -1263,6 +1263,10 @@
           padding-top: 27rem;
         }
       }
+
+      @include breakpoint(sm) {
+        margin-top: 10rem;
+      }
     }
 
     &[data-name="choosemonash"] {
@@ -1389,8 +1393,50 @@
 
           }
         }
+      } // end of choosemonash .content
+
+      @include breakpoint(sm) {
+
+        .content {
+          width: 30rem;
+
+
+
+          .content-row {
+
+            &.grey-background {
+              background-color: white;
+            }
+
+            padding-left: 1rem;
+            padding-right: .5rem;
+            padding-bottom: 0rem;
+
+            div.col:nth-of-type(2) {
+              margin-top: 3rem;
+              text-align: right;
+              padding-top: 2rem;
+              padding-bottom: 2rem;
+              padding-right: 1rem;
+
+              p {
+                padding-right: 0rem;
+              }
+
+              background-color: #f2f2f2;
+              border-radius: 2rem;
+            }
+
+            .col {
+                width: 100%;
+
+            }
+          }
+        }
+
+
       }
-    }
+    } //end of choosemonash section
 
     &[data-name="makeithappen"] {
       position: relative;
