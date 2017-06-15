@@ -1169,7 +1169,7 @@
             }
           }
         }
-      }
+      } // end of flexible-learning .content
 
       button.cta {
         // margin-top: 8rem;
@@ -1187,7 +1187,41 @@
         bottom: -140rem;
         z-index: 3;
       }
-    }
+
+      @include breakpoint(sm) {
+
+        .content {
+          width: 30rem;
+
+          .halves {
+            display: none;
+          }
+
+          .title {
+            p {
+              margin-bottom: 3rem;
+            }
+          }
+
+          .mobile-section {
+
+            h4 {
+              font-size: 2.3rem;
+              margin-top: 1rem;
+              margin-bottom: 1rem;
+              color: white;
+            }
+          }
+
+          .button-div {
+            margin-top: 4rem;
+          }
+        }
+
+
+
+      }
+    } // end of flexible learning section
 
     &[data-name="viewthecollection"] {
       position: relative;
