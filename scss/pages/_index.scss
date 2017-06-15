@@ -1484,8 +1484,20 @@
           }
         }
 
+      } // end of overlay
+
+      @include breakpoint(sm) {
+
+        .overlay {
+
+          .content {
+            width: 30rem;
+          }
+          
+        }
       }
-    }
+    } // end of makeithappen section
+
     &[data-name="contact"] {
       height: 13rem;
       background: #e6e6e6;
