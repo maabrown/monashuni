@@ -1493,7 +1493,6 @@
           .content {
             width: 30rem;
           }
-          
         }
       }
     } // end of makeithappen section
@@ -1534,8 +1533,23 @@
             }
           }
         }
+      } // end of contact .content
+
+      @include breakpoint(sm) {
+
+        .content {
+
+          .halves {
+
+              .col:nth-of-type(2) {
+                  span {
+                    font-size: 1.3rem;
+                  }
+              }
+          }
+        }
       }
-    }
+    } // end of contact section
 
     &[data-name="footer"] {
       height: 7.5rem;
@@ -1614,8 +1628,25 @@
             }
           }
         }
+      } // end of content section
+
+      @include breakpoint(sm) {
+
+        .content {
+
+          & .social {
+
+            ul {
+              text-align: center;
+
+              li {
+                margin-bottom: 2rem;
+              }
+            }
+          }
+        }
       }
-    }
+    } // end of section footer
 
     &[data-name="mobile-menu"] {
 
