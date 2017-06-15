@@ -17,8 +17,8 @@
     mainHeaderPosY = $mainHeader.offset().top
 
     // this is when it is mobile
-    $('.section[data-name="preheader"]').height(window.innerHeight + $mobileMenu.height());
-    mainHeaderPosY = $mainHeader.offset().top
+    // $('.section[data-name="preheader"]').height(window.innerHeight + $mobileMenu.height());
+    // mainHeaderPosY = $mainHeader.offset().top
 
   }
 
