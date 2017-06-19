@@ -802,17 +802,18 @@
 
 
 
-        .videoCarousel {
+        > .videoCarousel {
 
           .carousel__controls {
             display: none;
           }
 
-          height: $carouselHeight;
+          height: 37rem;
           width: $carouselWidth;
           // don't want overflow hidden because we want slides to show
           // the entire length of the page
           // overflow: hidden;
+
           // you want the carousel relative to its normal position
           position: relative;
           // centers the slides within the videoCarousel div
@@ -836,8 +837,9 @@
               // and moves the slide
               // percentage is based on the size of the element - not the
               // carousel track, so having the same size image matters
+              // this is what actually moves the carousel
               &:checked ~ .carousel__track {
-                  transform: translateX(-(($i - 1) * $percentageMove) + 10%);
+                  transform: translateX( (-(($i - 1) * 60%) + 17%) );
               }
 
               // styles for the slide itself - need to put in transition/animation
@@ -850,12 +852,14 @@
               &:checked ~ .carousel__track .carousel__slide:nth-of-type(#{$i}) {
 
                 h2 {
-                  color: black;
+                  color: $lightblue;
+                  opacity: 1;
                 }
 
                 p {
                   visibility: visible;
                   color: black;
+                  opacity: 1;
                 }
 
                 .img-wrapper {
@@ -888,7 +892,7 @@
                       visibility: hidden;
                     }
                   }
-                  @if $i == ($numOfSlides - 1) {
+                  @if $i == ($numOfSlides) {
                     .carousel__control--forward {
                       visibility: hidden;
                     }
@@ -897,31 +901,31 @@
 
             }
 
-            // sets the slides' original place along x-axis
-            .carousel__track .carousel__slide:nth-of-type(#{$i}) {
-              transform: translateX( (($i - 1) * $percentageMove) + 5);
-            }
 
+            // controls the amount of space between slides
+            .carousel__track .carousel__slide:nth-of-type(#{$i}) {
+              transform: translateX( ($i - 1 ) * 61.25%)
+            }
           }
 
           .carousel__control {
             height: 30px;
             width: 30px;
             margin-top: -15px;
-            top: 24%;
+            top: 50%;
             position: absolute;
             display: block;
             cursor: pointer;
-            border-width: 5px 5px 0 0;
+            border-width: 3px 3px 0 0;
             border-style: solid;
-            border-color: black;
+            border-color: white;
             // opacity: 0.35;
             outline: 0;
             z-index: 3;
           }
 
           .carousel__control--backward {
-            left: 12%;
+            left: 7%;
             transform: rotate(-135deg);
           }
           .carousel__control--forward {
@@ -977,28 +981,28 @@
 
           & .image5 {
             content: $image1;
-            height: $carouselImageHeight;
-            width: $carouselImageWidth;
+            height: 37rem;
+            width: 71rem;
           }
 
           & .image6 {
             content: $image2;
-            height: $carouselImageHeight;
-            width: $carouselImageWidth;
+            height: 37rem;
+            width: 71rem;
           }
 
           & .image7 {
             content: $image1;;
-            height: $carouselImageHeight;
-            width: $carouselImageWidth;
+            height: 37rem;
+            width: 71rem;
             z-index: -1;
           }
 
 
           & .image8 {
             content: $image2;
-            height: $carouselImageHeight;
-            width: $carouselImageWidth;
+            height: 37rem;
+            width: 71rem;
           }
 
           & .img-wrapper {
@@ -1012,6 +1016,7 @@
           }
         }
       } // end of newthinking .content
+
 
       @include breakpoint(sm) {
 
