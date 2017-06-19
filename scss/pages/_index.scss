@@ -1330,8 +1330,8 @@
         // creating a mini-grid system
         .content-row {
           width: 100%;
-          padding-left: 8rem;
-          padding-right: 8rem;
+          padding-left: 1rem;
+          padding-right: 1rem;
           // padding-top: 3rem;
           // padding-bottom: 3rem;
           background: $white;
@@ -1391,10 +1391,10 @@
         .content-row:nth-of-type(1) {
           > .col:nth-of-type(1) > div:nth-of-type(1) {
             background-color: #f9f9f9;
-            padding-left: 6rem;
-            padding-top: 7rem;
-            padding-bottom: 7rem;
-            padding-right: 3.3rem;
+            padding-left: $leftpanelpaddingleft;
+            padding-top: $panelpaddingtop;
+            padding-bottom: $panelpaddingbottom;
+            padding-right: $panelpaddingright;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
             div:after {
@@ -1409,10 +1409,10 @@
           }
 
           > .col:nth-of-type(2) > div:nth-of-type(1) {
-            padding-left: 4rem;
-            padding-top: 7rem;
-            padding-bottom: 7rem;
-            padding-right: 3.3rem;
+            padding-left: $rightpanelpaddingleft;
+            padding-top: $panelpaddingtop;
+            padding-bottom: $panelpaddingbottom;
+            padding-right: $panelpaddingright;
 
             div:after {
                 content: "";
@@ -1429,10 +1429,10 @@
 
         .content-row:nth-of-type(2) {
           > .col:nth-of-type(1) > div:nth-of-type(1) {
-            padding-left: 6rem;
-            padding-top: 7rem;
-            padding-bottom: 7rem;
-            padding-right: 3.3rem;
+            padding-left: $leftpanelpaddingleft;
+            padding-top: $panelpaddingtop;
+            padding-bottom: $panelpaddingbottom;
+            padding-right: $panelpaddingright;
 
             div:after {
                 content: "";
@@ -1445,10 +1445,10 @@
           }
 
           > .col:nth-of-type(2) > div:nth-of-type(1) {
-            padding-left: 4rem;
-            padding-top: 7rem;
-            padding-bottom: 7rem;
-            padding-right: 3.3rem;
+            padding-left: $rightpanelpaddingleft;
+            padding-top: $panelpaddingtop;
+            padding-bottom: $panelpaddingbottom;
+            padding-right: $panelpaddingright;
             background-color: $black;
             color: $white;
 
@@ -1474,16 +1474,16 @@
             img {
               content: $studentslaughing;
               width: 100%;
-              height: 430px;
+
             }
           }
 
           > .col:nth-of-type(2) > div:nth-of-type(1) {
 
-            padding-left: 4rem;
-            padding-top: 7rem;
-            padding-bottom: 7rem;
-            padding-right: 3.3rem;
+            padding-left: $rightpanelpaddingleft;
+            padding-top: $panelpaddingtop;
+            padding-bottom: $panelpaddingbottom;
+            padding-right: $panelpaddingright;
 
             div:after {
                 content: "";
@@ -1499,10 +1499,10 @@
 
         .content-row:nth-of-type(4) {
           > .col:nth-of-type(1) > div:nth-of-type(1) {
-            padding-left: 6rem;
-            padding-top: 7rem;
-            padding-bottom: 7rem;
-            padding-right: 3.3rem;
+            padding-left: $leftpanelpaddingleft;
+            padding-top: $panelpaddingtop;
+            padding-bottom: $panelpaddingbottom;
+            padding-right: $panelpaddingright;
 
             div:after {
                 content: "";
@@ -1515,10 +1515,10 @@
           }
 
           > .col:nth-of-type(2) > div:nth-of-type(1) {
-            padding-left: 4rem;
-            padding-top: 7rem;
-            padding-bottom: 7rem;
-            padding-right: 3.3rem;
+            padding-left: $rightpanelpaddingleft;
+            padding-top: $panelpaddingtop;
+            padding-bottom: $panelpaddingbottom;
+            padding-right: $panelpaddingright;
             color: $white;
             background: $black;
 
@@ -1540,12 +1540,12 @@
         .content-row:nth-of-type(5) {
           > .col:nth-of-type(1) > div:nth-of-type(1) {
             background-color: #f9f9f9;
-            padding-left: 6rem;
-            padding-top: 7rem;
-            padding-bottom: 7rem;
-            padding-right: 3.3rem;
+            padding-left: $leftpanelpaddingleft;
+            padding-top: $panelpaddingtop;
+            padding-bottom: $panelpaddingbottom;
+            padding-right: $panelpaddingright;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            
+
             div:after {
                 content: "";
                 margin-top: 2rem;
@@ -1561,7 +1561,6 @@
             img {
               content: $studentscientist;
               width: 100%;
-              height: 430px;
             }
           }
         }
