@@ -1324,7 +1324,7 @@
       .content {
         width: 98rem;
         margin: auto;
-        padding-top: 3rem;
+        // padding-top: 3rem;
         padding-bottom: 15rem;
 
         // creating a mini-grid system
@@ -1332,8 +1332,8 @@
           width: 100%;
           padding-left: 8rem;
           padding-right: 8rem;
-          padding-top: 3rem;
-          padding-bottom: 3rem;
+          // padding-top: 3rem;
+          // padding-bottom: 3rem;
           background: $white;
 
           &.clearfix:after {
@@ -1349,15 +1349,17 @@
 
 
             h3 {
-                font-size: 2.3rem;
+                font-size: 1.8rem;
                 text-transform: uppercase;
                 margin-top: 2rem;
+                color: $lightblue;
             }
 
             p {
               margin-top: 2rem;
-              font-size: 1.5rem;
+              font-size: 1.3rem;
               padding-right: 2rem;
+              height: 12em;
             }
 
             > div > img {
@@ -1375,6 +1377,14 @@
             .trendup-image {
               content: $trendup;
             }
+
+            .partner {
+              content: $partner;
+            }
+
+            .scope {
+              content: $scope;
+            }
           }
         }
 
@@ -1385,9 +1395,176 @@
             padding-top: 7rem;
             padding-bottom: 7rem;
             padding-right: 3.3rem;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+            div:after {
+                content: "";
+                margin-top: 2rem;
+                background: $black;
+                display: block;
+                height: 2px;
+                width: 4rem;
+
+            }
+          }
+
+          > .col:nth-of-type(2) > div:nth-of-type(1) {
+            padding-left: 4rem;
+            padding-top: 7rem;
+            padding-bottom: 7rem;
+            padding-right: 3.3rem;
+
+            div:after {
+                content: "";
+                margin-top: 2rem;
+                background: $black;
+                display: block;
+                height: 2px;
+                width: 4rem;
+
+            }
+          }
+
+        }
+
+        .content-row:nth-of-type(2) {
+          > .col:nth-of-type(1) > div:nth-of-type(1) {
+            padding-left: 6rem;
+            padding-top: 7rem;
+            padding-bottom: 7rem;
+            padding-right: 3.3rem;
+
+            div:after {
+                content: "";
+                margin-top: 2rem;
+                background: $black;
+                display: block;
+                height: 2px;
+                width: 4rem;
+            }
+          }
+
+          > .col:nth-of-type(2) > div:nth-of-type(1) {
+            padding-left: 4rem;
+            padding-top: 7rem;
+            padding-bottom: 7rem;
+            padding-right: 3.3rem;
+            background-color: $black;
+            color: $white;
+
+            h3 {
+              color: $white;
+            }
+
+            div:after {
+                content: "";
+                margin-top: 2rem;
+                background: $white;
+                display: block;
+                height: 2px;
+                width: 4rem;
+
+            }
           }
         }
 
+        .content-row:nth-of-type(3) {
+          > .col:nth-of-type(1) > div:nth-of-type(1) {
+
+            img {
+              content: $studentslaughing;
+              width: 100%;
+              height: 430px;
+            }
+          }
+
+          > .col:nth-of-type(2) > div:nth-of-type(1) {
+
+            padding-left: 4rem;
+            padding-top: 7rem;
+            padding-bottom: 7rem;
+            padding-right: 3.3rem;
+
+            div:after {
+                content: "";
+                margin-top: 2rem;
+                background: $black;
+                display: block;
+                height: 2px;
+                width: 4rem;
+
+            }
+          }
+        }
+
+        .content-row:nth-of-type(4) {
+          > .col:nth-of-type(1) > div:nth-of-type(1) {
+            padding-left: 6rem;
+            padding-top: 7rem;
+            padding-bottom: 7rem;
+            padding-right: 3.3rem;
+
+            div:after {
+                content: "";
+                margin-top: 2rem;
+                background: $black;
+                display: block;
+                height: 2px;
+                width: 4rem;
+            }
+          }
+
+          > .col:nth-of-type(2) > div:nth-of-type(1) {
+            padding-left: 4rem;
+            padding-top: 7rem;
+            padding-bottom: 7rem;
+            padding-right: 3.3rem;
+            color: $white;
+            background: $black;
+
+            h3 {
+              color: $white;
+            }
+
+            div:after {
+                content: "";
+                margin-top: 2rem;
+                background: $white;
+                display: block;
+                height: 2px;
+                width: 4rem;
+            }
+          }
+        }
+
+        .content-row:nth-of-type(5) {
+          > .col:nth-of-type(1) > div:nth-of-type(1) {
+            background-color: #f9f9f9;
+            padding-left: 6rem;
+            padding-top: 7rem;
+            padding-bottom: 7rem;
+            padding-right: 3.3rem;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            
+            div:after {
+                content: "";
+                margin-top: 2rem;
+                background: $black;
+                display: block;
+                height: 2px;
+                width: 4rem;
+            }
+          }
+
+          > .col:nth-of-type(2) > div:nth-of-type(1) {
+
+            img {
+              content: $studentscientist;
+              width: 100%;
+              height: 430px;
+            }
+          }
+        }
         h2 {
           @include TitleFont();
           line-height: 200%;
