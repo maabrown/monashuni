@@ -862,21 +862,17 @@
                   opacity: 1;
                 }
 
-                .img-wrapper {
-                  visibility: hidden;
+                p.personDescription {
+                  font-style: italic;
                 }
-              }
-
-              // adds styling to the carousel item to the right
-              &:checked ~ .carousel__track .carousel__slide:nth-of-type(#{$i + 1}) {
-
-                h2 {
-                  color: black;
-                }
-
-                p {
-                  visibility: visible;
-                  color: black;
+                // creates line underneath word
+                p.personCaption:after {
+                  content: "";
+                  margin-top: 2rem;
+                  background: $black;
+                  display: block;
+                  height: 2px;
+                  width: 4rem;
                 }
 
                 .img-wrapper {
@@ -955,25 +951,24 @@
             height: 100%;
             position: absolute;
 
-            p {
-              visibility: hidden;
-            }
-
             & .videoDescription {
               width: $carouselImageWidth;
               padding-top: 2rem;
 
               h2 {
                 text-align: left;
-                color: white;
+                color: $lightblue;
+                letter-spacing: 0px;
+                opacity: .3;
+                font-size: 1.8rem;
               }
 
               p {
                 text-align: left;
-                padding-left: 2rem;
-                border-left-color: black;
-                border-left-width: thin;
-                border-left-style: solid;
+                color: black;
+                opacity: .3;
+                font-size: 1.3rem;
+                margin-top: 1rem;
               }
             }
 
@@ -1007,11 +1002,11 @@
 
           & .img-wrapper {
             background-color: white;
-            height: $carouselImageHeight;
-            width: $carouselImageWidth;
+            height: 37rem;
+            width: 71rem;
             display: inline;
             z-index: 2;
-            opacity: 0.8;
+            opacity: 0.2;
             position: absolute;
           }
         }
@@ -1090,7 +1085,7 @@
         width: 116rem;
         margin:auto;
         padding-top: 15rem;
-        padding-bottom: 15rem;
+        padding-bottom: 9rem;
 
         h2 {
           @include TitleFont();
@@ -1133,10 +1128,12 @@
 
             &.padding-left {
               padding-left: 5rem;
+              padding-right: 1.5rem;
             }
 
             &.padding-right {
               padding-right: 5rem;
+              padding-left: 1.5rem;
             }
 
             font-size: 1.6rem;
@@ -1151,12 +1148,6 @@
               text-align: center;
               // setting the height of box divs to even out the text size
               height: 34rem;
-
-              &.border-right {
-                border-right-color: white;
-                border-right-width: thin;
-                border-right-style: solid;
-              }
 
               &.border-bottom {
                 border-bottom-color: white;
@@ -1186,6 +1177,10 @@
           }
         }
       } // end of flexible-learning .content
+
+      .button-div {
+        text-align: center;
+      }
 
       button.cta {
         // margin-top: 8rem;
@@ -1241,9 +1236,9 @@
 
     &[data-name="viewthecollection"] {
       position: relative;
-      height: 64rem;
+      height: 1rem;
       z-index: 0;
-      margin-top: 40rem;
+      margin-top: 11rem;
 
       .lineDown {
         position: absolute;
@@ -1261,8 +1256,7 @@
         position: absolute;
         width: 100%;
         height: 100%;
-        background-size: cover;
-        background-image: $collectionbg;
+
         background-position: 50% 50%;
       }
 
@@ -1287,14 +1281,50 @@
 
     &[data-name="choosemonash"] {
       height: auto;
-      background: $white;
       color: $black;
       text-align: center;
 
+      .chooseMonashHeader {
+        position: relative;
+        height: 40rem;
+        z-index: 0;
+        background: $makeithappenbg;
+        background-size: cover;
+        padding-top: 22rem;
+        color: white;
+
+        // .bg {
+        //   position: absolute;
+        //   width: 100%;
+        //   height: 100%;
+        //   background-size: cover;
+        //   background-image: $makeithappenbg;
+        //   background-position: 50% 50%;
+        //   opacity: 0.3;
+        // }
+
+        h2 {
+          @include TitleFont();
+          font-size: 2.8rem;
+          text-align: center;
+        }
+
+        h2 ~ p {
+          margin-top: 2rem;
+          text-align: center;
+          margin-left: 22rem;
+          margin-right: 22rem;
+        }
+
+        > p {
+          font-size: 1.7rem;
+        }
+      }
+
       .content {
-        // width: 116rem;
-        margin:auto;
-        padding-top: 15rem;
+        width: 98rem;
+        margin: auto;
+        padding-top: 3rem;
         padding-bottom: 15rem;
 
         // creating a mini-grid system
@@ -1304,15 +1334,12 @@
           padding-right: 8rem;
           padding-top: 3rem;
           padding-bottom: 3rem;
+          background: $white;
 
           &.clearfix:after {
             content: " ";
             display: table;
             clear: both;
-          }
-
-          &.grey-background {
-            background-color: #f2f2f2;
           }
 
           .col {
@@ -1333,6 +1360,10 @@
               padding-right: 2rem;
             }
 
+            > div > img {
+              width: 16%;
+            }
+
             .bulb-image {
               content: $experience;
             }
@@ -1345,9 +1376,16 @@
               content: $trendup;
             }
           }
+        }
 
-
-
+        .content-row:nth-of-type(1) {
+          > .col:nth-of-type(1) > div:nth-of-type(1) {
+            background-color: #f9f9f9;
+            padding-left: 6rem;
+            padding-top: 7rem;
+            padding-bottom: 7rem;
+            padding-right: 3.3rem;
+          }
         }
 
         h2 {
