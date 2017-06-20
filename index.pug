@@ -77,7 +77,7 @@
       .section(data-name="nextgen")
         .bg(data-parallax="-20")
         .content
-          h2 Next Generation Thinkers
+          h2 Next-Generation Thinkers
           p Progress needs restless thinking. Ideas that move. Ideas that take us beyond the expected 
             br
             | to the unexpected, and to incredible outcomes. Ideas for now. Ideas for the future. 
@@ -90,7 +90,7 @@
           .videoCarousel
             .carousel-container
               .carousel.my-carousel.carousel--translate
-                - var panels = ['image1', 'image2', 'image3', 'image4']
+                - var panels = ['curiosity', 'innovation', 'impact', 'inspiration', 'progress']
                 each val in panels
                   input.carousel__activator-gallery-one(type="radio", name="gallery-one-activator", id=val, checked=(val == panels[1]))
                 
@@ -100,38 +100,57 @@
                     label.carousel__control.carousel__control--forward(for= `${(idx == panels.length - 1) ? panels[0] : panels[idx + 1]}`)
                 
                 .carousel__track
-                
-                  .carousel__slide
-                      .img-wrapper
-                      img(class='image1')
-
-                      div.videoDescription
-                        h2 Innovation 
-                        p We are all born curious. It is this insatiable human desire to constantly ask 'why'. Why are things the way they are? Why must we accept it? It is asking the 'whys' that leads to the greatest discoveries. And that's part of our DNA at Monash.
-                      
-                  .carousel__slide
-                      .img-wrapper
-                      img(class='image2')
-
-                      div.videoDescription
-                        h2 Curiosity
-                        p We are all born curious. It is this insatiable human desire to constantly ask 'why'. Why are things the way they are? Why must we accept it? It is asking the 'whys' that leads to the greatest discoveries. And that's part of our DNA at Monash.
-                      
-                  .carousel__slide
-                      .img-wrapper
-                      img(class='image3')
-
-                      div.videoDescription
-                        h2 Innovation 
-                        p Testing, trialling, pushing the limits and harnessing creative thought. At Monash, we think innovation happens when things are turned on their head, when what we know to be true is questioned and we let ourselves believe in possibility.
                   
-                  .carousel__slide 
+                  .carousel__slide
                       .img-wrapper
-                      img(class='image4')
+                      .playButtonDiv
+                        img(class='playButton')
+                      img(class='curiosity')
+
+                      div.videoDescription
+                        h2 Curiosity 
+                        p We are all born curious. Why am I moving and how far can I go? What if I make a noise? What is that? Why is that? It is this insatiable human desire to constantly ask 'why', 'why', 'why' that leads to the greatest discoveries. And that's part of our Monash DNA.  
+                                      
+                  .carousel__slide
+                      .img-wrapper
+                      .playButtonDiv
+                          img(class='playButton')
+                      img(class='innovation')
+
+
+                      div.videoDescription
+                        h2 Innovation 
+                        p Testing, trailing, pushing the limits and harnessing creative thought. At Monash, we think innovation happens when things are turned on their head, when what we know to be true is questioned and we let ourselves believe in possibility.
+                      
+                  .carousel__slide
+                      .img-wrapper
+                      .playButtonDiv
+                        img(class='playButton')
+                      img(class='impact')
 
                       div.videoDescription
                         h2 Impact
-                        p Testing, trialling, pushing the limits and harnessing creative thought. At Monash, we think innovation happens when things are turned on their head, when what we know to be true is questioned and we let ourselves believe in possibility.
+                        p Whether it's through leadership programs, or through study or more social-minded initiatives, we give all our students a range of opportunities to create an impact and leave their own legacy.
+                      
+                  .carousel__slide
+                      .img-wrapper
+                      .playButtonDiv
+                        img(class='playButton')
+                      img(class='inspiration')
+
+                      div.videoDescription
+                        h2 Inspiration 
+                        p What fuels inspiration? Those who you surround yourself with? Or the environment? Or a combination of both? As Australia's largest university we also consider ourselves to be Australia's largest think tank too - surrounding our students with peers that are as hungry as they are, guide by world-class lecturers and industry leaders.
+                  
+                  .carousel__slide 
+                      .img-wrapper
+                      .playButtonDiv
+                        img(class='playButton')
+                      img(class='progress')
+
+                      div.videoDescription
+                        h2 Impact
+                        p Testing, trialing, pushing the limits and harnessing creative thought. At Monash, we think innovation happens when things are turned on their head, when what we know to be true is questioned and we let ourselves believe in possibility.
 
       .section(data-name="newthinking")
         .bg(data-parallax="-20")

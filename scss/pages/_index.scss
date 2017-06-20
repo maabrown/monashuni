@@ -248,7 +248,7 @@
         width: 35rem;
         right: 8rem;
         top: 3rem;
-        background-image: $image1;
+        background-image: $space;
       }
 
       .image2 {
@@ -405,7 +405,7 @@
 
 
 
-          @for $i from 1 through $numOfSlides {
+          @for $i from 1 through $nextGenNumOfSlides {
             // creates these classes for each image/video by looping
 
             .carousel__activator-gallery-one:nth-of-type(#{$i}) {
@@ -442,6 +442,10 @@
                 .img-wrapper {
                   visibility: hidden;
                 }
+
+                .playButtonDiv {
+                  visibility: visible;
+                }
               }
 
               // adds styling to the carousel item to the right
@@ -461,6 +465,10 @@
                 .img-wrapper {
                   visibility: hidden;
                 }
+
+                .playButtonDiv {
+                  visibility: visible;
+                }
               }
 
               &:checked ~ .carousel__controls:nth-of-type(#{$i}) {
@@ -471,7 +479,7 @@
                       visibility: hidden;
                     }
                   }
-                  @if $i == ($numOfSlides - 1) {
+                  @if $i == ($nextGenNumOfSlides - 1) {
                     .carousel__control--forward {
                       visibility: hidden;
                     }
@@ -571,30 +579,49 @@
 
           }
 
-          & .image1 {
-            content: $image1;
+          & .curiosity {
+            content: $curiosity;
             height: $carouselImageHeight;
             width: $carouselImageWidth;
           }
 
-          & .image2 {
-            content: $image2;
+          & .impact {
+            content: $impact;
             height: $carouselImageHeight;
             width: $carouselImageWidth;
           }
 
-          & .image3 {
-            content: $image1;;
+          & .innovation {
+            content: $innovation;;
             height: $carouselImageHeight;
             width: $carouselImageWidth;
             z-index: -1;
           }
 
-
-          & .image4 {
-            content: $image2;
+          & .inspiration {
+            content: $inspiration;
             height: $carouselImageHeight;
             width: $carouselImageWidth;
+          }
+
+          & .progress {
+            content: $progress;
+            height: $carouselImageHeight;
+            width: $carouselImageWidth;
+          }
+
+          & .playButtonDiv {
+            display: inline;
+            position: absolute;
+            top: 20%;
+            left: 15%;
+            visibility: hidden;
+
+            .playButton {
+              z-index: 2;
+              content: $pressplay;
+              width: 75%;
+            }
           }
 
           & .img-wrapper {
@@ -723,7 +750,7 @@
 
           > .videoCarousel {
 
-            @for $i from 1 to $numOfSlides {
+            @for $i from 1 to $nextGenNumOfSlides {
               .carousel__activator-gallery-one:nth-of-type(#{$i}) {
 
                 // when checked only show the one needed
@@ -829,7 +856,7 @@
 
 
 
-          @for $i from 1 through $numOfSlides {
+          @for $i from 1 through $newProblemsNumOfSlides {
             // creates these classes for each image/video by looping
 
             .carousel__activator:nth-of-type(#{$i}) {
@@ -890,7 +917,7 @@
                       visibility: hidden;
                     }
                   }
-                  @if $i == ($numOfSlides) {
+                  @if $i == ($newProblemsNumOfSlides) {
                     .carousel__control--forward {
                       visibility: hidden;
                     }
@@ -1027,7 +1054,7 @@
 
           > .videoCarousel {
 
-            @for $i from 1 to $numOfSlides {
+            @for $i from 1 to $newProblemsNumOfSlides {
               .carousel__activator:nth-of-type(#{$i}) {
 
                 // when checked only show the one needed

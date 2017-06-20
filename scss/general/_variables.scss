@@ -17,6 +17,13 @@ $studentscientist: url(../assets/StudentScientists.png);
 $studentslaughing: url(../assets/StudentsLaughing.png);
 $partner: url(../assets/qualitylogos/partner.png);
 $scope: url(../assets/qualitylogos/scope.png);
+$space: url(../assets/space.jpg);
+$curiosity: url(../assets/nextGen/Curiosity.jpg);
+$impact: url(../assets/nextGen/Impact.jpg);
+$innovation: url(../assets/nextGen/Innovation.jpg);
+$inspiration: url(../assets/nextGen/Inspiration.jpg);
+$progress: url(../assets/nextGen/Progress.jpg);
+$pressplay: url(../assets/play_button.png);
 
 //social icons
 $ytIcon: url(../assets/social/yt.png);
@@ -35,7 +42,8 @@ $lightblue: #4896c3;
 $boxShadow: 0px 0px 15px rgba(0,0,0,0.2);
 
 //video/image carousel
-$numOfSlides: 4;
+$nextGenNumOfSlides: 5;
+$newProblemsNumOfSlides: 10;
 $carouselHeight: 50rem;
 $carouselWidth: 100%;
 $carouselControlSize: 5rem;
