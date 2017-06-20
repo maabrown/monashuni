@@ -220,7 +220,7 @@
     &[data-name="intro"] {
       background: $white;
       color: $black;
-      height: 84rem;
+      height: 73rem;
       position: relative;
       z-index: 1;
 
@@ -230,9 +230,9 @@
         border-right:1px solid $white;
         background: $black;
         height: 40rem;
-        left: 50%;
+        left: 52%;
         margin-left: -50rem;
-        bottom: -40rem;
+        bottom: -61rem;
       }
 
       .image1, .image2 {
@@ -244,18 +244,18 @@
       }
 
       .image1 {
-        height: 42rem;
-        width: 42rem;
-        right: -12rem;
-        top: 14rem;
+        height: 35rem;
+        width: 35rem;
+        right: 8rem;
+        top: 3rem;
         background-image: $image1;
       }
 
       .image2 {
-        height: 32rem;
-        width: 32rem;
-        right: 20rem;
-        top: 40rem;
+        height: 27rem;
+        width: 27rem;
+        right: 27rem;
+        top: 33rem;
         background-image: $image2;
       }
 
@@ -264,8 +264,8 @@
         width: 12rem;
         height: 28rem;
         position: absolute;
-        right: 8rem;
-        bottom: 0rem;
+        right: 16rem;
+        bottom: 4rem;
       }
 
       .content {
@@ -276,6 +276,8 @@
         h2 {
           @include TitleFont();
           font-size: 2.8rem;
+          line-height: 150%;
+          padding-left: 10rem;
         }
         .textSpace {
           width: 42rem;
