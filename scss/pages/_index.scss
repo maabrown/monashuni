@@ -610,6 +610,12 @@
             width: $nextGenCarouselImageWidth;
           }
 
+          & .qta {
+            content: $qta;
+            height: $nextGenCarouselImageHeight;
+            width: $nextGenCarouselImageWidth;
+          }
+
           & .playButtonDiv {
             display: inline;
             position: absolute;
