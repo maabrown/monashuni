@@ -959,6 +959,12 @@
             width: $newProbCarouselImageWidth;
           }
 
+          & .xWu {
+            content: $xWu;
+            height: $newProbCarouselImageHeight;
+            width: $newProbCarouselImageWidth;
+          }
+
           & .playButtonDiv {
             display: inline;
             position: absolute;
@@ -1059,6 +1065,7 @@
         margin:auto;
         padding-top: 15rem;
         padding-bottom: 9rem;
+        background-image: $robots;
 
         h2 {
           @include TitleFont();
@@ -1083,19 +1090,19 @@
           .col {
 
             &.original-image {
-              background-image: $image1;
+              // background-image: $image1;
               background-size: cover;
             }
 
             // use CSS to flip the image
             &.flipped-image {
-              background-image: $image1;
-              background-size: cover;
-              transform: scale(-1,1);
+              // background-image: $image1;
+              // background-size: cover;
+              // transform: scale(-1,1);
 
               // use CSS to flip the text back so reader can read it
               & .box {
-                transform: scale(-1,1);
+                // transform: scale(-1,1);
               }
             }
 
