@@ -160,14 +160,14 @@
             | questioned the answers. 
             br
             | Meet and be inspired by 10 incredible Monash people who
-            | are creating the extraordinary -  
+            | are creating the extraordinary &mdash; 
             br
             | here and around the world.
           
           .videoCarousel
             .carousel-container
               .carousel.my-carousel.carousel--translate
-                - var panels = ['image5', 'image6', 'image7', 'image8']
+                - var panels = ['nStone', 'kFitzGibbon', 'nBertram', 'sFenton', 'tLe', 'xWu', 'bKiernan', 'mMcintosh', 'kSievert', 'sLoni' ]
                 - var panels_length = panels.length + 4;
                 each val in panels
                   input.carousel__activator(type="radio", name="activator", id=(val), checked=(val == panels[1]))
@@ -178,13 +178,12 @@
                     label.carousel__control.carousel__control--forward(for= `${(idx == panels.length - 1) ? panels[0] : panels[idx + 1]}`)
                 
                 .carousel__track
-                  //- each val in panels
-                  //-   .carousel__slide
-                  //-     img(class=val)
                 
                   .carousel__slide
                       .img-wrapper
-                      img(class='image5')
+                      .playButtonDiv
+                        img(class='playButton')
+                      img(class='nStone')
 
                       div.videoDescription
                         h2 Nick Stone
@@ -193,31 +192,103 @@
                       
                   .carousel__slide
                       .img-wrapper
-                      img(class='image6')
+                      .playButtonDiv
+                        img(class='playButton')
+                      img(class='kFitzGibbon')
 
                       div.videoDescription
-                        h2 Dr Kate Fitz-Gibbon
+                        h2 Dr. Kate Fitz-Gibbon
                         p.personDescription Senior Lecturer in Criminology, Monash University
-                        p.personCaption Discover how Monash Business School graduate, Nick Stone took a slice of Australian culture and turned it into a business success story on the world's biggest stage.
+                        p.personCaption Learn how Monash Research, Kate Fitz-Gibbon helped to shut down provocation being used as a defence in Australian murder charges.
                       
                   .carousel__slide
                       .img-wrapper
-                      img(class='image7')
+                      .playButtonDiv
+                        img(class='playButton')
+                      img(class='nBertram')
 
                       div.videoDescription
-                        h2 Nick Stone
-                        p.personDescription Bluestone Lane Founder and Monash Business School graduate.
-                        p.personCaption Discover how Monash Business School graduate, Nick Stone took a slice of Australian culture and turned it into a business success story on the world's biggest stage.
+                        h2 Nigel Bertram
+                        p.personDescription Professor of Architecture, Monash University.
+                        p.personCaption See how Monash University's Nigel Bertram thought outside the squire and inspired new thinking and reinvention with the Big West House.
                   
                   .carousel__slide 
                       .img-wrapper
-                      img(class='image8')
+                      .playButtonDiv
+                        img(class='playButton')
+                      img(class='sFenton')
 
                       div.videoDescription
-                        h2 Dr Kate Fitz-Gibbon
-                        p.personDescription Senior Lecturer in Criminology, Monash University.
-                        p.personCaption Discover how Monash Business School graduate, Nick Stone took a slice of Australian culture and turned it into a business success story on the world's biggest stage.
-              
+                        h2 Sophie Fenton
+                        p.personDescription Sandridge School Co-Founder and Principal, Monash University Graduate.
+                        p.personCaption Watch how Monash's 2016 Distinguished Alumni Award for the Faculty of Education, Sophie Fenton, dreamt big, challenged the norms and thought beyond the classroom.
+                
+                  .carousel__slide 
+                      .img-wrapper
+                      .playButtonDiv
+                        img(class='playButton')
+                      img(class='tLe')
+
+                      div.videoDescription
+                        h2 Tan Le
+                        p.personDescription EMOTIV Founder and CEO, Monash University graduate.
+                        p.personCaption Open minds like former young Australian of the Year, Tan Le who helped revolutionise the way medical technology is used in our lives.
+                        
+                  .carousel__slide 
+                      .img-wrapper
+                      .playButtonDiv
+                        img(class='playButton')
+                      img(class='xWu')
+
+                      div.videoDescription
+                        h2 Professor XinHua Wu
+                        p.personDescription Director at Monash Centre for Additive Manufacturing.
+                        p.personCaption Be inspired by Monash engineering researcher Professor XinHua Wu, who challenged the status quo of aircraft engine manufacturing.
+      
+                  .carousel__slide 
+                      .img-wrapper
+                      .playButtonDiv
+                        img(class='playButton')
+                      img(class='bKiernan')
+
+                      div.videoDescription
+                        h2 Professor Ben Kiernan
+                        p.personDescription Monash University Distinguished Alumni Award 2015 - Faculty of the Arts.
+                        p.personCaption Learn how the Founding Director of the Genocide Study Program, Ben Kiernan, worked to bring the perpetrators of the Khmer Rouge regime to justice.
+                  
+                  .carousel__slide 
+                      .img-wrapper
+                      .playButtonDiv
+                        img(class='playButton')
+                      img(class='mMcintosh')
+
+                      div.videoDescription
+                        h2 Michelle McIntosh
+                        p.personDescription Associate Professor of Pharmacy and Pharmaceutical Sciences, Monash University.
+                        p.personCaption See how Monash Associate Professor Michelle McIntosh is delivering life-saving solutions to women around the world.      
+                  
+                  .carousel__slide 
+                      .img-wrapper
+                      .playButtonDiv
+                        img(class='playButton')
+                      img(class='kSievert')
+
+                      div.videoDescription
+                        h2 Kate Sievert
+                        p.personDescription Education Coordinator, Hepatitis Victoria and Monash University graduate.
+                        p.personCaption See how Monash graduate Kate Sievert and her work with migrant communities and the treatment of Hepatitis B. 
+                  
+                  .carousel__slide 
+                      .img-wrapper
+                      .playButtonDiv
+                        img(class='playButton')
+                      img(class='sLoni')
+
+                      div.videoDescription
+                        h2 Sam Loni
+                        p.personDescription Global Coordinator of SDSN Youth and Monash University graduate.
+                        p.personCaption Follow the story of Sam Loni, who helped create a youth-run division of the United Nations, whilst a student at Monash University. 
+      
       .section(data-name="flexiblelearning")
         .bg
         .content

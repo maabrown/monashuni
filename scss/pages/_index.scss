@@ -547,7 +547,7 @@
             }
 
             & .videoDescription {
-              width: $carouselImageWidth;
+              width: $nextGenCarouselImageWidth;
               padding-top: 2rem;
 
               h2 {
@@ -581,33 +581,33 @@
 
           & .curiosity {
             content: $curiosity;
-            height: $carouselImageHeight;
-            width: $carouselImageWidth;
+            height: $nextGenCarouselImageHeight;
+            width: $nextGenCarouselImageWidth;
           }
 
           & .impact {
             content: $impact;
-            height: $carouselImageHeight;
-            width: $carouselImageWidth;
+            height: $nextGenCarouselImageHeight;
+            width: $nextGenCarouselImageWidth;
           }
 
           & .innovation {
             content: $innovation;;
-            height: $carouselImageHeight;
-            width: $carouselImageWidth;
+            height: $nextGenCarouselImageHeight;
+            width: $nextGenCarouselImageWidth;
             z-index: -1;
           }
 
           & .inspiration {
             content: $inspiration;
-            height: $carouselImageHeight;
-            width: $carouselImageWidth;
+            height: $nextGenCarouselImageHeight;
+            width: $nextGenCarouselImageWidth;
           }
 
           & .progress {
             content: $progress;
-            height: $carouselImageHeight;
-            width: $carouselImageWidth;
+            height: $nextGenCarouselImageHeight;
+            width: $nextGenCarouselImageWidth;
           }
 
           & .playButtonDiv {
@@ -625,12 +625,12 @@
           }
 
           & .img-wrapper {
-            background-color: white;
-            height: $carouselImageHeight;
-            width: $carouselImageWidth;
+            background-color: $black;
+            height: $nextGenCarouselImageHeight;
+            width: $nextGenCarouselImageWidth;
             display: inline;
             z-index: 2;
-            opacity: 0.3;
+            opacity: 0.8;
             position: absolute;
           }
         }
@@ -805,6 +805,10 @@
                 .img-wrapper {
                   visibility: hidden;
                 }
+
+                .playButtonDiv {
+                  visibility: visible;
+                }
               }
 
               &:checked ~ .carousel__controls:nth-of-type(#{$i}) {
@@ -879,7 +883,7 @@
             position: absolute;
 
             & .videoDescription {
-              width: $carouselImageWidth;
+              width: $nextGenCarouselImageWidth;
               padding-top: 2rem;
 
               h2 {
@@ -901,39 +905,81 @@
 
           }
 
-          & .image5 {
-            content: $image1;
-            height: 37rem;
-            width: 71rem;
+          & .bKiernan {
+            content: $bKiernan;
+            height: $newProbCarouselImageHeight;
+            width: $newProbCarouselImageWidth;
           }
 
-          & .image6 {
-            content: $image2;
-            height: 37rem;
-            width: 71rem;
+          & .kFitzGibbon {
+            content: $kFitzGibbon;
+            height: $newProbCarouselImageHeight;
+            width: $newProbCarouselImageWidth;
           }
 
-          & .image7 {
-            content: $image1;;
-            height: 37rem;
-            width: 71rem;
-            z-index: -1;
+          & .kSievert {
+            content: $kSievert;
+            height: $newProbCarouselImageHeight;
+            width: $newProbCarouselImageWidth;
           }
 
+          & .mMcintosh {
+            content: $mMcintosh;
+            height: $newProbCarouselImageHeight;
+            width: $newProbCarouselImageWidth;
+          }
 
-          & .image8 {
-            content: $image2;
-            height: 37rem;
-            width: 71rem;
+          & .nStone {
+            content: $nStone;
+            height: $newProbCarouselImageHeight;
+            width: $newProbCarouselImageWidth;
+          }
+
+          & .nBertram {
+            content: $nBertram;
+            height: $newProbCarouselImageHeight;
+            width: $newProbCarouselImageWidth;
+          }
+
+          & .sLoni {
+            content: $sLoni;
+            height: $newProbCarouselImageHeight;
+            width: $newProbCarouselImageWidth;
+          }
+
+          & .sFenton {
+            content: $sFenton;
+            height: $newProbCarouselImageHeight;
+            width: $newProbCarouselImageWidth;
+          }
+
+          & .tLe {
+            content: $tLe;
+            height: $newProbCarouselImageHeight;
+            width: $newProbCarouselImageWidth;
+          }
+
+          & .playButtonDiv {
+            display: inline;
+            position: absolute;
+            top: 40%;
+            left: 30%;
+            visibility: hidden;
+
+            .playButton {
+              z-index: 2;
+              content: $pressplay;
+              width: 75%;
+            }
           }
 
           & .img-wrapper {
-            background-color: white;
+            background-color: $black;
             height: 37rem;
             width: 71rem;
             display: inline;
             z-index: 2;
-            opacity: 0.2;
+            opacity: 0.8;
             position: absolute;
           }
         }

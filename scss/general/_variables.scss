@@ -24,6 +24,15 @@ $innovation: url(../assets/nextGen/Innovation.jpg);
 $inspiration: url(../assets/nextGen/Inspiration.jpg);
 $progress: url(../assets/nextGen/Progress.jpg);
 $pressplay: url(../assets/play_button.png);
+$bKiernan: url(../assets/newProblems/BenKiernan.jpg);
+$kFitzGibbon: url(../assets/newProblems/Kate-Fitzgibbon.jpg);
+$kSievert: url(../assets/newProblems/Kate-sievert.jpg);
+$mMcintosh: url(../assets/newProblems/michelle-mcintosh.jpg);
+$nStone: url(../assets/newProblems/Nick_Stone.jpg);
+$nBertram: url(../assets/newProblems/nigelbertram.jpg);
+$sLoni: url(../assets/newProblems/samloni.jpg);
+$sFenton: url(../assets/newProblems/sophie-fenton.jpg);
+$tLe: url(../assets/newProblems/tan-le.jpg);
 
 //social icons
 $ytIcon: url(../assets/social/yt.png);
@@ -49,8 +58,12 @@ $carouselWidth: 100%;
 $carouselControlSize: 5rem;
 $slideTransition: .5s;
 $percentageMove: 37.5%;
-$carouselImageHeight: 275px;
-$carouselImageWidth: 415px;
+$nextGenCarouselImageHeight: 275px;
+$nextGenCarouselImageWidth: 415px;
+
+$newProbCarouselImageHeight: 37rem;
+$newProbCarouselImageWidth: 71rem;
+
 
 // choose monash panels
 $leftpanelpaddingleft: 6rem;
