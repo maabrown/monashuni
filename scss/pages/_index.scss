@@ -1090,6 +1090,10 @@
       text-align: center;
       position: relative;
 
+      @include breakpoint(sm) {
+        background: $black;
+      }
+
       .bg {
         position: absolute;
         width: 100%;
@@ -1102,6 +1106,18 @@
         margin:auto;
         padding-top: 15rem;
         padding-bottom: 9rem;
+
+        @include breakpoint(sm) {
+          padding-top: 10rem;
+          width: 30rem;
+
+          .title {
+            p {
+              margin-bottom: 3rem;
+              font-size: 1.5rem;
+            }
+          }
+        }
 
         h2 {
           @include TitleFont();
@@ -1122,6 +1138,10 @@
           text-align: center;
           margin-top: 1rem;
           position: relative;
+
+          @include breakpoint(sm) {
+            display: none;
+          }
 
           .col {
             float: none;
@@ -1197,10 +1217,42 @@
             }
           }
         }
+
+        .mobile-section {
+          display: none;
+
+          @include breakpoint(sm) {
+            display: block;
+            margin-left: 2rem;
+            margin-right: 2rem;
+
+            div {
+              margin-top: 6rem;
+            }
+
+            h4 {
+              font-size: 2.3rem;
+              margin-top: 1rem;
+              margin-bottom: 1rem;
+              color: white;
+            }
+
+            p {
+              color: white;
+              text-align: center;
+              font-size: 1.7rem;
+            }
+          }
+        }
+
       } // end of flexible-learning .content
 
       .button-div {
         text-align: center;
+
+        @include breakpoint(sm) {
+          margin-top: 4rem;
+        }
       }
 
       button.cta {
@@ -1221,39 +1273,7 @@
       }
 
 
-      @include breakpoint(sm) {
 
-        .content {
-          width: 30rem;
-
-          .halves {
-            display: none;
-          }
-
-          .title {
-            p {
-              margin-bottom: 3rem;
-            }
-          }
-
-          .mobile-section {
-
-            h4 {
-              font-size: 2.3rem;
-              margin-top: 1rem;
-              margin-bottom: 1rem;
-              color: white;
-            }
-          }
-
-          .button-div {
-            margin-top: 4rem;
-          }
-        }
-
-
-
-      }
     } // end of flexible learning section
 
     &[data-name="viewthecollection"] {
