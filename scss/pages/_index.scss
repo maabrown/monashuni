@@ -499,6 +499,10 @@
                   opacity: 1;
                 }
 
+                div:after {
+                  opacity: 1;
+                }
+
                 .img-wrapper {
                   visibility: hidden;
                 }
@@ -635,6 +639,7 @@
                 display: block;
                 height: 2px;
                 width: 4rem;
+                opacity: .3;
               }
             }
 
