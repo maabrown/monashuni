@@ -662,6 +662,11 @@
                 &:checked ~ .carousel__track .carousel__slide:nth-of-type(#{$i}) {
                   display: block;
                   transform: none;
+
+                  div.playButtonDiv {
+                    top: 21%;
+                    left: 41%;
+                  }
                 }
 
                 // when checked only show arrows for one vid
