@@ -11,9 +11,12 @@
         label(class="toggle-container" for="toggle")
           span.button-toggle.button-mobile
         nav.mobile-nav
-          a.mobile-nav-item About
-          a.mobile-nav-item Our Stories
-          a.mobile-nav-item Courses
+          a(class="mobile-nav-item" href="#about") About
+          a(class="mobile-nav-item" href="#new_thinking") Our Stories
+          a(class="mobile-nav-item" href="#courses") Courses
+          a(class="mobile-nav-item" href="#next_generation") Next Gen
+          a(class="mobile-nav-item" href="#choose_monash") Choose Monash
+          a(class="mobile-nav-item" href="#contact_section") Contact
         .mobile-nav-logo
           
       .section(data-name="preheader")
@@ -43,15 +46,15 @@
           ul
             li.logo: a(href="#")
               .logoImg
-            li: a(href="#") About
-            li: a(href="#") Our Stories
-            li: a(href="#") Courses
-            li: a(href="#") Next Gen
-            li: a(href="#") Choose Monash
-            li: a(href="#") Contact
+            li: a(href="#about") About
+            li: a(href="#new_thinking") Our Stories
+            li: a(href="#courses") Courses
+            li: a(href="#next_generation") Next Gen
+            li: a(href="#choose_monash") Choose Monash
+            li: a(href="#contact_section") Contact
       .section(data-name="headerSpacer").headerSpacer
     
-      .section(data-name="intro")
+      .section(data-name="intro" id="about")
         .lineDown(data-parallax="-2")
         .bigM
         .image1(data-parallax="28")
@@ -74,7 +77,7 @@
               | learn to question the answers, your potential 
               | is unleashed.
             
-      .section(data-name="nextgen")
+      .section(data-name="nextgen" id="next_generation")
         .bg(data-parallax="-20")
         .content
           h2 Next-Generation Thinkers
@@ -168,7 +171,7 @@
                         div
                           p It’s the desire to challenge the norm and pursue a philosophy of interrogation. It is the inherent mindset to question the answers put in front of you to move forward. At Monash we equip our students with the skills to do this, in order to make a bigger impact in their lives and their careers.
                         
-      .section(data-name="newthinking")
+      .section(data-name="newthinking" id="new_thinking")
         .bg(data-parallax="-20")
         .content
           h2 New Problems, New Thinking
@@ -305,7 +308,7 @@
                         p.personDescription Global Coordinator of SDSN Youth and Monash University graduate.
                         p.personCaption Follow the story of Sam Loni, who helped create a youth-run division of the United Nations, whilst a student at Monash University. 
       
-      .section(data-name="flexiblelearning")
+      .section(data-name="flexiblelearning" id="courses")
         .bg
         .content
           //- .lineDown(data-parallax="-4")
@@ -372,7 +375,7 @@
         //- .overlay
           .content
       
-      .section(data-name="choosemonash")
+      .section(data-name="choosemonash" id="choose_monash")
 
         .chooseMonashHeader
           h2 Choose Monash
@@ -396,14 +399,14 @@
           .content-row.clearfix
             .col
               div
-                img.bulb-image
+                img.size
                 h3 Size and Scale
                 div
                   p A big university provides you with big opportunities. As Australia's largest university, with more than 60,000 students and 310,000 alumni from over 170 countries, we are well placed to offer the benefits that brings. We know our students thrive in this inclusive and truly empowering environment.
                 
             .col
               div
-                img.bulb-image
+                img.star
                 h3 Top 100 University World Ranking
                 div
                   p Our world-class reputation for excellence in education and research coupled with our global record of innovation has seen Monash University ranked 74rd in the world, securing a place in the top 100 of world universities (Times Higher Education World University Rankings 2015-2016).
@@ -456,7 +459,7 @@
             p Monash University has a large range of flexible study options that can be tailored to your needs and with intake periods throughout the year - now is the ideal time to start planning your Monash University future.
             
             button.cta.btn.btn--white Study at Monash
-      .section(data-name="contact")
+      .section(data-name="contact" id="contact_section")
         .content
           .halves
             .col

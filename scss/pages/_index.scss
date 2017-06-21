@@ -729,7 +729,7 @@
       .content {
         width: 116rem;
         margin:auto;
-        padding-top: 7rem;
+        padding-top: 15rem;
         position: relative;
 
         @include breakpoint(sm) {
@@ -2056,9 +2056,9 @@
             top: 50%;
             left: 15%;
             // determines how big the X is
-            width: 90%;
+            width: 60%;
             // determines thickness of X
-            height: 6px;
+            height: 2px;
             // determines color of X
             background-color: white;
             border-radius: 5px;
@@ -2088,10 +2088,10 @@
 
         .mobile-nav {
           display: inline-block;
-          margin: 16px 25px 0px;
+          margin-left: 3rem;
+          margin-bottom: 2rem;
+          margin-top: 2rem;
           pointer-events: none;
-          // margin-top: 50px;
-          // margin-left: 40px;
         }
 
         // when menu is clicked
@@ -2120,7 +2120,7 @@
             & .mobile-nav-item {
                 color: white;
                 letter-spacing: 3px;
-                height: 5px;
+                height: 15px;
                 line-height: 14px;
                 margin-top: 5px;
                 opacity: 1;
@@ -2158,7 +2158,8 @@
           line-height: 50px;
           text-transform: uppercase;
           white-space: nowrap;
-          margin-bottom: 13px;
+          // space between the lines
+          margin-bottom: 8px;
           // shrinks the words height
           transform: scaleY(0.1);
           transition: $transition-duration, opacity 1s;
@@ -2180,8 +2181,10 @@
 
           // this is for after the third line
           // you want to make them disappear
-          &:nth-child(n+3) {
-
+          &:nth-child(n+4) {
+            margin-top: -7px;
+            opacity: 0;
+            letter-spacing: -5.8px
           }
 
           // uses 'before' pseudo element to make lines
