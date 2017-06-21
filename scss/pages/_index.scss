@@ -667,6 +667,15 @@
                     top: 21%;
                     left: 41%;
                   }
+
+                  .img-wrapper,
+                  div.videoDescription {
+                    width: 30rem;
+                  }
+
+                  > img {
+                    width: 30rem;
+                  }
                 }
 
                 // when checked only show arrows for one vid
@@ -1007,12 +1016,18 @@
       @include breakpoint(sm) {
 
         height: 90rem;
-        p {
-          font-size: 1.3rem;
-        }
 
         .content {
           width: 30rem;
+
+          h2 {
+            font-size: 2.5rem;
+          }
+
+          p {
+            font-size: 1.5rem;
+          }
+
 
           > .videoCarousel {
 
@@ -1055,7 +1070,9 @@
             }
           }
         }
-      }
+
+      } // end of data-name newthinking mobile
+
     } // end of data-name newthinking
 
     &[data-name="flexiblelearning"] {
