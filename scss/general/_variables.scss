@@ -18,6 +18,8 @@ $studentslaughing: url(../assets/choose_monash/Modern-UNi-IMG.jpg);
 $partner: url(../assets/qualitylogos/partner.png);
 $scope: url(../assets/qualitylogos/scope.png);
 $space: url(../assets/space.jpg);
+$size: url(../assets/qualitylogos/size.png);
+$star: url(../assets/qualitylogos/bulb.png);
 
 $curiosity: url(../assets/nextGen/Curiosity.jpg);
 $impact: url(../assets/nextGen/Impact.jpg);
@@ -72,9 +74,13 @@ $newProbCarouselImageHeight: 37rem;
 $newProbCarouselImageWidth: 71rem;
 
 
-// choose monash panels
+// choose monash panels - desktop
 $leftpanelpaddingleft: 6rem;
 $panelpaddingright: 4rem;
 $panelpaddingtop: 4rem;
 $panelpaddingbottom: 3rem;
 $rightpanelpaddingleft: 4rem;
+
+// choose monash panels - mobile
+$mobilepanelpadding: 2rem 2rem 2rem 2rem;
+$mobilepanelborderradius: 2rem;

@@ -1335,15 +1335,17 @@
         padding-top: 22rem;
         color: white;
 
-        // .bg {
-        //   position: absolute;
-        //   width: 100%;
-        //   height: 100%;
-        //   background-size: cover;
-        //   background-image: $makeithappenbg;
-        //   background-position: 50% 50%;
-        //   opacity: 0.3;
-        // }
+        @include breakpoint(sm) {
+          background-size: cover;
+          background-position: 50% 50%;
+          padding-top: 6rem;
+
+          h2 ~ p.description {
+            margin-left: 2rem;
+            margin-right: 2rem;
+            font-size: 1.5rem;
+          }
+        }
 
         h2 {
           @include TitleFont();
@@ -1369,13 +1371,15 @@
         // padding-top: 3rem;
         padding-bottom: 15rem;
 
+        @include breakpoint(sm) {
+          width: 30rem;
+        }
+
         // creating a mini-grid system
         .content-row {
           width: 100%;
           padding-left: 1rem;
           padding-right: 1rem;
-          // padding-top: 3rem;
-          // padding-bottom: 3rem;
           background: $white;
 
           &.clearfix:after {
@@ -1389,6 +1393,9 @@
             float: left;
             text-align: left;
 
+            @include breakpoint(sm) {
+              width: 100%;
+            }
 
             h3 {
                 font-size: 1.8rem;
@@ -1402,18 +1409,22 @@
               font-size: 1.3rem;
               padding-right: 2rem;
               height: 12em;
+
+              @include breakpoint(sm) {
+                height: auto;
+              }
             }
 
             > div > img {
-              width: 16%;
+              width: 14%;
             }
 
             .bulb-image {
-              content: $experience;
+              content: $bulb;
             }
 
             .g8-image {
-              content: $experience;
+              content: $g8;
             }
 
             .trendup-image {
@@ -1427,6 +1438,18 @@
             .scope {
               content: $scope;
             }
+
+            .experience {
+              content: $experience;
+            }
+
+            .size {
+              content: $size;
+            }
+
+            .star {
+              content: $star;
+            }
           }
         }
 
@@ -1439,22 +1462,10 @@
             padding-right: $panelpaddingright;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
-            div:after {
-                content: "";
-                margin-top: 2rem;
-                background: $black;
-                display: block;
-                height: 2px;
-                width: 4rem;
-
+            @include breakpoint(sm) {
+              padding: $mobilepanelpadding;
+              border-radius: $mobilepanelborderradius;
             }
-          }
-
-          > .col:nth-of-type(2) > div:nth-of-type(1) {
-            padding-left: $rightpanelpaddingleft;
-            padding-top: $panelpaddingtop;
-            padding-bottom: $panelpaddingbottom;
-            padding-right: $panelpaddingright;
 
             div:after {
                 content: "";
@@ -1464,9 +1475,46 @@
                 height: 2px;
                 width: 4rem;
 
+                @include breakpoint(sm) {
+                  display: none;
+                }
+
             }
           }
 
+          > .col:nth-of-type(2) {
+
+             @include breakpoint(sm) {
+              text-align: right;
+              background-color: #f2f2f2;
+              border-radius: 2em;
+              margin-top: 2em;
+            }
+
+            > div:nth-of-type(1) {
+              padding-left: $rightpanelpaddingleft;
+              padding-top: $panelpaddingtop;
+              padding-bottom: $panelpaddingbottom;
+              padding-right: $panelpaddingright;
+
+              @include breakpoint(sm) {
+                padding: $mobilepanelpadding;
+              }
+
+              div:after {
+                  content: "";
+                  margin-top: 2rem;
+                  background: $black;
+                  display: block;
+                  height: 2px;
+                  width: 4rem;
+
+                @include breakpoint(sm) {
+                  display: none;
+                }
+              }
+            }
+          }
         }
 
         .content-row:nth-of-type(2) {
@@ -1476,6 +1524,10 @@
             padding-bottom: $panelpaddingbottom;
             padding-right: $panelpaddingright;
 
+            @include breakpoint(sm) {
+              padding: $mobilepanelpadding;
+            }
+
             div:after {
                 content: "";
                 margin-top: 2rem;
@@ -1483,31 +1535,47 @@
                 display: block;
                 height: 2px;
                 width: 4rem;
+
+              @include breakpoint(sm) {
+                display: none;
+              }
             }
           }
 
-          > .col:nth-of-type(2) > div:nth-of-type(1) {
-            padding-left: $rightpanelpaddingleft;
-            padding-top: $panelpaddingtop;
-            padding-bottom: $panelpaddingbottom;
-            padding-right: $panelpaddingright;
-            background-color: $black;
-            color: $white;
+          > .col:nth-of-type(2)
 
-            h3 {
+
+            > div:nth-of-type(1) {
+              padding-left: $rightpanelpaddingleft;
+              padding-top: $panelpaddingtop;
+              padding-bottom: $panelpaddingbottom;
+              padding-right: $panelpaddingright;
+              background-color: $black;
               color: $white;
+
+              h3 {
+                color: $white;
+              }
+
+              @include breakpoint(sm) {
+                padding: $mobilepanelpadding;
+                border-radius: 2rem;
+              }
+
+              div:after {
+                  content: "";
+                  margin-top: 2rem;
+                  background: $white;
+                  display: block;
+                  height: 2px;
+                  width: 4rem;
+
+                @include breakpoint(sm) {
+                  display: none;
+                }
+              }
             }
 
-            div:after {
-                content: "";
-                margin-top: 2rem;
-                background: $white;
-                display: block;
-                height: 2px;
-                width: 4rem;
-
-            }
-          }
         }
 
         .content-row:nth-of-type(3) {
@@ -1517,6 +1585,11 @@
               content: $studentslaughing;
               width: 100%;
 
+              @include breakpoint(sm) {
+                margin-top: 3rem;
+                border-radius: $mobilepanelborderradius;
+              }
+
             }
           }
 
@@ -1527,6 +1600,10 @@
             padding-bottom: $panelpaddingbottom;
             padding-right: $panelpaddingright;
 
+            @include breakpoint(sm) {
+              padding: $mobilepanelpadding;
+            }
+
             div:after {
                 content: "";
                 margin-top: 2rem;
@@ -1535,6 +1612,9 @@
                 height: 2px;
                 width: 4rem;
 
+              @include breakpoint(sm) {
+                display: none;
+              }
             }
           }
         }
@@ -1546,6 +1626,12 @@
             padding-bottom: $panelpaddingbottom;
             padding-right: $panelpaddingright;
 
+            @include breakpoint(sm) {
+              padding: $mobilepanelpadding;
+              border-radius: $mobilepanelborderradius;
+              background-color: #f2f2f2;
+            }
+
             div:after {
                 content: "";
                 margin-top: 2rem;
@@ -1553,6 +1639,10 @@
                 display: block;
                 height: 2px;
                 width: 4rem;
+
+              @include breakpoint(sm) {
+                display: none;
+              }
             }
           }
 
@@ -1563,6 +1653,12 @@
             padding-right: $panelpaddingright;
             color: $white;
             background: $black;
+
+            @include breakpoint(sm) {
+              padding: $mobilepanelpadding;
+              margin-top: 3rem;
+              border-radius: $mobilepanelborderradius;
+            }
 
             h3 {
               color: $white;
@@ -1575,6 +1671,10 @@
                 display: block;
                 height: 2px;
                 width: 4rem;
+
+              @include breakpoint(sm) {
+                display: none;
+              }
             }
           }
         }
@@ -1588,6 +1688,12 @@
             padding-right: $panelpaddingright;
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+            @include breakpoint(sm) {
+              padding: $mobilepanelpadding;
+              border-radius: $mobilepanelborderradius;
+              margin-top: 3rem;
+            }
+
             div:after {
                 content: "";
                 margin-top: 2rem;
@@ -1595,6 +1701,10 @@
                 display: block;
                 height: 2px;
                 width: 4rem;
+
+              @include breakpoint(sm) {
+                display: none;
+              }
             }
           }
 
@@ -1603,6 +1713,11 @@
             img {
               content: $studentscientist;
               width: 100%;
+
+              @include breakpoint(sm) {
+                border-radius: $mobilepanelborderradius;
+                margin-top: 3rem;
+              }
             }
           }
         }
@@ -1667,47 +1782,7 @@
         }
       } // end of choosemonash .content
 
-      @include breakpoint(sm) {
 
-        .content {
-          width: 30rem;
-
-
-
-          .content-row {
-
-            &.grey-background {
-              background-color: white;
-            }
-
-            padding-left: 1rem;
-            padding-right: .5rem;
-            padding-bottom: 0rem;
-
-            div.col:nth-of-type(2) {
-              margin-top: 3rem;
-              text-align: right;
-              padding-top: 2rem;
-              padding-bottom: 2rem;
-              padding-right: 1rem;
-
-              p {
-                padding-right: 0rem;
-              }
-
-              background-color: #f2f2f2;
-              border-radius: 2rem;
-            }
-
-            .col {
-                width: 100%;
-
-            }
-          }
-        }
-
-
-      }
     } //end of choosemonash section
 
     &[data-name="makeithappen"] {
@@ -1962,8 +2037,6 @@
         position: fixed;
         z-index: 7;
         border-bottom: 2px solid white;
-        // margin: 35px auto 0;
-        // width: 300px;
         background-color: black;
         overflow: hidden;
 
@@ -2090,7 +2163,7 @@
           line-height: 50px;
           text-transform: uppercase;
           white-space: nowrap;
-          margin-bottom: 20px;
+          margin-bottom: 13px;
           // shrinks the words height
           transform: scaleY(0.1);
           transition: $transition-duration, opacity 1s;
@@ -2130,7 +2203,7 @@
             // in the a tag
             width: 100%;
             // determines how thick the hamberger lines are
-            height: 50px;
+            height: 20px;
             // sets the color of the hamburger lines
             background-color: white;
             // with the top property moves lines to middle of words
