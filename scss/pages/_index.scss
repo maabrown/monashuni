@@ -716,6 +716,10 @@
       position: relative;
       z-index: 0;
 
+      @include breakpoint(sm) {
+        height: 75rem;
+      }
+
       .bg {
         position: absolute;
         width: 100%;
@@ -728,11 +732,19 @@
         padding-top: 7rem;
         position: relative;
 
+        @include breakpoint(sm) {
+          width: 30rem;
+        }
+
         h2 {
           @include TitleFont();
           font-size: 2.8rem;
           color: $black;
           text-align: center;
+
+          @include breakpoint(sm) {
+            font-size: 2.5rem;
+          }
         }
 
         h2 ~ p {
@@ -744,6 +756,10 @@
         > p {
           font-size: 1.7rem;
           color: $black;
+
+          @include breakpoint(sm) {
+            font-size: 1.5rem;
+          }
         }
 
 
@@ -786,6 +802,10 @@
               // this is what actually moves the carousel
               &:checked ~ .carousel__track {
                   transform: translateX( (-(($i - 1) * 60%) + 17%) );
+
+                  @include breakpoint(sm) {
+                    transform: none;
+                  }
               }
 
               // styles for the slide itself - need to put in transition/animation
@@ -828,6 +848,41 @@
                 .playButtonDiv {
                   visibility: visible;
                 }
+
+                @include breakpoint(sm) {
+                  display: block;
+                  transform: none;
+
+                  h2 {
+                    margin-top: 1rem;
+                  }
+
+                  p.personDescription {
+                    margin-top: 0.5rem;
+                  }
+
+                  div.playButtonDiv {
+                    top: 21%;
+                    left: 41%;
+                  }
+
+                  .img-wrapper,
+                  div.videoDescription {
+                    width: 30rem;
+                    padding-top: 0rem;
+                  }
+
+                  > img {
+                    width: 30rem;
+                    height: 20rem;
+                  }
+
+                  p.personCaption:after {
+                    display: none;
+                  }
+                }
+
+
               }
 
               &:checked ~ .carousel__controls:nth-of-type(#{$i}) {
@@ -868,6 +923,10 @@
             // opacity: 0.35;
             outline: 0;
             z-index: 3;
+
+            @include breakpoint(sm) {
+              top: 30%;
+            }
           }
 
           .carousel__control--backward {
@@ -895,6 +954,18 @@
             top: 0;
             left: 0;
             right: 0;
+
+            @include breakpoint(sm) {
+              height: 100%;
+              right: 0;
+              position: absolute;
+              // hide all the images that aren't checked
+              display: none;
+              overflow-y: auto;
+              top: 0;
+              left: 0;
+              transform: none;
+            }
           }
 
           .carousel__slide {
@@ -1009,87 +1080,6 @@
           }
         } // end of videoCarousel
       } // end of newthinking .content
-
-
-      @include breakpoint(sm) {
-
-        height: 90rem;
-
-        .content {
-          width: 30rem;
-
-          h2 {
-            font-size: 2.5rem;
-          }
-
-          p {
-            font-size: 1.5rem;
-          }
-
-
-          > .videoCarousel {
-
-            .carousel__control {
-              top: 30%;
-            }
-
-          //   @for $i from 1 to $newProblemsNumOfSlides {
-          //     .carousel__activator:nth-of-type(#{$i}) {
-          //
-          //       // when checked only show the one needed
-          //       &:checked ~ .carousel__track .carousel__slide:nth-of-type(#{$i}) {
-          //         display: block;
-          //         transform: none;
-          //
-          //         div.playButtonDiv {
-          //           top: 21%;
-          //           left: 41%;
-          //         }
-          //
-          //         .img-wrapper,
-          //         div.videoDescription {
-          //           width: 30rem;
-          //         }
-          //
-          //         > img {
-          //           width: 30rem;
-          //           height: 20rem;
-          //         }
-          //       }
-          //
-          //       // when checked only show arrows for one vid
-          //       &:checked ~ .carousel__track .carousel__controls:nth-of-type(#{$i}) {
-          //         display: block;
-          //       }
-          //
-          //       // don't move the carousel track
-          //       &:checked ~ .carousel__track {
-          //         transform: none;
-          //       }
-          //   }
-          // }
-
-            // position the carousel slide on the screen
-            .carousel__track .carousel__slide {
-              height: 100%;
-              right: 0;
-              position: absolute;
-              // hide all the images that aren't checked
-              display: none;
-              overflow-y: auto;
-              top: 0;
-              left: 0;
-              transform: none;
-            }
-
-            .carousel__control {
-              border-color: white;
-            }
-          }
-        }// end of newthinking mobile content
-
-      } // end of data-name newthinking mobile
-
     } // end of data-name newthinking
 
     &[data-name="flexiblelearning"] {
