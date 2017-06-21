@@ -90,7 +90,7 @@
           .videoCarousel
             .carousel-container
               .carousel.my-carousel.carousel--translate
-                - var panels = ['curiosity', 'innovation', 'impact', 'inspiration', 'progress']
+                - var panels = ['curiosity', 'innovation', 'impact', 'inspiration', 'progress', 'qta']
                 each val in panels
                   input.carousel__activator-gallery-one(type="radio", name="gallery-one-activator", id=val, checked=(val == panels[1]))
                 
@@ -108,8 +108,9 @@
                       img(class='curiosity')
 
                       div.videoDescription
-                        h2 Curiosity 
-                        p We are all born curious. Why am I moving and how far can I go? What if I make a noise? What is that? Why is that? It is this insatiable human desire to constantly ask 'why', 'why', 'why' that leads to the greatest discoveries. And that's part of our Monash DNA.  
+                        h2 Curiosity
+                        div 
+                          p We are all born curious. Why am I moving and how far can I go? What if I make a noise? What is that? Why is that? It is this insatiable human desire to constantly ask 'why', 'why', 'why' that leads to the greatest discoveries. And that's part of our Monash DNA.  
                                       
                   .carousel__slide
                       .img-wrapper
@@ -119,8 +120,9 @@
 
 
                       div.videoDescription
-                        h2 Innovation 
-                        p Testing, trailing, pushing the limits and harnessing creative thought. At Monash, we think innovation happens when things are turned on their head, when what we know to be true is questioned and we let ourselves believe in possibility.
+                        h2 Innovation
+                        div 
+                          p Testing, trailing, pushing the limits and harnessing creative thought. At Monash, we think innovation happens when things are turned on their head, when what we know to be true is questioned and we let ourselves believe in possibility.
                       
                   .carousel__slide
                       .img-wrapper
@@ -130,7 +132,8 @@
 
                       div.videoDescription
                         h2 Impact
-                        p Whether it's through leadership programs, or through study or more social-minded initiatives, we give all our students a range of opportunities to create an impact and leave their own legacy.
+                        div
+                          p Whether it's through leadership programs, or through study or more social-minded initiatives, we give all our students a range of opportunities to create an impact and leave their own legacy.
                       
                   .carousel__slide
                       .img-wrapper
@@ -139,8 +142,9 @@
                       img(class='inspiration')
 
                       div.videoDescription
-                        h2 Inspiration 
-                        p What fuels inspiration? Those who you surround yourself with? Or the environment? Or a combination of both? As Australia's largest university we also consider ourselves to be Australia's largest think tank too - surrounding our students with peers that are as hungry as they are, guide by world-class lecturers and industry leaders.
+                        h2 Inspiration
+                        div 
+                          p What fuels inspiration? Those who you surround yourself with? Or the environment? Or a combination of both? As Australia's largest university we also consider ourselves to be Australia's largest think tank too - surrounding our students with peers that are as hungry as they are, guide by world-class lecturers and industry leaders.
                   
                   .carousel__slide 
                       .img-wrapper
@@ -150,7 +154,8 @@
 
                       div.videoDescription
                         h2 Impact
-                        p Testing, trialing, pushing the limits and harnessing creative thought. At Monash, we think innovation happens when things are turned on their head, when what we know to be true is questioned and we let ourselves believe in possibility.
+                        div
+                          p Testing, trialing, pushing the limits and harnessing creative thought. At Monash, we think innovation happens when things are turned on their head, when what we know to be true is questioned and we let ourselves believe in possibility.
 
                   .carousel__slide 
                       .img-wrapper
@@ -160,7 +165,8 @@
 
                       div.videoDescription
                         h2 Question the Answers
-                        p It’s the desire to challenge the norm and pursue a philosophy of interrogation. It is the inherent mindset to question the answers put in front of you to move forward. At Monash we equip our students with the skills to do this, in order to make a bigger impact in their lives and their careers.
+                        div
+                          p It’s the desire to challenge the norm and pursue a philosophy of interrogation. It is the inherent mindset to question the answers put in front of you to move forward. At Monash we equip our students with the skills to do this, in order to make a bigger impact in their lives and their careers.
                         
       .section(data-name="newthinking")
         .bg(data-parallax="-20")

@@ -380,7 +380,17 @@
           color: $white;
         }
 
+        // responsive for .content
+        @include breakpoint(sm) {
 
+          width: 30rem;
+          padding-top: 15rem;
+          height: 77rem;
+
+          p {
+            font-size: 1.3rem;
+          }
+       }
 
         > .videoCarousel {
 
@@ -418,13 +428,10 @@
               // carousel track, so having the same size image matters
               &:checked ~ .carousel__track {
                   transform: translateX(-(($i - 1) * $percentageMove) + 10%);
-              }
 
-              // styles for the slide itself - need to put in transition/animation
-              &:checked ~ .carousel__slide:nth-of-type(#{$i}) {
-                  top: 0;
-                  left: 0;
-                  right: 0;
+                  @include breakpoint(sm) {
+                    transform: none;
+                  }
               }
 
               &:checked ~ .carousel__track .carousel__slide:nth-of-type(#{$i}) {
@@ -446,6 +453,35 @@
 
                 .playButtonDiv {
                   visibility: visible;
+                }
+
+                @include breakpoint(sm) {
+                    display: block;
+                    transform: none;
+
+                    div.playButtonDiv {
+                      top: 21%;
+                      left: 41%;
+                    }
+
+                    .img-wrapper,
+                    div.videoDescription {
+                      width: 30rem;
+                      padding-top: 0rem;
+
+                      h2 {
+                        margin-top: 1rem;
+                      }
+
+                      h2 ~ p {
+                        margin-top: 1rem;
+                        font-size: 1rem;
+                      }
+                    }
+
+                    > img {
+                      width: 30rem;
+                    }
                 }
               }
 
@@ -470,7 +506,9 @@
                 .playButtonDiv {
                   visibility: visible;
                 }
+
               }
+
 
               &:checked ~ .carousel__controls:nth-of-type(#{$i}) {
                   display: block;
@@ -480,7 +518,7 @@
                       visibility: hidden;
                     }
                   }
-                  @if $i == ($nextGenNumOfSlides - 1) {
+                  @if $i == ($nextGenNumOfSlides) {
                     .carousel__control--forward {
                       visibility: hidden;
                     }
@@ -520,6 +558,7 @@
             right: 7%;
             transform: rotate(45deg);
           }
+
           .carousel__track {
             position: absolute;
             top: 0;
@@ -537,6 +576,19 @@
             top: 0;
             left: 0;
             right: 0;
+
+                @include breakpoint(sm) {
+                    height: 100%;
+                    right: 0;
+                    position: absolute;
+                    // hide all the images that aren't checked
+                    display: none;
+                    overflow-y: auto;
+                    top: 0;
+                    left: 0;
+                    transform: none;
+
+                }
           }
 
           .carousel__slide {
@@ -560,15 +612,23 @@
                 margin-top: 2rem;
               }
 
-              p {
+              > div > p {
                 text-align: left;
                 color: $black;
                 opacity: .3;
                 font-size: 1.3rem;
                 line-height: 2.2rem;
+                height: 12rem;
+                margin-top: 1rem;
+
+                @include breakpoint(sm) {
+                  height: 16rem;
+                  font-size: 1rem;
+                  line-height: 2.1rem;
+                }
               }
 
-              p:after {
+              > div:after {
                 content: "";
                 margin-top: 2rem;
                 background: $black;
@@ -641,73 +701,6 @@
             position: absolute;
           }
         }
-
-
-        @include breakpoint(sm) {
-
-          width: 30rem;
-          padding-top: 15rem;
-          height: 77rem;
-
-          p {
-            font-size: 1.3rem;
-          }
-
-          > .videoCarousel {
-
-            @for $i from 1 to $nextGenNumOfSlides {
-              .carousel__activator-gallery-one:nth-of-type(#{$i}) {
-
-                // when checked only show the one needed
-                &:checked ~ .carousel__track .carousel__slide:nth-of-type(#{$i}) {
-                  display: block;
-                  transform: none;
-
-                  div.playButtonDiv {
-                    top: 21%;
-                    left: 41%;
-                  }
-
-                  .img-wrapper,
-                  div.videoDescription {
-                    width: 30rem;
-                  }
-
-                  > img {
-                    width: 30rem;
-                  }
-                }
-
-                // when checked only show arrows for one vid
-                &:checked ~ .carousel__track .carousel__controls:nth-of-type(#{$i}) {
-                  display: block;
-                }
-
-                // don't move the carousel track
-                &:checked ~ .carousel__track {
-                  transform: none;
-                }
-            }
-          }
-
-          // position the carousel slide on the screen
-          .carousel__track .carousel__slide {
-            height: 100%;
-            right: 0;
-            position: absolute;
-            // hide all the images that aren't checked
-            display: none;
-            overflow-y: auto;
-            top: 0;
-            left: 0;
-            transform: none;
-          }
-
-          .carousel__control {
-            border-color: white;
-          }
-        }// end of videoCarousel mobile
-       }
       } // end of content
     } // end of nextgen
 
@@ -1009,7 +1002,7 @@
             opacity: 0.8;
             position: absolute;
           }
-        }
+        } // end of videoCarousel
       } // end of newthinking .content
 
 
@@ -1031,26 +1024,45 @@
 
           > .videoCarousel {
 
-            @for $i from 1 to $newProblemsNumOfSlides {
-              .carousel__activator:nth-of-type(#{$i}) {
-
-                // when checked only show the one needed
-                &:checked ~ .carousel__track .carousel__slide:nth-of-type(#{$i}) {
-                  display: block;
-                  transform: none;
-                }
-
-                // when checked only show arrows for one vid
-                &:checked ~ .carousel__track .carousel__controls:nth-of-type(#{$i}) {
-                  display: block;
-                }
-
-                // don't move the carousel track
-                &:checked ~ .carousel__track {
-                  transform: none;
-                }
+            .carousel__control {
+              top: 30%;
             }
-          }
+
+          //   @for $i from 1 to $newProblemsNumOfSlides {
+          //     .carousel__activator:nth-of-type(#{$i}) {
+          //
+          //       // when checked only show the one needed
+          //       &:checked ~ .carousel__track .carousel__slide:nth-of-type(#{$i}) {
+          //         display: block;
+          //         transform: none;
+          //
+          //         div.playButtonDiv {
+          //           top: 21%;
+          //           left: 41%;
+          //         }
+          //
+          //         .img-wrapper,
+          //         div.videoDescription {
+          //           width: 30rem;
+          //         }
+          //
+          //         > img {
+          //           width: 30rem;
+          //           height: 20rem;
+          //         }
+          //       }
+          //
+          //       // when checked only show arrows for one vid
+          //       &:checked ~ .carousel__track .carousel__controls:nth-of-type(#{$i}) {
+          //         display: block;
+          //       }
+          //
+          //       // don't move the carousel track
+          //       &:checked ~ .carousel__track {
+          //         transform: none;
+          //       }
+          //   }
+          // }
 
             // position the carousel slide on the screen
             .carousel__track .carousel__slide {
@@ -1069,7 +1081,7 @@
               border-color: white;
             }
           }
-        }
+        }// end of newthinking mobile content
 
       } // end of data-name newthinking mobile
 
