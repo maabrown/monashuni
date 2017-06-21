@@ -1054,7 +1054,8 @@
 
     &[data-name="flexiblelearning"] {
       height: auto;
-      background: $black;
+      background: $robots;
+      background-size: 100% 100%;
       color: $black;
       text-align: center;
       position: relative;
@@ -1071,7 +1072,6 @@
         margin:auto;
         padding-top: 15rem;
         padding-bottom: 9rem;
-        background-image: $robots;
 
         h2 {
           @include TitleFont();
@@ -1084,20 +1084,23 @@
         h2 ~ p {
           font-size: 1.7rem;
           margin-top: 3rem;
-          margin-bottom: 10rem;
+          margin-bottom: 0rem;
           color: $white;
         }
 
         .halves {
-          text-align: left;
-          margin-top: 7rem;
+          text-align: center;
+          margin-top: 1rem;
           position: relative;
 
           .col {
-
+            float: none;
+            width: 37%;
+            padding-left: 1rem;
+            padding-right: 1rem;
             &.original-image {
               // background-image: $image1;
-              background-size: cover;
+              // background-size: cover;
             }
 
             // use CSS to flip the image
@@ -1113,27 +1116,29 @@
             }
 
             &.padding-left {
-              padding-left: 5rem;
-              padding-right: 1.5rem;
+              // padding-left: 5rem;
+              // padding-right: 1.5rem;
             }
 
             &.padding-right {
-              padding-right: 5rem;
-              padding-left: 1.5rem;
+              // padding-right: 5rem;
+              // padding-left: 1.5rem;
             }
 
             font-size: 1.6rem;
-            margin-bottom: 5rem;
+            margin-bottom: 1rem;
 
             .box {
               // box-shadow: $boxShadow;
               // margin-top: 5rem;
               // background: $white;
               padding: 7rem 5rem;
+              padding-bottom: 3rem;
+              padding-top: 3rem;
               color: white;
               text-align: center;
               // setting the height of box divs to even out the text size
-              height: 34rem;
+              // height: 25rem;
 
               &.border-bottom {
                 border-bottom-color: white;
@@ -1142,11 +1147,11 @@
               }
 
               &:first-child {
-                margin-top: 10rem;
+                margin-top: 1rem;
               }
 
               h4.title {
-                font-size: 2.3rem;
+                font-size: 2.1rem;
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 line-height: 120%;
@@ -1157,7 +1162,7 @@
                 display: inline-block;
                 vertical-align: top;
                 margin-top: 3rem;
-                font-size: 1.6rem;
+                font-size: 1.4rem;
               }
             }
           }
@@ -1184,6 +1189,7 @@
         bottom: -140rem;
         z-index: 3;
       }
+
 
       @include breakpoint(sm) {
 
