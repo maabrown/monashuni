@@ -27,7 +27,22 @@
             
         div(class="lightbox-target" id="innovation_video")
           <iframe width="560" height="315" src="https://www.youtube.com/embed/t0o1vF_GQKU?list=PLjZkU1vM_0aUz2vfbs3_N2yv0CLcPwkqR" frameborder="0" allowfullscreen></iframe>
-          a(class="lightbox-close" href="#new_generation")    
+          a(class="lightbox-close" href="#new_generation")
+        
+        div(class="lightbox-target" id="curiousity_video")
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/kGH9fIRYU9o?list=PLjZkU1vM_0aUz2vfbs3_N2yv0CLcPwkqR" frameborder="0" allowfullscreen></iframe>
+          a(class="lightbox-close" href="#new_generation")
+        
+        div(class="lightbox-target" id="inspiration_video")
+          a(class="lightbox-close" href="#new_generation")
+        
+        div(class="lightbox-target" id="progress_video")
+          a(class="lightbox-close" href="#new_generation")
+        
+        div(class="lightbox-target" id="qta_video")
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/av35jbIv5bE?list=PLjZkU1vM_0aUz2vfbs3_N2yv0CLcPwkqR" frameborder="0" allowfullscreen></iframe>
+          a(class="lightbox-close" href="#new_generation")
+            
       
       .section(data-name="preheader")
         .bg
@@ -118,7 +133,8 @@
                       .img-wrapper
                       .playButtonDiv
                         img(class='playButton')
-                      img(class='curiosity')
+                      a(href="curiousity_video")
+                        img(class='curiosity')
 
                       div.videoDescription
                         h2 Curiosity
@@ -154,7 +170,8 @@
                       .img-wrapper
                       .playButtonDiv
                         img(class='playButton')
-                      img(class='inspiration')
+                      a(href="#inspiration_video")
+                        img(class='inspiration')
 
                       div.videoDescription
                         h2 Inspiration
@@ -165,18 +182,20 @@
                       .img-wrapper
                       .playButtonDiv
                         img(class='playButton')
-                      img(class='progress')
+                      a(href="#progress_video")
+                        img(class='progress')
 
                       div.videoDescription
-                        h2 Impact
+                        h2 Progress
                         div
-                          p Testing, trialing, pushing the limits and harnessing creative thought. At Monash, we think innovation happens when things are turned on their head, when what we know to be true is questioned and we let ourselves believe in possibility.
+                          p Progress sees hope in the future. Progress questions the answers. It is endless possibilities on the journey towards a goal. And it is at the heart of everything we do.
 
                   .carousel__slide 
                       .img-wrapper
                       .playButtonDiv
                         img(class='playButton')
-                      img(class='qta')
+                      a(href="#qta_video")
+                        img(class='qta')
 
                       div.videoDescription
                         h2 Question the Answers
