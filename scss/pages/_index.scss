@@ -441,6 +441,10 @@
                   opacity: 1;
                 }
 
+                div:after {
+                  opacity: 1;
+                }
+
                 p {
                   visibility: visible;
                   color: black;
@@ -614,6 +618,7 @@
                 font-size: 1.8rem;
                 letter-spacing: 0px;
                 margin-top: 2rem;
+                font-family: 'Roboto', sans-serif;
               }
 
               > div > p {
@@ -982,6 +987,7 @@
                 letter-spacing: 0px;
                 opacity: .3;
                 font-size: 1.8rem;
+                font-family: 'Roboto', sans-serif;
               }
 
               p {
@@ -1148,32 +1154,6 @@
             width: 37%;
             padding-left: 1rem;
             padding-right: 1rem;
-            &.original-image {
-              // background-image: $image1;
-              // background-size: cover;
-            }
-
-            // use CSS to flip the image
-            &.flipped-image {
-              // background-image: $image1;
-              // background-size: cover;
-              // transform: scale(-1,1);
-
-              // use CSS to flip the text back so reader can read it
-              & .box {
-                // transform: scale(-1,1);
-              }
-            }
-
-            &.padding-left {
-              // padding-left: 5rem;
-              // padding-right: 1.5rem;
-            }
-
-            &.padding-right {
-              // padding-right: 5rem;
-              // padding-left: 1.5rem;
-            }
 
             font-size: 1.6rem;
             margin-bottom: 1rem;
@@ -1213,6 +1193,7 @@
                 vertical-align: top;
                 margin-top: 3rem;
                 font-size: 1.4rem;
+                height: 17rem;
               }
             }
           }
@@ -1877,6 +1858,9 @@
             }
 
             &:nth-of-type(2) {
+              a:hover {
+                text-decoration: underline;
+              }
               h2 {
                 text-align: left;
                 padding-left: 5%;
@@ -2237,8 +2221,8 @@
             width:50px;
             height:50px;
             box-sizing: border-box;
-            background: white;
-            color: black;
+            background: black;
+            color: white;
             text-decoration: none;
             position: absolute;
             top: 15%;
@@ -2254,7 +2238,7 @@
             display: block;
             height: 30px;
             width: 1px;
-            background: black;
+            background: white;
             position: absolute;
             left: 26px;
             top:10px;
@@ -2271,7 +2255,7 @@
             display: block;
             height: 30px;
             width: 1px;
-            background: black;
+            background: white;
             position: absolute;
             left: 26px;
             top:10px;
