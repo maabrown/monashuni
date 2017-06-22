@@ -18,7 +18,17 @@
           a(class="mobile-nav-item" href="#choose_monash") Choose Monash
           a(class="mobile-nav-item" href="#contact_section") Contact
         .mobile-nav-logo
-          
+      
+      .section(data-name="lightbox-nested-section")
+        
+        div(class="lightbox-target" id="impact_video")
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/S2YL-Z5SB2Y?list=PLjZkU1vM_0aUz2vfbs3_N2yv0CLcPwkqR" frameborder="0" allowfullscreen></iframe>
+          a(class="lightbox-close" href="#new_generation")
+            
+        div(class="lightbox-target" id="innovation_video")
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/t0o1vF_GQKU?list=PLjZkU1vM_0aUz2vfbs3_N2yv0CLcPwkqR" frameborder="0" allowfullscreen></iframe>
+          a(class="lightbox-close" href="#new_generation")    
+      
       .section(data-name="preheader")
         .bg
         .overlay
@@ -119,7 +129,8 @@
                       .img-wrapper
                       .playButtonDiv
                           img(class='playButton')
-                      img(class='innovation')
+                      a(href="#innovation_video")
+                        img(class='innovation')
 
 
                       div.videoDescription
@@ -131,7 +142,8 @@
                       .img-wrapper
                       .playButtonDiv
                         img(class='playButton')
-                      img(class='impact')
+                      a(href="#impact_video")
+                        img(class='impact')
 
                       div.videoDescription
                         h2 Impact
