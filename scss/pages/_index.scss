@@ -2039,6 +2039,14 @@
           }
         }
       }
+
+      @include breakpoint(md) {
+        .overlay {
+          .content {
+            width: 72rem;
+          }
+        }
+      }
     } /* end of makeithappen section*/
 
     &[data-name="contact"] {
