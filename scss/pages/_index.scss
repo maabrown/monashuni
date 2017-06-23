@@ -875,6 +875,10 @@
           width: 30rem;
         }
 
+        @include breakpoint(md) {
+          width: 72rem;
+        }
+
         h2 {
           @include TitleFont();
           font-size: 2.8rem;
@@ -926,6 +930,10 @@
             display: none;
           }
 
+          @include breakpoint(md) {
+            height: 55rem;
+          }
+
 
 
           @for $i from 1 through $newProblemsNumOfSlides {
@@ -944,6 +952,11 @@
                           transform: translateX( (-(($i - 1) * 60%) + 17%) );
 
                   @include breakpoint(sm) {
+                    -webkit-transform: none;
+                            transform: none;
+                  }
+
+                  @include breakpoint(md) {
                     -webkit-transform: none;
                             transform: none;
                   }
@@ -1024,6 +1037,44 @@
                   }
                 }
 
+                @include breakpoint(md) {
+                  display: block;
+                  -webkit-transform: none;
+                          transform: none;
+                  text-align: center;
+
+                  h2 {
+                    margin-top: 1rem;
+                  }
+
+                  p.personDescription {
+                    margin-top: 0.5rem;
+                  }
+
+                  div.playButtonDiv {
+                    top: 21%;
+                    left: 41%;
+                  }
+
+                  .img-wrapper {
+                    width: 54rem;
+                  }
+
+                  div.videoDescription {
+                    padding-top: 0rem;
+                    width: 60rem;
+                    padding-left: 13%;
+                  }
+
+                  > a > img {
+                    width: 54rem;
+                    height: 36rem;
+                  }
+
+                  p.personCaption:after {
+                    display: none;
+                  }
+                }
 
               }
 
@@ -1070,6 +1121,11 @@
             @include breakpoint(sm) {
               top: 30%;
             }
+
+            @include breakpoint(md) {
+              top: 30%;
+              border-color: black;
+            }
           }
 
           .carousel__control--backward {
@@ -1104,6 +1160,19 @@
             right: 0;
 
             @include breakpoint(sm) {
+              height: 100%;
+              right: 0;
+              position: absolute;
+              /* hide all the images that aren't checked*/
+              display: none;
+              overflow-y: auto;
+              top: 0;
+              left: 0;
+              -webkit-transform: none;
+                      transform: none;
+            }
+
+            @include breakpoint(md) {
               height: 100%;
               right: 0;
               position: absolute;
