@@ -58,7 +58,8 @@
           top: 50%;
           left: 50%;
           -webkit-transform: translateX(-50%) translateY(-50%);
-                  transform: translateX(-50%) translateY(-50%);
+                  -ms-transform: translateX(-50%) translateY(-50%);
+              transform: translateX(-50%) translateY(-50%);
           width: 84rem;
           display: inline-block;
           position: absolute;
@@ -108,7 +109,8 @@
           position: absolute;
           left: 50%;
           -webkit-transform: translatex(-50%);
-                  transform: translatex(-50%);
+                  -ms-transform: translatex(-50%);
+              transform: translatex(-50%);
           top: 49rem;
 
           @include Transition();
@@ -187,7 +189,8 @@
                 vertical-align: middle;
                 float: left;
                 -webkit-transform: translateY(-50%);
-                        transform: translateY(-50%);
+                        -ms-transform: translateY(-50%);
+                    transform: translateY(-50%);
                 top: 50%;
                 position: relative;
                 margin-left: 1rem;
@@ -218,7 +221,8 @@
           width: 100%;
           left: 50%;
           -webkit-transform: translateX(-50%);
-                  transform: translateX(-50%);
+                  -ms-transform: translateX(-50%);
+              transform: translateX(-50%);
         }
 
         &--fixed ~ .headerSpacer {
@@ -354,7 +358,7 @@
           h2 {
             padding-left: 7rem;
           }
-        } // end of .content responsive tablet
+        } /* end of .content responsive tablet*/
       } /*end of content*/
 
       @include breakpoint(sm) {
@@ -388,7 +392,7 @@
             }
           }
         }
-      } //end of intro responsive - phone
+      } /*end of intro responsive - phone*/
     } /* end of intro*/
 
     &[data-name="nextgen"] {
@@ -482,16 +486,19 @@
               /* carousel track, so having the same size image matters*/
               &:checked ~ .carousel__track {
                   -webkit-transform: translateX(-(($i - 1) * $percentageMove) + 10%);
-                          transform: translateX(-(($i - 1) * $percentageMove) + 10%);
+                          -ms-transform: translateX(-(($i - 1) * $percentageMove) + 10%);
+                      transform: translateX(-(($i - 1) * $percentageMove) + 10%);
 
                   @include breakpoint(sm) {
                     -webkit-transform: none;
-                            transform: none;
+                            -ms-transform: none;
+                        transform: none;
                   }
 
                   @include breakpoint(md) {
                     -webkit-transform: none;
-                            transform: none;
+                            -ms-transform: none;
+                        transform: none;
                   }
               }
 
@@ -523,7 +530,8 @@
                 @include breakpoint(sm) {
                     display: block;
                     -webkit-transform: none;
-                            transform: none;
+                            -ms-transform: none;
+                        transform: none;
 
                     div.playButtonDiv {
                       top: 21%;
@@ -553,7 +561,8 @@
                 @include breakpoint(md) {
                     display: block;
                     -webkit-transform: none;
-                            transform: none;
+                            -ms-transform: none;
+                        transform: none;
 
                     div.playButtonDiv {
                       top: 21%;
@@ -630,7 +639,8 @@
               /* sets the slides' original place along x-axis*/
               .carousel__track .carousel__slide:nth-of-type(#{$i}) {
                 -webkit-transform: translateX(($i - 1) * $percentageMove + 4%);
-                        transform: translateX(($i - 1) * $percentageMove + 4%);
+                        -ms-transform: translateX(($i - 1) * $percentageMove + 4%);
+                    transform: translateX(($i - 1) * $percentageMove + 4%);
               }
 
           }
@@ -658,12 +668,14 @@
           .carousel__control--backward {
             left: 8%;
             -webkit-transform: rotate(-135deg);
-                    transform: rotate(-135deg);
+                    -ms-transform: rotate(-135deg);
+                transform: rotate(-135deg);
           }
           .carousel__control--forward {
             right: 7%;
             -webkit-transform: rotate(45deg);
-                    transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
           }
 
           .carousel__track {
@@ -677,6 +689,7 @@
             /* smoothes the movement between slides*/
             -webkit-transition: -webkit-transform .5s ease 0s;
             transition: -webkit-transform .5s ease 0s;
+            -o-transition: transform .5s ease 0s;
             transition: transform .5s ease 0s;
             transition: transform .5s ease 0s, -webkit-transform .5s ease 0s;
           }
@@ -697,7 +710,8 @@
                     top: 0;
                     left: 0;
                     -webkit-transform: none;
-                            transform: none;
+                            -ms-transform: none;
+                        transform: none;
                 }
 
                 @include breakpoint(md){
@@ -710,7 +724,8 @@
                   top: 0;
                   left: 21%;
                   -webkit-transform: none;
-                          transform: none;
+                          -ms-transform: none;
+                      transform: none;
                 }
           }
 
@@ -949,16 +964,19 @@
               /* this is what actually moves the carousel*/
               &:checked ~ .carousel__track {
                   -webkit-transform: translateX( (-(($i - 1) * 60%) + 17%) );
-                          transform: translateX( (-(($i - 1) * 60%) + 17%) );
+                          -ms-transform: translateX( (-(($i - 1) * 60%) + 17%) );
+                      transform: translateX( (-(($i - 1) * 60%) + 17%) );
 
                   @include breakpoint(sm) {
                     -webkit-transform: none;
-                            transform: none;
+                            -ms-transform: none;
+                        transform: none;
                   }
 
                   @include breakpoint(md) {
                     -webkit-transform: none;
-                            transform: none;
+                            -ms-transform: none;
+                        transform: none;
                   }
               }
 
@@ -1006,7 +1024,8 @@
                 @include breakpoint(sm) {
                   display: block;
                   -webkit-transform: none;
-                          transform: none;
+                          -ms-transform: none;
+                      transform: none;
 
                   h2 {
                     margin-top: 1rem;
@@ -1040,7 +1059,8 @@
                 @include breakpoint(md) {
                   display: block;
                   -webkit-transform: none;
-                          transform: none;
+                          -ms-transform: none;
+                      transform: none;
                   text-align: center;
 
                   h2 {
@@ -1099,7 +1119,8 @@
             /* controls the amount of space between slides*/
             .carousel__track .carousel__slide:nth-of-type(#{$i}) {
               -webkit-transform: translateX( ($i - 1 ) * 61.25%);
-                      transform: translateX( ($i - 1 ) * 61.25%)
+                      -ms-transform: translateX( ($i - 1 ) * 61.25%);
+                  transform: translateX( ($i - 1 ) * 61.25%)
             }
           }
 
@@ -1131,12 +1152,14 @@
           .carousel__control--backward {
             left: 7%;
             -webkit-transform: rotate(-135deg);
-                    transform: rotate(-135deg);
+                    -ms-transform: rotate(-135deg);
+                transform: rotate(-135deg);
           }
           .carousel__control--forward {
             right: 7%;
             -webkit-transform: rotate(45deg);
-                    transform: rotate(45deg);
+                    -ms-transform: rotate(45deg);
+                transform: rotate(45deg);
           }
           .carousel__track {
             position: absolute;
@@ -1149,6 +1172,7 @@
             /* smoothes the movement between slides*/
             -webkit-transition: -webkit-transform .5s ease 0s;
             transition: -webkit-transform .5s ease 0s;
+            -o-transition: transform .5s ease 0s;
             transition: transform .5s ease 0s;
             transition: transform .5s ease 0s, -webkit-transform .5s ease 0s;
           }
@@ -1169,7 +1193,8 @@
               top: 0;
               left: 0;
               -webkit-transform: none;
-                      transform: none;
+                      -ms-transform: none;
+                  transform: none;
             }
 
             @include breakpoint(md) {
@@ -1182,7 +1207,8 @@
               top: 0;
               left: 0;
               -webkit-transform: none;
-                      transform: none;
+                      -ms-transform: none;
+                  transform: none;
             }
           }
 
@@ -2297,18 +2323,21 @@
             background-color: white;
             border-radius: 5px;
             -webkit-transition: $transition-duration;
+            -o-transition: $transition-duration;
             transition: $transition-duration;
           }
 
           /* uses psedo elements to make the X*/
           &:before {
             -webkit-transform: translateY(-50%) rotate(45deg) scale(0);
-                    transform: translateY(-50%) rotate(45deg) scale(0);
+                    -ms-transform: translateY(-50%) rotate(45deg) scale(0);
+                transform: translateY(-50%) rotate(45deg) scale(0);
           }
 
           &:after {
             -webkit-transform: translateY(-50%) rotate(-45deg) scale(0);
-                    transform: translateY(-50%) rotate(-45deg) scale(0)
+                    -ms-transform: translateY(-50%) rotate(-45deg) scale(0);
+                transform: translateY(-50%) rotate(-45deg) scale(0)
           }
         }
 
@@ -2339,12 +2368,14 @@
 
             &:before {
               -webkit-transform: translateY(-50%) rotate(45deg) scale(1);
-                      transform: translateY(-50%) rotate(45deg) scale(1);
+                      -ms-transform: translateY(-50%) rotate(45deg) scale(1);
+                  transform: translateY(-50%) rotate(45deg) scale(1);
             }
 
             &:after {
               -webkit-transform: translateY(-50%) rotate(-45deg) scale(1);
-                      transform: translateY(-50%) rotate(-45deg) scale(1);
+                      -ms-transform: translateY(-50%) rotate(-45deg) scale(1);
+                  transform: translateY(-50%) rotate(-45deg) scale(1);
             }
           }
 
@@ -2370,8 +2401,10 @@
                 margin-top: 1rem;
                 opacity: 1;
                 -webkit-transform: scaleY(1);
-                        transform: scaleY(1);
+                        -ms-transform: scaleY(1);
+                    transform: scaleY(1);
                 -webkit-transition: $transition-duration;
+                -o-transition: $transition-duration;
                 transition: $transition-duration;
                 width: 100%;
                 border-bottom: .1rem solid white;
@@ -2416,8 +2449,10 @@
           margin-bottom: 8px;
           /* shrinks the words height*/
           -webkit-transform: scaleY(0.1);
-                  transform: scaleY(0.1);
+                  -ms-transform: scaleY(0.1);
+              transform: scaleY(0.1);
           -webkit-transition: $transition-duration, opacity 1s;
+          -o-transition: $transition-duration, opacity 1s;
           transition: $transition-duration, opacity 1s;
 
           /* adjusting the line length for hamburger to be even*/
@@ -2462,8 +2497,10 @@
             background-color: white;
             /* with the top property moves lines to middle of words*/
             -webkit-transform: translateY(-50%);
-                    transform: translateY(-50%);
+                    -ms-transform: translateY(-50%);
+                transform: translateY(-50%);
             -webkit-transition: $transition-duration;
+            -o-transition: $transition-duration;
             transition: $transition-duration;
           }
 
@@ -2485,6 +2522,7 @@
         background: rgba(0,0,0,.7);
         opacity: 0;
         -webkit-transition: opacity .5s ease-in-out;
+        -o-transition: opacity .5s ease-in-out;
         transition: opacity .5s ease-in-out;
         overflow: hidden;
 
@@ -2504,6 +2542,7 @@
             top: 15%;
             right: 0;
             -webkit-transition: .5s ease-in-out;
+            -o-transition: .5s ease-in-out;
             transition: .5s ease-in-out;
           }
 
@@ -2517,7 +2556,8 @@
             left: 26px;
             top:10px;
             -webkit-transform:rotate(45deg);
-            transform:rotate(45deg);
+            -ms-transform:rotate(45deg);
+                transform:rotate(45deg);
             }
 
             /* Provides part of the "X" to eliminate an image from the close link */
@@ -2532,7 +2572,8 @@
             left: 26px;
             top:10px;
             -webkit-transform:rotate(-45deg);
-            transform:rotate(-45deg);
+            -ms-transform:rotate(-45deg);
+                transform:rotate(-45deg);
           }
 
 
