@@ -1,4 +1,4 @@
-// main: ../style.scss
+/* main: ../style.scss*/
 
 .index {
   margin: auto;
@@ -57,7 +57,8 @@
         .centreCopy {
           top: 50%;
           left: 50%;
-          transform: translateX(-50%) translateY(-50%);
+          -webkit-transform: translateX(-50%) translateY(-50%);
+                  transform: translateX(-50%) translateY(-50%);
           width: 84rem;
           display: inline-block;
           position: absolute;
@@ -106,7 +107,8 @@
 
           position: absolute;
           left: 50%;
-          transform: translatex(-50%);
+          -webkit-transform: translatex(-50%);
+                  transform: translatex(-50%);
           top: 49rem;
 
           @include Transition();
@@ -174,7 +176,8 @@
                 height: 3rem;
                 vertical-align: middle;
                 float: left;
-                transform: translateY(-50%);
+                -webkit-transform: translateY(-50%);
+                        transform: translateY(-50%);
                 top: 50%;
                 position: relative;
                 margin-left: 1rem;
@@ -204,7 +207,8 @@
           left: 0rem;
           width: 100%;
           left: 50%;
-          transform: translateX(-50%);
+          -webkit-transform: translateX(-50%);
+                  transform: translateX(-50%);
         }
 
         &--fixed ~ .headerSpacer {
@@ -238,7 +242,8 @@
       .image1, .image2 {
         position: absolute;
         border: 1px solid $white;
-        box-shadow: $boxShadow;
+        -webkit-box-shadow: $boxShadow;
+                box-shadow: $boxShadow;
         background: $white;
         background-size: cover;
       }
@@ -298,26 +303,26 @@
             margin-bottom: 2rem;
           }
         }
-      } //end of content
+      } /*end of content*/
 
       @include breakpoint(sm) {
 
         height: 45rem;
 
-        // .image1 {
-        //   height: 15rem;
-        //   width: 14rem;
-        //   right: 5rem;
-        //   top: 14rem;
-        //   background-size: cover;
-        // }
-        //
-        // .image2 {
-        //   height: 10rem;
-        //   width: 10rem;
-        //   right: 15rem;
-        //   top: 27rem;
-        // }
+        /* .image1 {*/
+        /*   height: 15rem;*/
+        /*   width: 14rem;*/
+        /*   right: 5rem;*/
+        /*   top: 14rem;*/
+        /*   background-size: cover;*/
+        /* }*/
+        /**/
+        /* .image2 {*/
+        /*   height: 10rem;*/
+        /*   width: 10rem;*/
+        /*   right: 15rem;*/
+        /*   top: 27rem;*/
+        /* }*/
 
         .bigM {
           width: 12rem;
@@ -347,7 +352,7 @@
           }
         }
       }
-    } // end of intro
+    } /* end of intro*/
 
     &[data-name="nextgen"] {
 
@@ -388,7 +393,7 @@
           color: $white;
         }
 
-        // responsive for .content
+        /* responsive for .content*/
         @include breakpoint(sm) {
 
           width: 30rem;
@@ -408,16 +413,16 @@
 
           height: $carouselHeight;
           width: $carouselWidth;
-          // don't want overflow hidden because we want slides to show
-          // the entire length of the page
-          // overflow: hidden;
-          // you want the carousel relative to its normal position
+          /* don't want overflow hidden because we want slides to show*/
+          /* the entire length of the page*/
+          /* overflow: hidden;*/
+          /* you want the carousel relative to its normal position*/
           position: relative;
-          // centers the slides within the videoCarousel div
-          // text-align: center;
+          /* centers the slides within the videoCarousel div*/
+          /* text-align: center;*/
           margin-top: 5rem;
 
-          // makes radio buttons disappear
+          /* makes radio buttons disappear*/
           & .carousel__activator-gallery-one {
             display: none;
           }
@@ -425,20 +430,22 @@
 
 
           @for $i from 1 through $nextGenNumOfSlides {
-            // creates these classes for each image/video by looping
+            /* creates these classes for each image/video by looping*/
 
             .carousel__activator-gallery-one:nth-of-type(#{$i}) {
 
-              // when arrow (carousel__controls) are clicked, changes
-              // id of carousel__activator and sets 'checked' class
-              // and moves the slide
-              // percentage is based on the size of the element - not the
-              // carousel track, so having the same size image matters
+              /* when arrow (carousel__controls) are clicked, changes*/
+              /* id of carousel__activator and sets 'checked' class*/
+              /* and moves the slide*/
+              /* percentage is based on the size of the element - not the*/
+              /* carousel track, so having the same size image matters*/
               &:checked ~ .carousel__track {
-                  transform: translateX(-(($i - 1) * $percentageMove) + 10%);
+                  -webkit-transform: translateX(-(($i - 1) * $percentageMove) + 10%);
+                          transform: translateX(-(($i - 1) * $percentageMove) + 10%);
 
                   @include breakpoint(sm) {
-                    transform: none;
+                    -webkit-transform: none;
+                            transform: none;
                   }
               }
 
@@ -469,7 +476,8 @@
 
                 @include breakpoint(sm) {
                     display: block;
-                    transform: none;
+                    -webkit-transform: none;
+                            transform: none;
 
                     div.playButtonDiv {
                       top: 21%;
@@ -497,7 +505,7 @@
                 }
               }
 
-              // adds styling to the carousel item to the right
+              /* adds styling to the carousel item to the right*/
               &:checked ~ .carousel__track .carousel__slide:nth-of-type(#{$i + 1}) {
 
                 h2 {
@@ -543,9 +551,10 @@
 
             }
 
-              // sets the slides' original place along x-axis
+              /* sets the slides' original place along x-axis*/
               .carousel__track .carousel__slide:nth-of-type(#{$i}) {
-                transform: translateX(($i - 1) * $percentageMove + 4%);
+                -webkit-transform: translateX(($i - 1) * $percentageMove + 4%);
+                        transform: translateX(($i - 1) * $percentageMove + 4%);
               }
 
           }
@@ -561,18 +570,20 @@
             border-width: 3px 3px 0 0;
             border-style: solid;
             border-color: white;
-            // opacity: 0.35;
+            /* opacity: 0.35;*/
             outline: 0;
             z-index: 3;
           }
 
           .carousel__control--backward {
             left: 8%;
-            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+                    transform: rotate(-135deg);
           }
           .carousel__control--forward {
             right: 7%;
-            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
           }
 
           .carousel__track {
@@ -583,8 +594,11 @@
             left: 0;
             padding: 0;
             margin: 0;
-            // smoothes the movement between slides
+            /* smoothes the movement between slides*/
+            -webkit-transition: -webkit-transform .5s ease 0s;
+            transition: -webkit-transform .5s ease 0s;
             transition: transform .5s ease 0s;
+            transition: transform .5s ease 0s, -webkit-transform .5s ease 0s;
           }
 
           .carousel__track .carousel__slide {
@@ -597,12 +611,13 @@
                     height: 100%;
                     right: 0;
                     position: absolute;
-                    // hide all the images that aren't checked
+                    /* hide all the images that aren't checked*/
                     display: none;
                     overflow-y: auto;
                     top: 0;
                     left: 0;
-                    transform: none;
+                    -webkit-transform: none;
+                            transform: none;
 
                 }
           }
@@ -658,13 +673,25 @@
 
           }
 
-          & .curiosity {
+          & .curiosity, {
             content: $curiosity;
             height: $nextGenCarouselImageHeight;
             width: $nextGenCarouselImageWidth;
           }
 
           & .impact {
+            content: $impact;
+            height: $nextGenCarouselImageHeight;
+            width: $nextGenCarouselImageWidth;
+          }
+
+          & .impact::after {
+            content: $impact;
+            height: $nextGenCarouselImageHeight;
+            width: $nextGenCarouselImageWidth;
+          }
+
+          & .impact::before {
             content: $impact;
             height: $nextGenCarouselImageHeight;
             width: $nextGenCarouselImageWidth;
@@ -718,9 +745,9 @@
             opacity: 0.8;
             position: absolute;
           }
-        } // end of videoCarousel
-      } // end of content
-    } // end of nextgen
+        } /* end of videoCarousel*/
+      } /* end of content*/
+    } /* end of nextgen*/
 
     &[data-name="newthinking"] {
       background: $white;
@@ -786,17 +813,17 @@
 
           height: 37rem;
           width: $carouselWidth;
-          // don't want overflow hidden because we want slides to show
-          // the entire length of the page
-          // overflow: hidden;
+          /* don't want overflow hidden because we want slides to show*/
+          /* the entire length of the page*/
+          /* overflow: hidden;*/
 
-          // you want the carousel relative to its normal position
+          /* you want the carousel relative to its normal position*/
           position: relative;
-          // centers the slides within the videoCarousel div
-          // text-align: center;
+          /* centers the slides within the videoCarousel div*/
+          /* text-align: center;*/
           margin-top: 5rem;
 
-          // makes radio buttons disappear
+          /* makes radio buttons disappear*/
           & .carousel__activator {
             display: none;
           }
@@ -804,25 +831,27 @@
 
 
           @for $i from 1 through $newProblemsNumOfSlides {
-            // creates these classes for each image/video by looping
+            /* creates these classes for each image/video by looping*/
 
             .carousel__activator:nth-of-type(#{$i}) {
 
-              // when arrow (carousel__controls) are clicked, changes
-              // id of carousel__activator and sets 'checked' class
-              // and moves the slide
-              // percentage is based on the size of the element - not the
-              // carousel track, so having the same size image matters
-              // this is what actually moves the carousel
+              /* when arrow (carousel__controls) are clicked, changes*/
+              /* id of carousel__activator and sets 'checked' class*/
+              /* and moves the slide*/
+              /* percentage is based on the size of the element - not the*/
+              /* carousel track, so having the same size image matters*/
+              /* this is what actually moves the carousel*/
               &:checked ~ .carousel__track {
-                  transform: translateX( (-(($i - 1) * 60%) + 17%) );
+                  -webkit-transform: translateX( (-(($i - 1) * 60%) + 17%) );
+                          transform: translateX( (-(($i - 1) * 60%) + 17%) );
 
                   @include breakpoint(sm) {
-                    transform: none;
+                    -webkit-transform: none;
+                            transform: none;
                   }
               }
 
-              // styles for the slide itself - need to put in transition/animation
+              /* styles for the slide itself - need to put in transition/animation*/
               &:checked ~ .carousel__slide:nth-of-type(#{$i}) {
                   top: 0;
                   left: 0;
@@ -845,7 +874,7 @@
                 p.personDescription {
                   font-style: italic;
                 }
-                // creates line underneath word
+                /* creates line underneath word*/
                 p.personCaption:after {
                   content: "";
                   margin-top: 2rem;
@@ -865,7 +894,8 @@
 
                 @include breakpoint(sm) {
                   display: block;
-                  transform: none;
+                  -webkit-transform: none;
+                          transform: none;
 
                   h2 {
                     margin-top: 1rem;
@@ -917,9 +947,10 @@
             }
 
 
-            // controls the amount of space between slides
+            /* controls the amount of space between slides*/
             .carousel__track .carousel__slide:nth-of-type(#{$i}) {
-              transform: translateX( ($i - 1 ) * 61.25%)
+              -webkit-transform: translateX( ($i - 1 ) * 61.25%);
+                      transform: translateX( ($i - 1 ) * 61.25%)
             }
           }
 
@@ -934,7 +965,7 @@
             border-width: 3px 3px 0 0;
             border-style: solid;
             border-color: white;
-            // opacity: 0.35;
+            /* opacity: 0.35;*/
             outline: 0;
             z-index: 3;
 
@@ -945,11 +976,13 @@
 
           .carousel__control--backward {
             left: 7%;
-            transform: rotate(-135deg);
+            -webkit-transform: rotate(-135deg);
+                    transform: rotate(-135deg);
           }
           .carousel__control--forward {
             right: 7%;
-            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
           }
           .carousel__track {
             position: absolute;
@@ -959,8 +992,11 @@
             left: 0;
             padding: 0;
             margin: 0;
-            // smoothes the movement between slides
+            /* smoothes the movement between slides*/
+            -webkit-transition: -webkit-transform .5s ease 0s;
+            transition: -webkit-transform .5s ease 0s;
             transition: transform .5s ease 0s;
+            transition: transform .5s ease 0s, -webkit-transform .5s ease 0s;
           }
 
           .carousel__track .carousel__slide {
@@ -973,12 +1009,13 @@
               height: 100%;
               right: 0;
               position: absolute;
-              // hide all the images that aren't checked
+              /* hide all the images that aren't checked*/
               display: none;
               overflow-y: auto;
               top: 0;
               left: 0;
-              transform: none;
+              -webkit-transform: none;
+                      transform: none;
             }
           }
 
@@ -1093,9 +1130,9 @@
             opacity: 0.8;
             position: absolute;
           }
-        } // end of videoCarousel
-      } // end of newthinking .content
-    } // end of data-name newthinking
+        } /* end of videoCarousel*/
+      } /* end of newthinking .content*/
+    } /* end of data-name newthinking*/
 
     &[data-name="flexiblelearning"] {
       height: auto;
@@ -1168,16 +1205,16 @@
             margin-bottom: 1rem;
 
             .box {
-              // box-shadow: $boxShadow;
-              // margin-top: 5rem;
-              // background: $white;
+              /* box-shadow: $boxShadow;*/
+              /* margin-top: 5rem;*/
+              /* background: $white;*/
               padding: 7rem 5rem;
               padding-bottom: 3rem;
               padding-top: 3rem;
               color: white;
               text-align: center;
-              // setting the height of box divs to even out the text size
-              // height: 25rem;
+              /* setting the height of box divs to even out the text size*/
+              /* height: 25rem;*/
 
               &.border-bottom {
                 border-bottom-color: white;
@@ -1235,7 +1272,7 @@
           }
         }
 
-      } // end of flexible-learning .content
+      } /* end of flexible-learning .content*/
 
       .button-div {
         text-align: center;
@@ -1246,7 +1283,7 @@
       }
 
       button.cta {
-        // margin-top: 8rem;
+        /* margin-top: 8rem;*/
         border-color: white;
       }
 
@@ -1264,7 +1301,7 @@
 
 
 
-    } // end of flexible learning section
+    } /* end of flexible learning section*/
 
     &[data-name="choosemonash"] {
       height: auto;
@@ -1313,14 +1350,14 @@
       .content {
         width: 98rem;
         margin: auto;
-        // padding-top: 3rem;
+        /* padding-top: 3rem;*/
         padding-bottom: 15rem;
 
         @include breakpoint(sm) {
           width: 30rem;
         }
 
-        // creating a mini-grid system
+        /* creating a mini-grid system*/
         .content-row {
           width: 100%;
           padding-left: 1rem;
@@ -1409,11 +1446,13 @@
             padding-top: $panelpaddingtop;
             padding-bottom: $panelpaddingbottom;
             padding-right: $panelpaddingright;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
             @include breakpoint(sm) {
               padding: $mobilepanelpadding;
-              box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08), 0 4px 16px 0 rgba(0, 0, 0, 0.08);
+              -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08), 0 4px 16px 0 rgba(0, 0, 0, 0.08);
+                      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08), 0 4px 16px 0 rgba(0, 0, 0, 0.08);
             }
 
             div:after {
@@ -1534,8 +1573,8 @@
               width: 100%;
 
               @include breakpoint(sm) {
-                // margin-top: 3rem;
-                // border-radius: $mobilepanelborderradius;
+                /* margin-top: 3rem;*/
+                /* border-radius: $mobilepanelborderradius;*/
                 display: none;
               }
 
@@ -1635,13 +1674,15 @@
             padding-top: $panelpaddingtop;
             padding-bottom: $panelpaddingbottom;
             padding-right: $panelpaddingright;
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
             @include breakpoint(sm) {
               padding: $mobilepanelpadding;
               border-radius: $mobilepanelborderradius;
               margin-top: 3rem;
-              box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08), 0 4px 16px 0 rgba(0, 0, 0, 0.08);
+              -webkit-box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08), 0 4px 16px 0 rgba(0, 0, 0, 0.08);
+                      box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08), 0 4px 16px 0 rgba(0, 0, 0, 0.08);
             }
 
             div:after {
@@ -1690,14 +1731,15 @@
             padding-left: 4rem;
             padding-right: 4rem;
 
-            .image { //container
+            .image { /*container*/
               width: 100%;
               height: 40rem;
 
               .img {
                 width: 100%;
                 height: 36rem;
-                box-shadow: $boxShadow;
+                -webkit-box-shadow: $boxShadow;
+                        box-shadow: $boxShadow;
               }
             }
 
@@ -1721,10 +1763,10 @@
             }
           }
         }
-      } // end of choosemonash .content
+      } /* end of choosemonash .content*/
 
 
-    } //end of choosemonash section
+    } /*end of choosemonash section*/
 
     &[data-name="makeithappen"] {
       position: relative;
@@ -1776,7 +1818,7 @@
           }
         }
 
-      } // end of overlay
+      } /* end of overlay*/
 
       @include breakpoint(sm) {
 
@@ -1787,7 +1829,7 @@
           }
         }
       }
-    } // end of makeithappen section
+    } /* end of makeithappen section*/
 
     &[data-name="contact"] {
       height: 9rem;
@@ -1855,7 +1897,7 @@
             }
           }
           }
-        } // end of contact .content
+        } /* end of contact .content*/
 
       @include breakpoint(sm) {
 
@@ -1871,7 +1913,7 @@
           }
         }
       }
-    } // end of contact section
+    } /* end of contact section*/
 
     &[data-name="footer"] {
       height: 7.5rem;
@@ -1969,7 +2011,7 @@
             }
           }
         }
-      } // end of content section
+      } /* end of content section*/
 
       @include breakpoint(sm) {
 
@@ -1987,7 +2029,7 @@
           }
         }
       }
-    } // end of section footer
+    } /* end of section footer*/
 
     &[data-name="mobile-menu"] {
 
@@ -2005,13 +2047,13 @@
         background-color: black;
         overflow: hidden;
 
-        // dont want to show radio button
+        /* dont want to show radio button*/
         #toggle {
           display: none;
         }
 
-        // have to give CSS to lable to get toggle to work
-        // make sure that input ID is same as label for attr
+        /* have to give CSS to lable to get toggle to work*/
+        /* make sure that input ID is same as label for attr*/
         .toggle-container {
           position: absolute;
           display: inline-block;
@@ -2019,29 +2061,32 @@
           height: 90px;
           background-color: transparent;
 
-          // makes the X for when the mobile menu is opened
+          /* makes the X for when the mobile menu is opened*/
           &:before, &:after {
             position: absolute;
             content: '';
             top: 50%;
             left: 15%;
-            // determines how big the X is
+            /* determines how big the X is*/
             width: 60%;
-            // determines thickness of X
+            /* determines thickness of X*/
             height: 2px;
-            // determines color of X
+            /* determines color of X*/
             background-color: white;
             border-radius: 5px;
+            -webkit-transition: $transition-duration;
             transition: $transition-duration;
           }
 
-          // uses psedo elements to make the X
+          /* uses psedo elements to make the X*/
           &:before {
-            transform: translateY(-50%) rotate(45deg) scale(0);
+            -webkit-transform: translateY(-50%) rotate(45deg) scale(0);
+                    transform: translateY(-50%) rotate(45deg) scale(0);
           }
 
           &:after {
-            transform: translateY(-50%) rotate(-45deg) scale(0)
+            -webkit-transform: translateY(-50%) rotate(-45deg) scale(0);
+                    transform: translateY(-50%) rotate(-45deg) scale(0)
           }
         }
 
@@ -2064,25 +2109,27 @@
           pointer-events: none;
         }
 
-        // when menu is clicked
+        /* when menu is clicked*/
         #toggle:checked {
 
-          // shows the X - use of scale(1)
+          /* shows the X - use of scale(1)*/
           & ~ .toggle-container {
 
             &:before {
-              transform: translateY(-50%) rotate(45deg) scale(1);
+              -webkit-transform: translateY(-50%) rotate(45deg) scale(1);
+                      transform: translateY(-50%) rotate(45deg) scale(1);
             }
 
             &:after {
-              transform: translateY(-50%) rotate(-45deg) scale(1);
+              -webkit-transform: translateY(-50%) rotate(-45deg) scale(1);
+                      transform: translateY(-50%) rotate(-45deg) scale(1);
             }
           }
 
-          // moves the words away from the X
+          /* moves the words away from the X*/
           & ~ .mobile-nav {
-            // these values may need to change based on menu
-            // transform: translate(80px, 50px);
+            /* these values may need to change based on menu*/
+            /* transform: translate(80px, 50px);*/
             margin-bottom: 0rem;
             pointer-events: auto;
             text-align: left;
@@ -2092,7 +2139,7 @@
             display: block;
             margin-left: 0rem;
 
-            // making titles back into nav items from lines
+            /* making titles back into nav items from lines*/
             & .mobile-nav-item {
                 color: white;
                 letter-spacing: 3px;
@@ -2100,7 +2147,9 @@
                 line-height: 2rem;
                 margin-top: 1rem;
                 opacity: 1;
-                transform: scaleY(1);
+                -webkit-transform: scaleY(1);
+                        transform: scaleY(1);
+                -webkit-transition: $transition-duration;
                 transition: $transition-duration;
                 width: 100%;
                 border-bottom: .1rem solid white;
@@ -2110,45 +2159,47 @@
                   border-bottom: none;
                 }
 
-              // hiding lines
+              /* hiding lines*/
               &:before {
                 opacity: 0;
               }
             }
           }
 
-          // don't show the logo when the menu is opened
+          /* don't show the logo when the menu is opened*/
           & ~ .mobile-nav-logo {
-            // position: absolute;
+            /* position: absolute;*/
           }
-        } // end of #toggle:checked
+        } /* end of #toggle:checked*/
 
 
 
-        // show items as lines, making hamburger menu
-        // this is it's initial setting
+        /* show items as lines, making hamburger menu*/
+        /* this is it's initial setting*/
         .mobile-nav-item {
           position: relative;
           display: inline-block;
           float: left;
           clear: both;
-          // by setting color to transparent the lines
-          // cover the words
+          /* by setting color to transparent the lines*/
+          /* cover the words*/
           color: transparent;
-          // sets the font size of the words
+          /* sets the font size of the words*/
           font-size: 18px;
           height: 2px;
           line-height: 50px;
           text-transform: uppercase;
           white-space: nowrap;
-          // space between the lines
+          /* space between the lines*/
           margin-bottom: 8px;
-          // shrinks the words height
-          transform: scaleY(0.1);
+          /* shrinks the words height*/
+          -webkit-transform: scaleY(0.1);
+                  transform: scaleY(0.1);
+          -webkit-transition: $transition-duration, opacity 1s;
           transition: $transition-duration, opacity 1s;
 
-          // adjusting the line length for hamburger to be even
-          // will need to be adjusted based on the words used
+          /* adjusting the line length for hamburger to be even*/
+          /* will need to be adjusted based on the words used*/
           &:nth-child(1) {
             letter-spacing: -2.2px;
           }
@@ -2157,38 +2208,40 @@
             letter-spacing: -5.8px;
           }
 
-          // adjusting the line line length
+          /* adjusting the line line length*/
           &:nth-child(3) {
             letter-spacing: -4.5px;
           }
 
-          // this is for after the third line
-          // you want to make them disappear
+          /* this is for after the third line*/
+          /* you want to make them disappear*/
           &:nth-child(n+4) {
             margin-top: -7px;
             opacity: 0;
             letter-spacing: -5.8px
           }
 
-          // uses 'before' pseudo element to make lines
+          /* uses 'before' pseudo element to make lines*/
           &:before {
             position: absolute;
-            // want the line to be empty content which then
-            // is just the background color
+            /* want the line to be empty content which then*/
+            /* is just the background color*/
             content: ' ';
-            // moves the hamburger down to the middle of the
-            // words
+            /* moves the hamburger down to the middle of the*/
+            /* words*/
             top: 50%;
             left: 0;
-            // lines take up the entire width of the word
-            // in the a tag
+            /* lines take up the entire width of the word*/
+            /* in the a tag*/
             width: 100%;
-            // determines how thick the hamberger lines are
+            /* determines how thick the hamberger lines are*/
             height: 20px;
-            // sets the color of the hamburger lines
+            /* sets the color of the hamburger lines*/
             background-color: white;
-            // with the top property moves lines to middle of words
-            transform: translateY(-50%);
+            /* with the top property moves lines to middle of words*/
+            -webkit-transform: translateY(-50%);
+                    transform: translateY(-50%);
+            -webkit-transition: $transition-duration;
             transition: $transition-duration;
           }
 
@@ -2198,8 +2251,8 @@
           text-decoration: none;
         }
 
-      } // end of breakpoint md
-    } //end of data-name=mobile-menu
+      } /* end of breakpoint md*/
+    } /*end of data-name=mobile-menu*/
 
     &[data-name="lightbox-nested-section"] {
 
@@ -2209,17 +2262,19 @@
         width: 100%;
         background: rgba(0,0,0,.7);
         opacity: 0;
+        -webkit-transition: opacity .5s ease-in-out;
         transition: opacity .5s ease-in-out;
         overflow: hidden;
 
 
-          //  Creates the X for the LightBox
+          /*  Creates the X for the LightBox*/
 
           a.lightbox-close {
             display: block;
             width:50px;
             height:50px;
-            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+                    box-sizing: border-box;
             background: black;
             color: white;
             text-decoration: none;
@@ -2227,8 +2282,6 @@
             top: 15%;
             right: 0;
             -webkit-transition: .5s ease-in-out;
-            -moz-transition: .5s ease-in-out;
-            -o-transition: .5s ease-in-out;
             transition: .5s ease-in-out;
           }
 
@@ -2242,8 +2295,6 @@
             left: 26px;
             top:10px;
             -webkit-transform:rotate(45deg);
-            -moz-transform:rotate(45deg);
-            -o-transform:rotate(45deg);
             transform:rotate(45deg);
             }
 
@@ -2259,8 +2310,6 @@
             left: 26px;
             top:10px;
             -webkit-transform:rotate(-45deg);
-            -moz-transform:rotate(-45deg);
-            -o-transform:rotate(-45deg);
             transform:rotate(-45deg);
           }
 
@@ -2293,7 +2342,7 @@
       }
     }
 
-  } // end of .section
+  } /* end of .section*/
 
 
-} // end of .index
+} /* end of .index*/
