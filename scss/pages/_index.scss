@@ -1313,6 +1313,11 @@
         background: $black;
       }
 
+      @include breakpoint(md) {
+        background: $robottabletdarker;
+        background-size: 100% 88%;
+      }
+
       .bg {
         position: absolute;
         width: 100%;
@@ -1336,6 +1341,11 @@
               font-size: 1.5rem;
             }
           }
+        }
+
+        @include breakpoint(md) {
+          width: 77rem;
+          padding-top: 11rem;
         }
 
         h2 {
@@ -1371,17 +1381,21 @@
             font-size: 1.6rem;
             margin-bottom: 1rem;
 
+            @include breakpoint(md) {
+              width: 47%;
+            }
+
             .box {
-              /* box-shadow: $boxShadow;*/
-              /* margin-top: 5rem;*/
-              /* background: $white;*/
               padding: 7rem 5rem;
               padding-bottom: 3rem;
               padding-top: 3rem;
               color: white;
               text-align: center;
-              /* setting the height of box divs to even out the text size*/
-              /* height: 25rem;*/
+
+              @include breakpoint(md) {
+                padding-right: 2rem;
+                padding-left: 2rem;
+              }
 
               &.border-bottom {
                 border-bottom-color: white;
