@@ -127,6 +127,10 @@
           @include breakpoint(sm) {
             display: none;
           }
+
+          @include breakpoint(md) {
+            top: 71rem;
+          }
         }
       }
     }
@@ -159,6 +163,12 @@
               margin: 0rem;
               margin-right: 1rem;
               text-align: center;
+
+              @include breakpoint(md) {
+                font-size: 1.1rem;
+                width: 10rem;
+                margin-right: 0rem;
+              }
 
               a {
                 display: inline;
@@ -228,6 +238,10 @@
       position: relative;
       z-index: 1;
 
+      @include breakpoint(md) {
+        height: 77rem;
+      }
+
       .lineDown {
         position: absolute;
         width: 2px;
@@ -237,6 +251,10 @@
         left: 52%;
         margin-left: -50rem;
         bottom: -61rem;
+
+        @include breakpoint(md) {
+          margin-left: -37rem;
+        }
       }
 
       .image1, .image2 {
@@ -258,6 +276,13 @@
         @include breakpoint(sm) {
           display: none;
         }
+
+        @include breakpoint(md) {
+          height: 26rem;
+          width: 26rem;
+          right: 2rem;
+          top: 27rem;
+        }
       }
 
       .image2 {
@@ -270,6 +295,13 @@
         @include breakpoint(sm) {
           display: none;
         }
+
+        @include breakpoint(md) {
+          height: 23rem;
+          width: 23rem;
+          right: 23rem;
+          top: 47rem;
+        }
       }
 
       .bigM {
@@ -279,6 +311,12 @@
         position: absolute;
         right: 16rem;
         bottom: 4rem;
+
+        @include breakpoint(md) {
+          height: 24rem;
+          right: 11rem;
+          bottom: 0rem;
+        }
       }
 
       .content {
@@ -303,26 +341,25 @@
             margin-bottom: 2rem;
           }
         }
+
+        @include breakpoint(md) {
+
+          padding-top: 11rem;
+
+          .textSpace {
+            margin-top: 1rem;
+            margin-left: 7rem;
+          }
+
+          h2 {
+            padding-left: 7rem;
+          }
+        } // end of .content responsive tablet
       } /*end of content*/
 
       @include breakpoint(sm) {
 
         height: 45rem;
-
-        /* .image1 {*/
-        /*   height: 15rem;*/
-        /*   width: 14rem;*/
-        /*   right: 5rem;*/
-        /*   top: 14rem;*/
-        /*   background-size: cover;*/
-        /* }*/
-        /**/
-        /* .image2 {*/
-        /*   height: 10rem;*/
-        /*   width: 10rem;*/
-        /*   right: 15rem;*/
-        /*   top: 27rem;*/
-        /* }*/
 
         .bigM {
           width: 12rem;
@@ -351,7 +388,7 @@
             }
           }
         }
-      }
+      } //end of intro responsive - phone
     } /* end of intro*/
 
     &[data-name="nextgen"] {
@@ -405,6 +442,10 @@
           }
        }
 
+       @include breakpoint(md) {
+         width: 72rem;
+       }
+
         > .videoCarousel {
 
           .carousel__controls {
@@ -447,6 +488,11 @@
                     -webkit-transform: none;
                             transform: none;
                   }
+
+                  @include breakpoint(md) {
+                    -webkit-transform: none;
+                            transform: none;
+                  }
               }
 
               &:checked ~ .carousel__track .carousel__slide:nth-of-type(#{$i}) {
@@ -482,6 +528,36 @@
                     div.playButtonDiv {
                       top: 21%;
                       left: 41%;
+                    }
+
+                    .img-wrapper,
+                    div.videoDescription {
+                      width: 30rem;
+                      padding-top: 0rem;
+
+                      h2 {
+                        margin-top: 1rem;
+                      }
+
+                      h2 ~ p {
+                        margin-top: 1rem;
+                        font-size: 1rem;
+                      }
+                    }
+
+                    > img {
+                      width: 30rem;
+                    }
+                }
+
+                @include breakpoint(md) {
+                    display: block;
+                    -webkit-transform: none;
+                            transform: none;
+
+                    div.playButtonDiv {
+                      top: 21%;
+                      left: 32%;
                     }
 
                     .img-wrapper,
@@ -573,6 +649,10 @@
             /* opacity: 0.35;*/
             outline: 0;
             z-index: 3;
+
+            @include breakpoint(md) {
+              border-color: black;
+            }
           }
 
           .carousel__control--backward {
@@ -618,7 +698,19 @@
                     left: 0;
                     -webkit-transform: none;
                             transform: none;
+                }
 
+                @include breakpoint(md){
+                  height: 100%;
+                  right: 0;
+                  position: absolute;
+                  /* hide all the images that aren't checked*/
+                  display: none;
+                  overflow-y: auto;
+                  top: 0;
+                  left: 21%;
+                  -webkit-transform: none;
+                          transform: none;
                 }
           }
 
@@ -654,6 +746,12 @@
                 margin-top: 1rem;
 
                 @include breakpoint(sm) {
+                  height: 16rem;
+                  font-size: 1rem;
+                  line-height: 2.1rem;
+                }
+
+                @include breakpoint(md) {
                   height: 16rem;
                   font-size: 1rem;
                   line-height: 2.1rem;
@@ -2034,6 +2132,10 @@
     &[data-name="mobile-menu"] {
 
       @include breakpoint(lg) {
+        display: none;
+      }
+
+      @include breakpoint(md) {
         display: none;
       }
 
