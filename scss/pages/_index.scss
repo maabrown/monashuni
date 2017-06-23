@@ -1510,6 +1510,15 @@
           }
         }
 
+        @include breakpoint(md) {
+          padding-top: 15rem;
+
+          h2 ~ p.description {
+            margin-left: 5rem;
+            margin-right: 5rem;
+          }
+        }
+
         h2 {
           @include TitleFont();
           font-size: 2.8rem;
@@ -1536,6 +1545,10 @@
 
         @include breakpoint(sm) {
           width: 30rem;
+        }
+
+        @include breakpoint(md) {
+          width: 77rem;
         }
 
         /* creating a mini-grid system*/
@@ -1569,6 +1582,10 @@
                 @include breakpoint(sm) {
                   line-height: 2.5rem;
                 }
+
+                @include breakpoint(md) {
+                  height: 3rem;
+                }
             }
 
             p {
@@ -1579,6 +1596,10 @@
 
               @include breakpoint(sm) {
                 height: auto;
+              }
+
+              @include breakpoint(md) {
+                height: 15em;
               }
             }
 
@@ -1759,6 +1780,10 @@
                 display: none;
               }
 
+              @include breakpoint(md) {
+                height: 40rem;
+              }
+
             }
           }
 
@@ -1890,6 +1915,10 @@
                 border-radius: $mobilepanelborderradius;
                 margin-top: 3rem;
                 display: none;
+              }
+
+              @include breakpoint(md) {
+                height: 40rem;
               }
             }
           }
