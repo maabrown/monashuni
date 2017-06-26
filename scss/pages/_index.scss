@@ -65,12 +65,12 @@
           position: absolute;
 
           h1 {
-            font-size: 3rem;
+            font-size: 4rem;
             @include TitleFont();
           }
 
           p.lead {
-            font-size: 1.7rem;
+            font-size: 2rem;
             line-height: 140%;
             width: 100%;
             display: inline-block;
