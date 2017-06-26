@@ -569,13 +569,13 @@
                         transform: none;
 
                     div.playButtonDiv {
-                      top: 21%;
-                      left: 32%;
+                      top: 30%;
+                      left: 40%;
                     }
 
                     .img-wrapper,
                     div.videoDescription {
-                      width: 39rem;
+                      width: 51rem;
                       padding-top: 0rem;
 
                       h2 {
@@ -588,9 +588,12 @@
                       }
                     }
 
-                    > img {
-                      width: 30rem;
+                    > a > img {
+                      width: 54rem;
+                      height: auto;
                     }
+
+
                 }
               }
 
@@ -732,7 +735,7 @@
                   display: none;
                   overflow-y: auto;
                   top: 0;
-                  left: 21%;
+                  left: 13%;
                   -webkit-transform: none;
                           -ms-transform: none;
                       transform: none;
@@ -1084,23 +1087,23 @@
                   }
 
                   div.playButtonDiv {
-                    top: 21%;
-                    left: 41%;
+                    top: 27%;
+                    left: 48%;
                   }
 
                   .img-wrapper {
                     width: 54rem;
+                    height: auto;
                   }
 
                   div.videoDescription {
                     padding-top: 0rem;
                     width: 60rem;
-                    padding-left: 17%;
+                    padding-left: 12.5%;
                   }
 
                   > a > img {
-                    width: 65%;
-                    height: 65%;
+                    width: 54rem;
                   }
 
                   p.personCaption:after {
@@ -1720,6 +1723,10 @@
                       box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08), 0 4px 16px 0 rgba(0, 0, 0, 0.08);
             }
 
+            @include breakpoint(md) {
+              padding: $tabletpanelpadding;
+            }
+
             div:after {
                 content: "";
                 margin-top: 2rem;
@@ -1753,6 +1760,10 @@
                 padding: $mobilepanelpadding;
               }
 
+              @incldue breakpoint(md) {
+                padding: $tabletpanelpadding;
+              }
+
               div:after {
                   content: "";
                   margin-top: 2rem;
@@ -1778,6 +1789,10 @@
 
             @include breakpoint(sm) {
               padding: $mobilepanelpadding;
+            }
+
+            @include breakpoint(md) {
+              padding: $tabletpanelpadding;
             }
 
             div:after {
@@ -1814,6 +1829,10 @@
 
               }
 
+              @include breakpoint(md) {
+                padding: $tabletpanelpadding;
+              }
+
               div:after {
                   content: "";
                   margin-top: 2rem;
@@ -1844,7 +1863,7 @@
               }
 
               @include breakpoint(md) {
-                height: 40rem;
+                height: 46rem;
               }
 
             }
@@ -1859,6 +1878,10 @@
 
             @include breakpoint(sm) {
               padding: $mobilepanelpadding;
+            }
+
+            @include breakpoint(md) {
+              padding: $tabletpanelpadding;
             }
 
             div:after {
@@ -1889,6 +1912,10 @@
               background-color: #f2f2f2;
             }
 
+            @include breakpoint(md) {
+              padding: $tabletpanelpadding;
+            }
+
             div:after {
                 content: "";
                 margin-top: 2rem;
@@ -1915,6 +1942,10 @@
               padding: $mobilepanelpadding;
               margin-top: 3rem;
               border-radius: $mobilepanelborderradius;
+            }
+
+            @include breakpoint(md) {
+              padding: $tabletpanelpadding;
             }
 
             h3 {
@@ -1954,6 +1985,10 @@
                       box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.08), 0 4px 16px 0 rgba(0, 0, 0, 0.08);
             }
 
+            @include breakpoint(md) {
+              padding: $tabletpanelpadding;
+            }
+
             div:after {
                 content: "";
                 margin-top: 2rem;
@@ -1981,7 +2016,7 @@
               }
 
               @include breakpoint(md) {
-                height: 40rem;
+                height: 46rem;
               }
             }
           }
