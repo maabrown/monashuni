@@ -379,7 +379,7 @@
           h2 {
             letter-spacing: 4px;
             font-size: 2.3rem;
-            padding-left: 2rem;
+            padding-left: 0rem;
           }
 
           .textSpace {
@@ -443,6 +443,10 @@
 
           p {
             font-size: 1.3rem;
+          }
+
+          h2 {
+            line-height: 4rem;
           }
        }
 
@@ -660,9 +664,14 @@
             outline: 0;
             z-index: 3;
 
+            @include breakpoint(sm) {
+              border-color: black;
+            }
+
             @include breakpoint(md) {
               border-color: black;
             }
+
           }
 
           .carousel__control--backward {
@@ -870,7 +879,7 @@
       z-index: 0;
 
       @include breakpoint(sm) {
-        height: 75rem;
+        height: 65rem;
         margin-bottom: 7rem;
       }
 
@@ -888,6 +897,7 @@
 
         @include breakpoint(sm) {
           width: 30rem;
+          padding-top: 5rem;
         }
 
         @include breakpoint(md) {
@@ -902,6 +912,7 @@
 
           @include breakpoint(sm) {
             font-size: 2.5rem;
+            line-height: 4rem;
           }
         }
 
@@ -1379,6 +1390,10 @@
           line-height: 150%;
           font-size: 2.8rem;
           color: $white;
+
+          @include breakpoint(sm) {
+            line-height: 4rem;
+          }
         }
 
 
@@ -1570,7 +1585,7 @@
         padding-bottom: 15rem;
 
         @include breakpoint(sm) {
-          width: 30rem;
+          width: 38rem;
         }
 
         @include breakpoint(md) {
@@ -1631,6 +1646,10 @@
 
             > div > img {
               width: 14%;
+
+              @include breakpoint(sm) {
+                width: 28%;
+              }
             }
 
             .bulb-image {
@@ -2083,6 +2102,10 @@
       border-top: 1px solid $lightgray;
       border-bottom: 1px solid $lightgray;
 
+      @include breakpoint(sm) {
+        height: 13.5rem;
+      }
+
       .content {
         width: 100%;
         max-width: 120rem;
@@ -2235,24 +2258,7 @@
                     background: $instaIcon;
                   }
                 }
-
-                @include breakpoint(sm) {
-                  display: none;
-                }
               }
-
-              &.insta_black {
-                a {
-                  .icon {
-                    background: $instaIcon-Black;
-                  }
-                }
-
-                @include breakpoint(lg) {
-                  display: none;
-                }
-              }
-
             }
           }
         }
@@ -2261,16 +2267,30 @@
       @include breakpoint(sm) {
 
         .content {
+          text-align: center;
+          background: $black;
+
+          & .attr {
+            float: none;
+            margin-left: 0rem;
+          }
 
           & .social {
+            float: none;
+            margin-right: 0rem;
 
             ul {
               text-align: center;
 
               li {
                 margin-bottom: 2rem;
+                float: none;
+                vertical-align: top;
+                margin-top: 0rem;
+
               }
             }
+
           }
         }
       }
@@ -2315,9 +2335,9 @@
             position: absolute;
             content: '';
             top: 50%;
-            left: 15%;
+            left: 30%;
             /* determines how big the X is*/
-            width: 60%;
+            width: 50%;
             /* determines thickness of X*/
             height: 2px;
             /* determines color of X*/
@@ -2357,7 +2377,7 @@
           display: inline-block;
           margin-left: 3rem;
           margin-bottom: 1rem;
-          margin-top: 2rem;
+          margin-top: 2.5rem;
           pointer-events: none;
         }
 
