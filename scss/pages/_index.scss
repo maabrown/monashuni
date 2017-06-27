@@ -1152,7 +1152,7 @@
             cursor: pointer;
             border-width: 3px 3px 0 0;
             border-style: solid;
-            border-color: white;
+            border-color: black;
             /* opacity: 0.35;*/
             outline: 0;
             z-index: 3;
@@ -1609,7 +1609,7 @@
         padding-bottom: 15rem;
 
         @include breakpoint(sm) {
-          width: 38rem;
+          width: 34rem;
         }
 
         @include breakpoint(md) {
@@ -1672,7 +1672,7 @@
               width: 14%;
 
               @include breakpoint(sm) {
-                width: 28%;
+                width: 20%;
               }
             }
 
