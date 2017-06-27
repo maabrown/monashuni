@@ -330,7 +330,7 @@
 
         h2 {
           @include TitleFont();
-          font-size: 2.8rem;
+          font-size: 3rem;
           line-height: 150%;
           padding-left: 10rem;
         }
@@ -340,7 +340,7 @@
           margin-left: 22rem;
 
           p {
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             line-height: 150%;
             margin-bottom: 2rem;
           }
@@ -553,7 +553,7 @@
 
                       h2 ~ p {
                         margin-top: 1rem;
-                        font-size: 1rem;
+                        font-size: 1.7rem;
                       }
                     }
 
@@ -758,7 +758,7 @@
                 text-align: left;
                 color: $lightblue;
                 opacity: .3;
-                font-size: 1.8rem;
+                font-size: 1.7rem;
                 letter-spacing: 0px;
                 margin-top: 2rem;
                 font-family: 'Roboto', sans-serif;
@@ -768,7 +768,7 @@
                 text-align: left;
                 color: $black;
                 opacity: .3;
-                font-size: 1.3rem;
+                font-size: 1.7rem;
                 line-height: 2.2rem;
                 height: 12rem;
                 margin-top: 1rem;
@@ -1243,7 +1243,7 @@
                 color: $lightblue;
                 letter-spacing: 0px;
                 opacity: .3;
-                font-size: 1.8rem;
+                font-size: 1.7rem;
                 font-family: 'Roboto', sans-serif;
               }
 
@@ -1251,7 +1251,7 @@
                 text-align: left;
                 color: black;
                 opacity: .3;
-                font-size: 1.3rem;
+                font-size: 1.7rem;
                 margin-top: 1rem;
               }
             }
@@ -1397,7 +1397,7 @@
           .title {
             p {
               margin-bottom: 3rem;
-              font-size: 1.5rem;
+              font-size: 1.7rem;
             }
           }
         }
@@ -1412,7 +1412,7 @@
         h2 {
           @include TitleFont();
           line-height: 150%;
-          font-size: 2.8rem;
+          font-size: 3rem;
           color: $white;
 
           @include breakpoint(sm) {
@@ -1443,7 +1443,7 @@
             padding-left: 1rem;
             padding-right: 1rem;
 
-            font-size: 1.6rem;
+            font-size: 1.7rem;
             margin-bottom: 1rem;
 
             @include breakpoint(md) {
@@ -1473,7 +1473,7 @@
               }
 
               h4.title {
-                font-size: 2.1rem;
+                font-size: 1.7rem;
                 text-transform: uppercase;
                 letter-spacing: 1px;
                 line-height: 120%;
@@ -1484,8 +1484,8 @@
                 display: inline-block;
                 vertical-align: top;
                 margin-top: 3rem;
-                font-size: 1.4rem;
-                height: 17rem;
+                font-size: 1.7rem;
+                height: 26rem;
               }
             }
           }
@@ -1657,7 +1657,7 @@
               margin-top: 2rem;
               font-size: 1.7rem;
               padding-right: 2rem;
-              height: 17.5em;
+              height: 15em;
 
               @include breakpoint(sm) {
                 height: auto;
@@ -2010,7 +2010,8 @@
 
             img {
               content: $studentscientist;
-              width: 100%;
+              width: 480px;
+              height: 460px;
 
               @include breakpoint(sm) {
                 border-radius: $mobilepanelborderradius;
@@ -2169,7 +2170,7 @@
 
         .halves {
           .col {
-            height: 100%;
+            height: 9rem;
 
             @include breakpoint(sm) {
               width: 100%;
@@ -2198,7 +2199,7 @@
                 text-decoration: underline;
               }
               h2 {
-                text-align: left;
+                text-align: center;
                 padding-left: 5%;
 
                 @include breakpoint(sm) {
@@ -2210,7 +2211,7 @@
 
             &:nth-of-type(1) {
               h2 {
-                text-align: right;
+                text-align: center;
                 padding-right: 5%;
 
                 @include breakpoint(sm) {
