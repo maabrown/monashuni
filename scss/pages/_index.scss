@@ -65,7 +65,7 @@
           position: absolute;
 
           h1 {
-            font-size: 4rem;
+            font-size: 3rem;
             @include TitleFont();
           }
 
@@ -824,11 +824,14 @@
           }
 
           & .innovation {
-            content: $innovation;;
+            content: $innovation;
             height: $nextGenCarouselImageHeight;
             width: $nextGenCarouselImageWidth;
-            z-index: -1;
           }
+
+          // & .picRatio {
+          //   @include aspect-ratio(555,364);
+          // }
 
           & .inspiration {
             content: $inspiration;
