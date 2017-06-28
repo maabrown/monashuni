@@ -1012,6 +1012,10 @@
           width: 72rem;
         }
 
+        @include breakpoint(tabLand) {
+          width: 105rem;
+        }
+
         h2 {
           @include TitleFont();
           font-size: 3rem;
@@ -1105,6 +1109,10 @@
                     -webkit-transform: none;
                             -ms-transform: none;
                         transform: none;
+                  }
+
+                  @include breakpoint(tabLand) {
+                    transform: translateX(-(($i - 1) * 68%));
                   }
               }
 
@@ -1249,7 +1257,11 @@
             .carousel__track .carousel__slide:nth-of-type(#{$i}) {
               -webkit-transform: translateX( ($i - 1 ) * 61.25%);
                       -ms-transform: translateX( ($i - 1 ) * 61.25%);
-                  transform: translateX( ($i - 1 ) * 61.25%)
+                  transform: translateX( ($i - 1 ) * 61.25%);
+
+                @include breakpoint(tabLand) {
+                  transform: translateX(($i - 1) * 68%);
+                }
             }
           }
 
@@ -1276,6 +1288,10 @@
               top: 30%;
               border-color: black;
             }
+
+            @include breakpoint(tabLand) {
+              border-color: white;
+            }
           }
 
           .carousel__control--backward {
@@ -1289,6 +1305,10 @@
             -webkit-transform: rotate(45deg);
                     -ms-transform: rotate(45deg);
                 transform: rotate(45deg);
+
+            @include breakpoint(tabLand) {
+              right: 9%;
+            }
           }
           .carousel__track {
             position: absolute;
@@ -1339,6 +1359,10 @@
                       -ms-transform: none;
                   transform: none;
             }
+
+            @include breakpoint(tabLand) {
+              padding-left: 15%;
+            }
           }
 
           .carousel__slide {
@@ -1364,6 +1388,10 @@
                 opacity: .3;
                 font-size: 1.7rem;
                 margin-top: 1rem;
+              }
+
+              @include breakpoint(tabLand) {
+                width: 63rem;
               }
             }
 
@@ -1440,6 +1468,10 @@
               z-index: 2;
               content: $pressplay;
               width: 75%;
+            }
+
+            @include breakpoint(tabLand) {
+              left: 46%;
             }
           }
 
