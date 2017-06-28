@@ -76,6 +76,10 @@
             display: inline-block;
             margin-top: 5rem;
             font-weight: 300;
+
+            @include breakpoint(md) {
+              font-size: 1.7rem;
+            }
           }
 
           button.cta {
