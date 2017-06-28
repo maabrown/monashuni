@@ -1505,6 +1505,10 @@
         height: 103rem;
       }
 
+      @include breakpoint(tabLand) {
+        background: $black;
+      }
+
       .bg {
         position: absolute;
         width: 100%;
@@ -1552,6 +1556,10 @@
           top: 0;
         }
 
+        @include breakpoint(tabLand) {
+          width: 105rem;
+        }
+
         h2 {
           @include TitleFont();
           line-height: 150%;
@@ -1591,6 +1599,16 @@
 
             @include breakpoint(md) {
               width: 47%;
+
+              .box:nth-of-type(2) {
+                p.description {
+                  height: 15rem;
+                }
+              }
+            }
+
+            @include breakpoint(tabLand) {
+              width: 46%;
 
               .box:nth-of-type(2) {
                 p.description {
