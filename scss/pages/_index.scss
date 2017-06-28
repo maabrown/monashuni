@@ -411,6 +411,10 @@
         height: 109rem;
       }
 
+      @include breakpoint(md) {
+        height: 94rem;
+      }
+
       .bg {
         position: absolute;
         width: 100%;
@@ -474,6 +478,11 @@
 
           height: $carouselHeight;
           width: $carouselWidth;
+
+          @include breakpoint(md) {
+            height: 59rem;
+          }
+
           /* don't want overflow hidden because we want slides to show*/
           /* the entire length of the page*/
           /* overflow: hidden;*/
@@ -582,7 +591,7 @@
                         transform: none;
 
                     div.playButtonDiv {
-                      top: 30%;
+                      top: 25%;
                       left: 40%;
                     }
 
@@ -692,7 +701,7 @@
 
             @include breakpoint(md) {
               border-color: black;
-              top: 35%;
+              top: 31%;
             }
 
           }
@@ -817,6 +826,10 @@
                 @include breakpoint(sm) {
                   display: none;
                 }
+
+                @include breakpoint(md) {
+                  display: none;
+                }
               }
             }
 
@@ -851,10 +864,6 @@
             height: $nextGenCarouselImageHeight;
             width: $nextGenCarouselImageWidth;
           }
-
-          // & .picRatio {
-          //   @include aspect-ratio(555,364);
-          // }
 
           & .inspiration {
             content: $inspiration;
@@ -973,6 +982,10 @@
 
           @include breakpoint(sm) {
             height: 50rem;
+          }
+
+          @include breakpoint(md) {
+            height: 59rem;
           }
 
           width: $carouselWidth;
@@ -1388,7 +1401,7 @@
 
       @include breakpoint(md) {
         background: $black;
-        height: 94rem;
+        height: 103rem;
       }
 
       .bg {
@@ -1477,6 +1490,12 @@
 
             @include breakpoint(md) {
               width: 47%;
+
+              .box:nth-of-type(2) {
+                p.description {
+                  height: 15rem;
+                }
+              }
             }
 
             .box {
@@ -2049,7 +2068,8 @@
               }
 
               @include breakpoint(md) {
-                height: 46rem;
+                height: 45.5rem;
+                width: 37.5rem;
               }
             }
           }
