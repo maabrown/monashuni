@@ -1751,6 +1751,10 @@
           }
         }
 
+        @include breakpoint(tabLand) {
+          padding-top: 17rem;
+        }
+
         h2 {
           @include TitleFont();
           font-size: 3rem;
@@ -2315,6 +2319,14 @@
         .overlay {
           .content {
             width: 72rem;
+          }
+        }
+      }
+
+      @include breakpoint(tabLand) {
+        .overlay {
+          .content {
+            width: 105rem;
           }
         }
       }
