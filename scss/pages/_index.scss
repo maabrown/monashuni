@@ -291,6 +291,13 @@
           right: 2rem;
           top: 27rem;
         }
+
+        @include breakpoint(tabLand) {
+          height: 25rem;
+          width: 25rem;
+          right: 2rem;
+          top: 27rem;
+        }
       }
 
       .image2 {
@@ -310,6 +317,13 @@
           right: 23rem;
           top: 47rem;
         }
+
+        @include breakpoint(tabLand) {
+          height: 20rem;
+          width: 20rem;
+          right: 19rem;
+          top: 49rem;
+        }
       }
 
       .bigM {
@@ -323,6 +337,13 @@
         @include breakpoint(md) {
           height: 24rem;
           right: 11rem;
+          bottom: 0rem;
+        }
+
+        @include breakpoint(tabLand) {
+          width: 12rem;
+          height: 21rem;
+          right: 6rem;
           bottom: 0rem;
         }
       }
@@ -470,6 +491,10 @@
          width: 72rem;
        }
 
+       @include breakpoint(tabLand) {
+         width: 105rem;
+       }
+
         > .videoCarousel {
 
           .carousel__controls {
@@ -524,6 +549,10 @@
                     -webkit-transform: none;
                             -ms-transform: none;
                         transform: none;
+                  }
+
+                  @include breakpoint(tabLand) {
+                    transform: translateX(-(($i - 1) * 35%));
                   }
               }
 
@@ -667,6 +696,12 @@
                       top: 20%;
                     }
                   }
+
+                  @include breakpoint(tabLand) {
+                    .carousel__control--forward, .carousel__control--backward {
+                      top: 23%;
+                    }
+                  }
               }
 
             }
@@ -676,6 +711,11 @@
                 -webkit-transform: translateX(($i - 1) * $percentageMove + 4%);
                         -ms-transform: translateX(($i - 1) * $percentageMove + 4%);
                     transform: translateX(($i - 1) * $percentageMove + 4%);
+
+                @include breakpoint(tabLand) {
+                  transform: translateX(($i - 1) * 35%);
+                }
+
               }
 
           }
@@ -768,6 +808,17 @@
                           -ms-transform: none;
                       transform: none;
                 }
+
+                @include breakpoint(tabLand) {
+                  padding-left: 16%;
+                }
+
+                > a > img {
+                    @include breakpoint(tabLand) {
+                      width: 35rem;
+                      height: auto;
+                    }
+                }
           }
 
           .carousel__slide {
@@ -830,6 +881,14 @@
                 @include breakpoint(md) {
                   display: none;
                 }
+
+                @include breakpoint(tabLand) {
+                  display: none;
+                }
+              }
+
+              @include breakpoint(tabLand) {
+                width: 33rem;
               }
             }
 
@@ -895,6 +954,11 @@
               content: $pressplay;
               width: 75%;
             }
+
+            @include breakpoint(tabLand) {
+              top: 18%;
+              left: 31%;
+            }
           }
 
           & .img-wrapper {
@@ -905,6 +969,11 @@
             z-index: 2;
             opacity: 0.8;
             position: absolute;
+
+            @include breakpoint(tabLand) {
+              height: 23rem;
+              width: 35rem;
+            }
           }
         } /* end of videoCarousel*/
       } /* end of content*/
