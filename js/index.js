@@ -94,8 +94,6 @@
   });
 
 
-
-
   //jump off
   $(window).trigger('resize');
 })();
