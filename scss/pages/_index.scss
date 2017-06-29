@@ -1274,7 +1274,7 @@
             cursor: pointer;
             border-width: 3px 3px 0 0;
             border-style: solid;
-            border-color: black;
+            border-color: white;
             /* opacity: 0.35;*/
             outline: 0;
             z-index: 3;
@@ -2274,7 +2274,7 @@
               @include TitleFont();
               font-size: 2.2rem;
               margin-bottom: 0rem;
-              margin-top: 3rem;
+              margin-top: 3.5rem;
             }
 
             span {
@@ -2379,6 +2379,29 @@
                 a {
                   .icon {
                     background: $ytIcon;
+                  }
+                }
+
+                @include breakpoint(sm) {
+                  display: none;
+                }
+
+                &.mobile-only {
+
+                  @include breakpoint(lg) {
+                    display: none;
+                  }
+
+                  @include breakpoint(md) {
+                    display: none;
+                  }
+
+                  @include breakpoint(tabLand) {
+                    display: none;
+                  }
+
+                  @include breakpoint(sm) {
+                    display: inline-block;
                   }
                 }
               }
