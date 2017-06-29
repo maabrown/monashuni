@@ -552,7 +552,9 @@
                   }
 
                   @include breakpoint(tabLand) {
-                    transform: translateX(-(($i - 1) * 35%));
+                    -webkit-transform: translateX(-(($i - 1) * 35%));
+                        -ms-transform: translateX(-(($i - 1) * 35%));
+                            transform: translateX(-(($i - 1) * 35%));
                   }
               }
 
@@ -713,7 +715,9 @@
                     transform: translateX(($i - 1) * $percentageMove + 4%);
 
                 @include breakpoint(tabLand) {
-                  transform: translateX(($i - 1) * 35%);
+                  -webkit-transform: translateX(($i - 1) * 35%);
+                      -ms-transform: translateX(($i - 1) * 35%);
+                          transform: translateX(($i - 1) * 35%);
                 }
 
               }
@@ -1111,7 +1115,9 @@
                   }
 
                   @include breakpoint(tabLand) {
-                    transform: translateX(-(($i - 1) * 68%));
+                    -webkit-transform: translateX(-(($i - 1) * 68%));
+                        -ms-transform: translateX(-(($i - 1) * 68%));
+                            transform: translateX(-(($i - 1) * 68%));
                   }
               }
 
@@ -1259,7 +1265,9 @@
                   transform: translateX( ($i - 1 ) * 61.25%);
 
                 @include breakpoint(tabLand) {
-                  transform: translateX(($i - 1) * 68%);
+                  -webkit-transform: translateX(($i - 1) * 68%);
+                      -ms-transform: translateX(($i - 1) * 68%);
+                          transform: translateX(($i - 1) * 68%);
                 }
             }
           }
