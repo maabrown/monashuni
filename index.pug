@@ -42,82 +42,7 @@ html(lang="en", xml="lang:en")
           a(class="mobile-nav-item" href="#next_generation") Next Gen
           a(class="mobile-nav-item" href="#choose_monash") Choose Monash
           a(class="mobile-nav-item" href="#contact_section") Contact
-        
-      
-      .section(data-name="lightbox-nested-section")
-        
-        //- Next Generation Videos
-        div(class="lightbox-target" id="impact_video")
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/S2YL-Z5SB2Y" frameborder="0" allowfullscreen></iframe>
-          a(class="lightbox-close" href="#new_generation")
-            
-        div(class="lightbox-target" id="innovation_video")
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/t0o1vF_GQKU" frameborder="0" allowfullscreen></iframe>
-          a(class="lightbox-close" href="#new_generation")
-        
-        div(class="lightbox-target" id="curiousity_video")
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/kGH9fIRYU9o" frameborder="0" allowfullscreen></iframe>
-          a(class="lightbox-close" href="#new_generation")
-        
-        div(class="lightbox-target" id="inspiration_video")
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/sgHTOORn_wE" frameborder="0" allowfullscreen></iframe>
-          a(class="lightbox-close" href="#new_generation")
-        
-        div(class="lightbox-target" id="progress_video")
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/0z_v05jkTK8" frameborder="0" allowfullscreen></iframe>
-          a(class="lightbox-close" href="#new_generation")
-        
-        div(class="lightbox-target" id="qta_video")
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/av35jbIv5bE" frameborder="0" allowfullscreen></iframe>
-          a(class="lightbox-close" href="#new_generation")
-          
-          
-            
-        //- New Thinking Videos    
-        div(class="lightbox-target" id="nStone_video")
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/CNci2onvhoY" frameborder="0" allowfullscreen></iframe>
-          a(class="lightbox-close" href="#new_thinking")
-        
-        div(class="lightbox-target" id="kFitzGibbon_video")
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/PVAx7M9ijmk" frameborder="0" allowfullscreen></iframe>
-          a(class="lightbox-close" href="#new_thinking")
-        
-        div(class="lightbox-target" id="nBertram_video")
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/L7kdt58lTYM" frameborder="0" allowfullscreen></iframe>
-          a(class="lightbox-close" href="#new_thinking")
-        
-        div(class="lightbox-target" id="sFenton_video")
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/o8r6W4NFg34" frameborder="0" allowfullscreen></iframe>
-          a(class="lightbox-close" href="#new_thinking")
-        
-        div(class="lightbox-target" id="tLe_video")
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/eJAj4SotFwg" frameborder="0" allowfullscreen></iframe>
-          a(class="lightbox-close" href="#new_thinking")
-        
-        div(class="lightbox-target" id="xWu_video")
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/BbaHmsb8c8c" frameborder="0" allowfullscreen></iframe>
-          a(class="lightbox-close" href="#new_thinking")
-        
-        div(class="lightbox-target" id="bKiernan_video")
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/EXUAvYnyE-c" frameborder="0" allowfullscreen></iframe>
-          a(class="lightbox-close" href="#new_thinking")
-        
-        div(class="lightbox-target" id="mMcintosh_video")
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/4XWFQmipm1k" frameborder="0" allowfullscreen></iframe>
-          a(class="lightbox-close" href="#new_thinking")
-        
-        div(class="lightbox-target" id="kSievert_video")
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/twf7gcyiGaQ" frameborder="0" allowfullscreen></iframe>
-          a(class="lightbox-close" href="#new_thinking")
-        
-        div(class="lightbox-target" id="sLoni_video")
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/xAlyqN3l-l4" frameborder="0" allowfullscreen></iframe>
-          a(class="lightbox-close" href="#new_thinking")
-        
-        div(class="lightbox-target" id="intro_video")
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/QyhZFM3H4Yg" frameborder="0" allowfullscreen></iframe>
-          a(class="lightbox-close" href="#preheader_section")
-        
+                
       .section(data-name="preheader" id="preheader_section")
         .bg
         .overlay
@@ -608,6 +533,79 @@ html(lang="en", xml="lang:en")
               li.insta: a(href="https://www.instagram.com/monash_uni/?hl=en", target="_blank"): .icon
               li.yt: a(href="https://www.youtube.com/channel/UCO3krgSinpAjqXE1DU47-cA", target="_blank"): .icon              
       
+      .section(data-name="lightbox-nested-section")
+        
+        //- Next Generation Videos
+        div(class="lightbox-target" id="impact_video")
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/S2YL-Z5SB2Y?enablejsapi=1" frameborder="0" allowfullscreen id="impact_video_iframe"></iframe>
+          a(class="lightbox-close" href="#new_generation")
+            
+        div(class="lightbox-target" id="innovation_video")
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/t0o1vF_GQKU?enablejsapi=1" frameborder="0" allowfullscreen id="innovation_video_iframe"></iframe>
+          a(class="lightbox-close" href="#new_generation")
+        
+        div(class="lightbox-target" id="curiousity_video")
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/kGH9fIRYU9o?enablejsapi=1" frameborder="0" allowfullscreen id="curiousity_video_iframe"></iframe>
+          a(class="lightbox-close" href="#new_generation")
+        
+        div(class="lightbox-target" id="inspiration_video")
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/sgHTOORn_wE?enablejsapi=1" frameborder="0" allowfullscreen id="inspiration_video_iframe"></iframe>
+          a(class="lightbox-close" href="#new_generation")
+        
+        div(class="lightbox-target" id="progress_video")
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/0z_v05jkTK8?enablejsapi=1" frameborder="0" allowfullscreen id="progress_video_iframe"></iframe>
+          a(class="lightbox-close" href="#new_generation")
+        
+        div(class="lightbox-target" id="qta_video")
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/av35jbIv5bE?enablejsapi=1" frameborder="0" allowfullscreen id="qta_video_iframe"></iframe>
+          a(class="lightbox-close" href="#new_generation")
+          
+          
+            
+        //- New Thinking Videos    
+        div(class="lightbox-target" id="nStone_video")
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/CNci2onvhoY?enablejsapi=1" frameborder="0" allowfullscreen id="nStone_video_iframe"></iframe>
+          a(class="lightbox-close" href="#new_thinking")
+        
+        div(class="lightbox-target" id="kFitzGibbon_video")
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/PVAx7M9ijmk?enablejsapi=1" frameborder="0" allowfullscreen id="kFitzGibbon_video_iframe"></iframe>
+          a(class="lightbox-close" href="#new_thinking")
+        
+        div(class="lightbox-target" id="nBertram_video")
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/L7kdt58lTYM?enablejsapi=1" frameborder="0" allowfullscreen id="nBertram_video_iframe"></iframe>
+          a(class="lightbox-close" href="#new_thinking")
+        
+        div(class="lightbox-target" id="sFenton_video")
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/o8r6W4NFg34?enablejsapi=1" frameborder="0" allowfullscreen id="sFenton_video_iframe"></iframe>
+          a(class="lightbox-close" href="#new_thinking")
+        
+        div(class="lightbox-target" id="tLe_video")
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/eJAj4SotFwg?enablejsapi=1" frameborder="0" allowfullscreen id="tLe_video_iframe"></iframe>
+          a(class="lightbox-close" href="#new_thinking")
+        
+        div(class="lightbox-target" id="xWu_video")
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/BbaHmsb8c8c?enablejsapi=1" frameborder="0" allowfullscreen id="xWu_video_iframe"></iframe>
+          a(class="lightbox-close" href="#new_thinking")
+        
+        div(class="lightbox-target" id="bKiernan_video")
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/EXUAvYnyE-c?enablejsapi=1" frameborder="0" allowfullscreen id="bKiernan_video_iframe"></iframe>
+          a(class="lightbox-close" href="#new_thinking")
+        
+        div(class="lightbox-target" id="mMcintosh_video")
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/4XWFQmipm1k?enablejsapi=1" frameborder="0" allowfullscreen id="mMcintosh_video_iframe"></iframe>
+          a(class="lightbox-close" href="#new_thinking")
+        
+        div(class="lightbox-target" id="kSievert_video")
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/twf7gcyiGaQ?enablejsapi=1" frameborder="0" allowfullscreen id="kSievert_video_iframe"></iframe>
+          a(class="lightbox-close" href="#new_thinking")
+        
+        div(class="lightbox-target" id="sLoni_video")
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/xAlyqN3l-l4?enablejsapi=1" frameborder="0" allowfullscreen id="sLoni_video_iframe"></iframe>
+          a(class="lightbox-close" href="#new_thinking")
+        
+        div(class="lightbox-target" id="intro_video")
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/QyhZFM3H4Yg?enablejsapi=1" frameborder="0" allowfullscreen id="preheader_video_iframe"></iframe>
+          a(class="lightbox-close" href="#preheader_section")
     //scripts
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js")
     script(src="js/index.js")
