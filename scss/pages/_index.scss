@@ -981,7 +981,7 @@
     &[data-name="newthinking"] {
       background: $white;
       color: $black;
-      height: 90rem;
+      height: 96rem;
       position: relative;
       z-index: 0;
 
@@ -1207,7 +1207,7 @@
                   }
 
                   div.playButtonDiv {
-                    top: 27%;
+                    top: 20%;
                     left: 48%;
                   }
 
@@ -1284,7 +1284,7 @@
             }
 
             @include breakpoint(md) {
-              top: 30%;
+              top: 25%;
               border-color: black;
             }
 
@@ -2779,6 +2779,14 @@
 
         a.lightbox-close {
           top: 15%;
+
+          @include breakpoint(md) {
+            right: 3%;
+          }
+
+          @include breakpoint(tabLand) {
+            right: 3%;
+          }
         }
 
         iframe {
