@@ -104,22 +104,9 @@
   var firstScriptTag = document.getElementsByTagName('script')[0];
   firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-  // var player1;
-  // window.onYouTubeIframeAPIReady = function() {
-  //   player1 = new YT.Player('preheader_video_iframe', {
-  //     events: {
-  //       'onReady': onPlayerReady,
-  //       'onStateChange' : pauseVideo
-  //     }
-  //   });
-  // }
-
+  // uses X on Lightbox to pause YouTube videos using postMessage and YT API
   $('a.lightbox-close').click(function(e) {
-    console.log(e);
-    console.log(e.delegateTarget.offsetParent.firstChild.id);
     var identifier = e.delegateTarget.offsetParent.firstChild.id;
     $('#' + identifier)[0].contentWindow.postMessage('{"event":"command","func":"' + 'pauseVideo' + '","args":""}', '*');
-
-    console.log('link clicked');
   })
 })();

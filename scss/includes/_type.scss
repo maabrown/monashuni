@@ -22,3 +22,18 @@ p {
 pre, .pre {
   white-space: pre;
 }
+
+@mixin linesForDivs {
+  div:after {
+      content: "";
+      margin-top: 1rem;
+      background: $black;
+      display: block;
+      height: 2px;
+      width: 4rem;
+  }
+
+  @include breakpoint(sm) {
+    display: none;
+  }
+}

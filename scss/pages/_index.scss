@@ -1901,19 +1901,8 @@
               padding: $tabletpanelpadding;
             }
 
-            div:after {
-                content: "";
-                margin-top: 2rem;
-                background: $black;
-                display: block;
-                height: 2px;
-                width: 4rem;
+            @include linesForDivs
 
-                @include breakpoint(sm) {
-                  display: none;
-                }
-
-            }
           }
 
           > .col:nth-of-type(2) {
@@ -1938,18 +1927,7 @@
                 padding: $tabletpanelpadding;
               }
 
-              div:after {
-                  content: "";
-                  margin-top: 2rem;
-                  background: $black;
-                  display: block;
-                  height: 2px;
-                  width: 4rem;
-
-                @include breakpoint(sm) {
-                  display: none;
-                }
-              }
+              @include linesForDivs;
             }
           }
         }
@@ -1969,18 +1947,8 @@
               padding: $tabletpanelpadding;
             }
 
-            div:after {
-                content: "";
-                margin-top: 2rem;
-                background: $black;
-                display: block;
-                height: 2px;
-                width: 4rem;
+            @include linesForDivs;
 
-              @include breakpoint(sm) {
-                display: none;
-              }
-            }
           }
 
           > .col:nth-of-type(2)
@@ -2007,18 +1975,7 @@
                 padding: $tabletpanelpadding;
               }
 
-              div:after {
-                  content: "";
-                  margin-top: 2rem;
-                  background: $white;
-                  display: block;
-                  height: 2px;
-                  width: 4rem;
-
-                @include breakpoint(sm) {
-                  display: none;
-                }
-              }
+              @include linesForDivs;
             }
 
         }
@@ -2031,8 +1988,6 @@
               width: 100%;
 
               @include breakpoint(sm) {
-                /* margin-top: 3rem;*/
-                /* border-radius: $mobilepanelborderradius;*/
                 display: none;
               }
 
@@ -2058,18 +2013,7 @@
               padding: $tabletpanelpadding;
             }
 
-            div:after {
-                content: "";
-                margin-top: 2rem;
-                background: $black;
-                display: block;
-                height: 2px;
-                width: 4rem;
-
-              @include breakpoint(sm) {
-                display: none;
-              }
-            }
+            @include linesForDivs;
           }
         }
 
@@ -2090,18 +2034,7 @@
               padding: $tabletpanelpadding;
             }
 
-            div:after {
-                content: "";
-                margin-top: 2rem;
-                background: $black;
-                display: block;
-                height: 2px;
-                width: 4rem;
-
-              @include breakpoint(sm) {
-                display: none;
-              }
-            }
+            @include linesForDivs;
           }
 
           > .col:nth-of-type(2) > div:nth-of-type(1) {
@@ -2126,18 +2059,7 @@
               color: $white;
             }
 
-            div:after {
-                content: "";
-                margin-top: 2rem;
-                background: $white;
-                display: block;
-                height: 2px;
-                width: 4rem;
-
-              @include breakpoint(sm) {
-                display: none;
-              }
-            }
+            @include linesForDivs;
           }
         }
 
@@ -2163,18 +2085,7 @@
               padding: $tabletpanelpadding;
             }
 
-            div:after {
-                content: "";
-                margin-top: 2rem;
-                background: $black;
-                display: block;
-                height: 2px;
-                width: 4rem;
-
-              @include breakpoint(sm) {
-                display: none;
-              }
-            }
+            @include linesForDivs;
           }
 
           > .col:nth-of-type(2) > div:nth-of-type(1) {
