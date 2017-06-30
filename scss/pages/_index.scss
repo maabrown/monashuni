@@ -2742,6 +2742,16 @@
             -webkit-transition: .5s ease-in-out;
             -o-transition: .5s ease-in-out;
             transition: .5s ease-in-out;
+
+            @include breakpoint(tabLand) {
+              width: 53px;
+              height: 53px;
+            }
+
+            @include breakpoint(md) {
+              width: 53px;
+              height: 53px;
+            }
           }
 
           a.lightbox-close:before {
@@ -2756,6 +2766,16 @@
             -webkit-transform:rotate(45deg);
             -ms-transform:rotate(45deg);
                 transform:rotate(45deg);
+
+            @include breakpoint(tabLand) {
+              height: 55px;
+              top: 0px;
+            }
+
+            @include breakpoint(md) {
+              height: 55px;
+              top: 0px;
+            }
             }
 
             /* Provides part of the "X" to eliminate an image from the close link */
@@ -2772,6 +2792,16 @@
             -webkit-transform:rotate(-45deg);
             -ms-transform:rotate(-45deg);
                 transform:rotate(-45deg);
+
+            @include breakpoint(tabLand) {
+              height: 55px;
+              top: 0px;
+            }
+
+            @include breakpoint(md) {
+              height: 55px;
+              top: 0px;
+            }
           }
 
 
@@ -2788,11 +2818,11 @@
           top: 15%;
 
           @include breakpoint(md) {
-            right: 3%;
+            right: 9%;
           }
 
           @include breakpoint(tabLand) {
-            right: 3%;
+            right: 9%;
           }
         }
 
