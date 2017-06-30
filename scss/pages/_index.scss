@@ -2727,6 +2727,10 @@
           right: 0;
           bottom: 0;
           border: 3px solid white;
+
+          @include breakpoint(sm) {
+            top: 4rem;
+          }
         }
 
       }
