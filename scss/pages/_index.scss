@@ -507,17 +507,8 @@
           @include breakpoint(md) {
             height: 59rem;
           }
-
-          /* don't want overflow hidden because we want slides to show*/
-          /* the entire length of the page*/
-          /* overflow: hidden;*/
-          /* you want the carousel relative to its normal position*/
           position: relative;
-          /* centers the slides within the videoCarousel div*/
-          /* text-align: center;*/
           margin-top: 5rem;
-
-          /* makes radio buttons disappear*/
           & .carousel__activator-gallery-one {
             display: none;
           }
@@ -525,15 +516,8 @@
 
 
           @for $i from 1 through $nextGenNumOfSlides {
-            /* creates these classes for each image/video by looping*/
 
             .carousel__activator-gallery-one:nth-of-type(#{$i}) {
-
-              /* when arrow (carousel__controls) are clicked, changes*/
-              /* id of carousel__activator and sets 'checked' class*/
-              /* and moves the slide*/
-              /* percentage is based on the size of the element - not the*/
-              /* carousel track, so having the same size image matters*/
               &:checked ~ .carousel__track {
                   -webkit-transform: translateX(-(($i - 1) * $percentageMove) + 10%);
                           -ms-transform: translateX(-(($i - 1) * $percentageMove) + 10%);
@@ -650,7 +634,6 @@
                 }
               }
 
-              /* adds styling to the carousel item to the right*/
               &:checked ~ .carousel__track .carousel__slide:nth-of-type(#{$i + 1}) {
 
                 h2 {
@@ -708,7 +691,6 @@
 
             }
 
-              /* sets the slides' original place along x-axis*/
               .carousel__track .carousel__slide:nth-of-type(#{$i}) {
                 -webkit-transform: translateX(($i - 1) * $percentageMove + 4%);
                         -ms-transform: translateX(($i - 1) * $percentageMove + 4%);
@@ -770,7 +752,6 @@
             left: 0;
             padding: 0;
             margin: 0;
-            /* smoothes the movement between slides*/
             -webkit-transition: -webkit-transform .5s ease 0s;
             transition: -webkit-transform .5s ease 0s;
             -o-transition: transform .5s ease 0s;
@@ -788,7 +769,6 @@
                     height: 100%;
                     right: 0;
                     position: absolute;
-                    /* hide all the images that aren't checked*/
                     display: none;
                     overflow-y: auto;
                     top: 0;
@@ -802,7 +782,6 @@
                   height: 100%;
                   right: 0;
                   position: absolute;
-                  /* hide all the images that aren't checked*/
                   display: none;
                   overflow-y: auto;
                   top: 0;
@@ -904,18 +883,6 @@
           }
 
           & .impact {
-            content: $impact;
-            height: $nextGenCarouselImageHeight;
-            width: $nextGenCarouselImageWidth;
-          }
-
-          & .impact::after {
-            content: $impact;
-            height: $nextGenCarouselImageHeight;
-            width: $nextGenCarouselImageWidth;
-          }
-
-          & .impact::before {
             content: $impact;
             height: $nextGenCarouselImageHeight;
             width: $nextGenCarouselImageWidth;
@@ -1065,17 +1032,8 @@
           }
 
           width: $carouselWidth;
-          /* don't want overflow hidden because we want slides to show*/
-          /* the entire length of the page*/
-          /* overflow: hidden;*/
-
-          /* you want the carousel relative to its normal position*/
           position: relative;
-          /* centers the slides within the videoCarousel div*/
-          /* text-align: center;*/
           margin-top: 5rem;
-
-          /* makes radio buttons disappear*/
           & .carousel__activator {
             display: none;
           }
@@ -1087,16 +1045,8 @@
 
 
           @for $i from 1 through $newProblemsNumOfSlides {
-            /* creates these classes for each image/video by looping*/
 
             .carousel__activator:nth-of-type(#{$i}) {
-
-              /* when arrow (carousel__controls) are clicked, changes*/
-              /* id of carousel__activator and sets 'checked' class*/
-              /* and moves the slide*/
-              /* percentage is based on the size of the element - not the*/
-              /* carousel track, so having the same size image matters*/
-              /* this is what actually moves the carousel*/
               &:checked ~ .carousel__track {
                   -webkit-transform: translateX( (-(($i - 1) * 60%) + 17%) );
                           -ms-transform: translateX( (-(($i - 1) * 60%) + 17%) );
@@ -1120,8 +1070,6 @@
                             transform: translateX(-(($i - 1) * 68%));
                   }
               }
-
-              /* styles for the slide itself - need to put in transition/animation*/
               &:checked ~ .carousel__slide:nth-of-type(#{$i}) {
                   top: 0;
                   left: 0;
@@ -1144,7 +1092,7 @@
                 p.personDescription {
                   font-style: italic;
                 }
-                /* creates line underneath word*/
+
                 p.personCaption:after {
                   content: "";
                   margin-top: 2rem;
@@ -1257,8 +1205,6 @@
 
             }
 
-
-            /* controls the amount of space between slides*/
             .carousel__track .carousel__slide:nth-of-type(#{$i}) {
               -webkit-transform: translateX( ($i - 1 ) * 61.25%);
                       -ms-transform: translateX( ($i - 1 ) * 61.25%);
@@ -1283,7 +1229,6 @@
             border-width: 3px 3px 0 0;
             border-style: solid;
             border-color: white;
-            /* opacity: 0.35;*/
             outline: 0;
             z-index: 3;
 
@@ -1325,7 +1270,6 @@
             left: 0;
             padding: 0;
             margin: 0;
-            /* smoothes the movement between slides*/
             -webkit-transition: -webkit-transform .5s ease 0s;
             transition: -webkit-transform .5s ease 0s;
             -o-transition: transform .5s ease 0s;
@@ -1343,7 +1287,6 @@
               height: 100%;
               right: 0;
               position: absolute;
-              /* hide all the images that aren't checked*/
               display: none;
               overflow-y: auto;
               top: 0;
@@ -1357,7 +1300,6 @@
               height: 100%;
               right: 0;
               position: absolute;
-              /* hide all the images that aren't checked*/
               display: none;
               overflow-y: auto;
               top: 0;
@@ -1703,7 +1645,6 @@
       }
 
       button.cta {
-        /* margin-top: 8rem;*/
         border-color: white;
       }
 
@@ -1794,7 +1735,6 @@
           width: 77rem;
         }
 
-        /* creating a mini-grid system*/
         .content-row {
           width: 100%;
           padding-left: 1rem;
@@ -2493,13 +2433,10 @@
         background-color: black;
         overflow: hidden;
 
-        /* dont want to show radio button*/
         #toggle {
           display: none;
         }
 
-        /* have to give CSS to lable to get toggle to work*/
-        /* make sure that input ID is same as label for attr*/
         .toggle-container {
           position: absolute;
           display: inline-block;
@@ -2507,17 +2444,13 @@
           height: 90px;
           background-color: transparent;
 
-          /* makes the X for when the mobile menu is opened*/
           &:before, &:after {
             position: absolute;
             content: '';
             top: 50%;
             left: 30%;
-            /* determines how big the X is*/
             width: 50%;
-            /* determines thickness of X*/
             height: 2px;
-            /* determines color of X*/
             background-color: white;
             border-radius: 5px;
             -webkit-transition: $transition-duration;
@@ -2525,7 +2458,6 @@
             transition: $transition-duration;
           }
 
-          /* uses psedo elements to make the X*/
           &:before {
             -webkit-transform: translateY(-50%) rotate(45deg) scale(0);
                     -ms-transform: translateY(-50%) rotate(45deg) scale(0);
@@ -2558,10 +2490,8 @@
           pointer-events: none;
         }
 
-        /* when menu is clicked*/
         #toggle:checked {
 
-          /* shows the X - use of scale(1)*/
           & ~ .toggle-container {
 
             &:before {
@@ -2577,10 +2507,7 @@
             }
           }
 
-          /* moves the words away from the X*/
           & ~ .mobile-nav {
-            /* these values may need to change based on menu*/
-            /* transform: translate(80px, 50px);*/
             margin-bottom: 0rem;
             pointer-events: auto;
             text-align: left;
@@ -2590,7 +2517,6 @@
             display: block;
             margin-left: 0rem;
 
-            /* making titles back into nav items from lines*/
             & .mobile-nav-item {
                 color: white;
                 letter-spacing: 3px;
@@ -2612,40 +2538,25 @@
                   border-bottom: none;
                 }
 
-              /* hiding lines*/
               &:before {
                 opacity: 0;
               }
             }
           }
-
-          /* don't show the logo when the menu is opened*/
-          & ~ .mobile-nav-logo {
-            /* position: absolute;*/
-          }
         } /* end of #toggle:checked*/
 
-
-
-        /* show items as lines, making hamburger menu*/
-        /* this is it's initial setting*/
         .mobile-nav-item {
           position: relative;
           display: inline-block;
           float: left;
           clear: both;
-          /* by setting color to transparent the lines*/
-          /* cover the words*/
           color: transparent;
-          /* sets the font size of the words*/
           font-size: 18px;
           height: 2px;
           line-height: 50px;
           text-transform: uppercase;
           white-space: nowrap;
-          /* space between the lines*/
           margin-bottom: 8px;
-          /* shrinks the words height*/
           -webkit-transform: scaleY(0.1);
                   -ms-transform: scaleY(0.1);
               transform: scaleY(0.1);
@@ -2653,8 +2564,6 @@
           -o-transition: $transition-duration, opacity 1s;
           transition: $transition-duration, opacity 1s;
 
-          /* adjusting the line length for hamburger to be even*/
-          /* will need to be adjusted based on the words used*/
           &:nth-child(1) {
             letter-spacing: -2.2px;
           }
@@ -2668,32 +2577,20 @@
             letter-spacing: -4.5px;
           }
 
-          /* this is for after the third line*/
-          /* you want to make them disappear*/
           &:nth-child(n+4) {
             margin-top: -7px;
             opacity: 0;
             letter-spacing: -5.8px
           }
 
-          /* uses 'before' pseudo element to make lines*/
           &:before {
             position: absolute;
-            /* want the line to be empty content which then*/
-            /* is just the background color*/
             content: ' ';
-            /* moves the hamburger down to the middle of the*/
-            /* words*/
             top: 50%;
             left: 0;
-            /* lines take up the entire width of the word*/
-            /* in the a tag*/
             width: 100%;
-            /* determines how thick the hamberger lines are*/
             height: 20px;
-            /* sets the color of the hamburger lines*/
             background-color: white;
-            /* with the top property moves lines to middle of words*/
             -webkit-transform: translateY(-50%);
                     -ms-transform: translateY(-50%);
                 transform: translateY(-50%);
@@ -2723,9 +2620,6 @@
         -o-transition: opacity .5s ease-in-out;
         transition: opacity .5s ease-in-out;
         overflow: hidden;
-
-
-          /*  Creates the X for the LightBox*/
 
           a.lightbox-close {
             display: block;
@@ -2778,8 +2672,6 @@
             }
             }
 
-            /* Provides part of the "X" to eliminate an image from the close link */
-
           a.lightbox-close:after {
             content: "";
             display: block;
@@ -2807,7 +2699,6 @@
 
       }
 
-          /* Uses the :target pseudo-class to perform the animations upon clicking the .lightbox-target anchor */
       .lightbox-target:target {
         opacity: 1;
         top: 0;
