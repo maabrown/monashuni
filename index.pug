@@ -27,8 +27,7 @@ html(lang="en", xml="lang:en")
     link(rel="apple-touch-icon-precomposed" href="../assets/favicons/favicon-57.png")
     link(rel="shortcut icon" type="image/x-icon" href="../assets/favicons/favicon.ico")
     // Google Tag Manager
-    noscript
-      iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-P6429Q', height='0', width='0', style='display:none;visibility:hidden')
+
     script.
       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
       new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -38,6 +37,8 @@ html(lang="en", xml="lang:en")
     // End Google Tag Manager
     
   body
+    noscript
+      iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-P6429Q', height='0', width='0', style='display:none;visibility:hidden')
     .index
       
       .section(data-name="mobile-menu")
