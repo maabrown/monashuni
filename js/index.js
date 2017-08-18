@@ -21,7 +21,7 @@
 
     if (mq) {
       // this is when it is mobile
-      $('.section[data-name="preheader"]').height(window.innerHeight + $mobileMenu.height());
+      $('.section[data-name="preheader"]').height(window.innerHeight);
       mainHeaderPosY = $mainHeader.offset().top
     }
   }
@@ -47,6 +47,7 @@
     var cur = $('body').attr('data-scrolllocation');
     if(cur == "") cur = 'preheader';
 
+    // changes data attribute of data-scrolllocation on body element based on where you are on the page
     $('.section').each(function() {
       if(
         windowY > $(this).offset().top &&
